@@ -1,6 +1,6 @@
 {
     "name": "xws-spec",
-    "version": "0.0.1",
+    "version": "0.1.1",
     "homepage": "https://github.com/elistevens/xws-spec",
     "authors": [
         { "name": "Eli Stevens", "homepage": "https://github.com/elistevens" },
@@ -11,6 +11,7 @@
     "description": "X-Wing Squadron Specification",
     "license": "MIT",
     "private": false,
+    "main": "dist/xws.min.js",
     "ignore": [
         "**/.*",
         "node_modules",

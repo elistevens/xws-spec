@@ -1,4 +1,4 @@
-*This is version 0.1.0 of this document.*
+*This is version 0.1.1 of this document.*
 
 In order to move squadrons from one app to another, we need a common format. Hereâ€™s what it should achieve and how it should work:
 
