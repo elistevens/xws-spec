@@ -1214,6 +1214,8 @@
     $exp.xws = {};
   }
 
+  $exp.xws.version = '0.1.0';
+
   $exp.xws.canonicalizationExceptions_dict = {
     "Rebel Alliance": "rebels",
     "Galactic Empire": "empire",
@@ -1307,7 +1309,7 @@
   };
 
   $exp.xws.validateSquadron = function(dirty_obj, vendor, ignore) {
-    var clean_obj, dirty_key, dirty_value, error, error_list, error_sublist, i, key, pilot_clean, pilot_dirty, _i, _len, _ref, _ref1;
+    var attr, clean_obj, dirty_key, dirty_value, error, error_list, error_sublist, i, key, pilot_clean, pilot_dirty, _i, _j, _len, _len1, _ref, _ref1, _ref2;
     if (vendor == null) {
       vendor = true;
     }
@@ -1324,25 +1326,29 @@
         clean_obj[key] = dirty_obj[key];
         delete dirty_obj[key];
       }
-      if (dirty_obj.version !== '0.1.0') {
-        error_list.push("squadron.version: " + dirty_obj.version + " != '0.1.0'");
+      if (dirty_obj.version !== $exp.xws.version) {
+        error_list.push("squadron.version: " + dirty_obj.version + " != " + $exp.xws.version);
       }
-      clean_obj.version = '0.1.0';
+      clean_obj.version = $exp.xws.version;
       delete dirty_obj.version;
-      if ('vendor' in dirty_obj && vendor) {
-        clean_obj.vendor = dirty_obj.vendor;
+      _ref = ['name', 'description', 'vendor'];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        attr = _ref[_i];
+        if (attr in dirty_obj && dirty_obj[attr]) {
+          clean_obj[attr] = dirty_obj[attr];
+        }
+        delete dirty_obj[attr];
       }
-      delete dirty_obj.vendor;
       delete dirty_obj.points;
       if (!dirty_obj.faction || !(dirty_obj.faction in $exp.xws.pilot_faction2ship2pilot2obj_dict)) {
         return [null, ["squadron.faction: " + dirty_obj.faction]];
       }
       clean_obj.faction = dirty_obj.faction;
       delete dirty_obj.faction;
-      _ref = dirty_obj.pilots || [];
-      for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
-        pilot_dirty = _ref[i];
-        _ref1 = _validateSquadron_pilot(clean_obj.faction, pilot_dirty, "squadron.pilots[" + i + "]", vendor), pilot_clean = _ref1[0], error_sublist = _ref1[1];
+      _ref1 = dirty_obj.pilots || [];
+      for (i = _j = 0, _len1 = _ref1.length; _j < _len1; i = ++_j) {
+        pilot_dirty = _ref1[i];
+        _ref2 = _validateSquadron_pilot(clean_obj.faction, pilot_dirty, "squadron.pilots[" + i + "]", vendor), pilot_clean = _ref2[0], error_sublist = _ref2[1];
         if (pilot_clean) {
           clean_obj.pilots.push(pilot_clean);
         }

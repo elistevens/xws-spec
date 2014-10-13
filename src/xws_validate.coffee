@@ -1,6 +1,7 @@
 #'use strict';
 $exp = exports ? this
 $exp.xws ?= {}
+$exp.xws.version = '0.1.0'
 
 $exp.xws.canonicalizationExceptions_dict = {
     "Rebel Alliance": "rebels",
@@ -86,14 +87,15 @@ $exp.xws.validateSquadron = (dirty_obj, vendor=true, ignore=[]) ->
             clean_obj[key] = dirty_obj[key]
             delete dirty_obj[key]
 
-        if dirty_obj.version != '0.1.0'
-            error_list.push "squadron.version: #{dirty_obj.version} != '0.1.0'"
-        clean_obj.version = '0.1.0'
+        if dirty_obj.version != $exp.xws.version
+            error_list.push "squadron.version: #{dirty_obj.version} != #{$exp.xws.version}"
+        clean_obj.version = $exp.xws.version
         delete dirty_obj.version
 
-        if 'vendor' of dirty_obj and vendor
-            clean_obj.vendor = dirty_obj.vendor
-        delete dirty_obj.vendor
+        for attr in ['name', 'description', 'vendor']
+            if attr of dirty_obj and dirty_obj[attr]
+                clean_obj[attr] = dirty_obj[attr]
+            delete dirty_obj[attr]
         delete dirty_obj.points
 
         if not dirty_obj.faction or dirty_obj.faction not of $exp.xws.pilot_faction2ship2pilot2obj_dict
