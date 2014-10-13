@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "X-Wing Squadron Format Schema",
+    "description": "A squadron for the X-Wing Miniatures Game in app-independent format for sharing, saving and moving between apps.",
+    "type": "object",
+    "required": ["version","faction","pilots"],
+    "additionalProperties" : false,
+    "properties": {
+        "version": {
+            "type": "string",
+            "pattern" : "^[0-9]+\.[0-9]+\.[0-9]+$",
+            "description": "The version of the XWS spec used to create this data"
+        },
+        "name": {
+            "type": "string",
+            "description": "The name of the squadron."
+        },
+        "points": {
+            "type": "integer",
+            "description": "The total points spent creating this squadron."
+        },
+        "faction": {
+            "type": "string",
+            "enum": [ "rebels", "empire", "scum" ],
+            "description": "The faction this squadron belongs to."
+        },
+        "description": {
+            "type": "string",
+            "description": "A description of this squadron."
+        },
+        "pilots": {
+            "type": "array",
+            "description": "The members of this squadron.",
+            "items": {
+                "type": "object",
+                "minItems": 1,
+                "required": ["name","ship"],
+                "additionalProperties" : false,
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "pattern" : "^[0-9a-z]+$"
+                    },
+                    "ship": {
+                        "type": "string",
+                        "pattern" : "^[0-9a-z]+$"
+                    },
+                    "upgrades": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "minProperties": 1,
+                        "patternProperties": {
+                            "^[0-9a-z]+$": {
+                                "type": "array",
+                                "minItems": 1,
+                                "items": {
+                                    "type": "string",
+                                    "pattern" : "^[0-9a-z]+$"
+                                }
+                            }
+                        }
+                     },
+                     "vendor": {
+                        "type": "object",
+                         "minProperties": 1,
+                         "maxProperties": 1,
+                         "description": "An extensible object containing app-specific data. Developers should put extra data here under their own namespace."
+                     }
+                }
+            }
+        },
+        "vendor": {
+            "type": "object",
+            "minProperties": 1,
+            "maxProperties": 1,
+            "description": "An extensible object containing app-specific data. Developers should put extra data here under their own namespace."
+        }
+    }
+}

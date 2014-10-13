@@ -26,7 +26,7 @@ A "squadron" is a single dictionary.
 
 The "squadron" MUST contain the following:
 * A faction ID with the key "faction"
-* An array of pilots with the key "pilots" (see below)
+* An array of pilots with the key "pilots" (see below). A squadron MUST have at least one pilot.
 
 The "squadron" MAY contain the following:
 * A squadron name with the key "name"
@@ -40,12 +40,12 @@ The "squadron" MAY contain the following:
   * The key "builder_link" should contain a link to the original squadron builder app. 
   
 A "pilot" MUST contain:
-* A unique ID for the pilot with the key "pilot"
+* A unique ID for the pilot with the key "name"
 * A unique ID for the ship with the key "ship"
   
 A "pilot" MAY contain:
 * A dictionary of upgrades with the key "upgrades", each with:
-  * A key identifying the type of upgrade, eg. "elitepilottalent", "missile", "torpedo", etc.
+  * A key identifying the type of upgrade, eg. "crew", "missile", "torpedo", etc.
   * A value which is an array of unique IDs for each upgrade of that type, eg. "pushthelimit", "outmaneuver", etc.
 * A dictionary of app-specific data with the key "vendor". Each vendor should use a key specific to their app, eg. "voidstate". 
  
@@ -109,6 +109,20 @@ Container (multiple squadrons): .XWC
 2. Convert non-ASCII characters to closest ASCII equivalent (to remove umlauts, etc.)
 3.	Remove non-alphanumeric characters
 4.	Lowercase it
+	
+######Canonicalization Special Cases
+The following factions and card names are abbreviated to reduce the data length.
+
+Key | Canonicalization
+----|-----
+"Rebel Alliance" |	"rebels"
+"Galactic Empire" |	"empire",
+"Scum and Villainy" |	"scum",
+-|-
+"Astromech Droid" |	"amd",
+"Salvaged Astromech Droid" |	"samd",
+"Elite Pilot Talent" |	"ept",
+"Modification" |	"mod"
 
 ####Sample XWS Data Structure
 This sample shows a build with lots of upgrades, some added dynamically by other upgrades (A-Wing Test Pilot). It includes all required and optional data as well as vendor data at both top level and squadron level.
@@ -117,7 +131,7 @@ This sample shows a build with lots of upgrades, some added dynamically by other
 {
     "name": "2 A-Wings, 2 X-Wings",
     "faction": "rebels",
-    "points": "100",
+    "points": 100,
     "version": "0.1.0",
     "description": "Tycho leads a flight",
     "pilots": [
@@ -131,7 +145,7 @@ This sample shows a build with lots of upgrades, some added dynamically by other
                 "missile": [
                     "chardaanrefit"
                 ],
-                "elitepilottalent": [
+                "ept": [
                     "pushthelimit",
                     "experthandling"
                 ],
@@ -149,7 +163,7 @@ This sample shows a build with lots of upgrades, some added dynamically by other
             "name": "rookiepilot",
             "ship": "xwing",
             "upgrades": {
-                "astromechdroid": [
+                "amd": [
                     "r2astromech"
                 ]
             },
@@ -163,7 +177,7 @@ This sample shows a build with lots of upgrades, some added dynamically by other
             "name": "rookiepilot",
             "ship": "xwing",
             "upgrades": {
-                "astromechdroid": [
+                "amd": [
                     "r2astromech"
                 ]
             },
@@ -183,11 +197,11 @@ This sample shows a build with lots of upgrades, some added dynamically by other
                 "missile": [
                     "chardaanrefit"
                 ],
-                "elitepilottalent": [
+                "ept": [
                     "elusiveness",
                     "experthandling"
                 ],
-                "modification": [
+                "mod": [
                     "stealthdevice"
                 ]
             },
@@ -221,9 +235,6 @@ faction | Faction (string). Possible values: â€œrebelsâ€, â€œempire
 description | Text description or notes on the squadron.	Optional. String.
 pilots | An array of pilots. See below.	Required. Array.
 vendor | A dictionary of vendors, each with their own dictionary of app-specific data.	Optional. Dictionary.
-vendor.link | Web link to view this squadron.	Optional. String.
-vendor.builder | Name of the squadron builder used to generate the squadron.	Optional. String.
-vendor.builder_link | Link to the squadron builder used to generate the squadron.	Optional. String.
 
 ######Pilot-level Dictionary Keys
 
@@ -235,22 +246,116 @@ upgrades | Upgrade cards for this pilot. A dictionary where each key is a type o
 points | Total points spent, including upgrades.	Optional. Integer.
 vendor | A dictionary of vendors, each with their own dictionary of app-specific data.	Optional. Dictionary.
 
+######Vendor-level Dictionary Keys
+
+Key | Notes
+----|-----
+link | Web link to view this squadron. Optional. String.
+builder | Name of the squadron builder used to generate the squadron. Optional. String.
+builder_link | Link to the squadron builder used to generate the squadron. Optional. String.
+... | Other properties can be added here as required
+
 ####Canonicalized Names
 A selection of canonicalized card names for app authors to check their output agains.
 
 ######Upgrades
-astromech
-bomb
-cannon
-cargo
-crew
-elite
-hardpoint
-illicit
-missile
-modification
-system
-team
-title
-torpedo
+amd ( special case for astromech droid)  
+bomb  
+cannon  
+cargo  
+crew  
+ept (special case for elitepilottalent)  
+hardpoint  
+illicit  
+missile  
+mod (special case for modification)  
+samd (special case for salvaged astromech droid)  
+system  
+team  
+title  
+torpedo  
 turret
+
+####Validation
+Implementations MAY use the following JSON schema to validate XWS data. More on JSON schemas can be fond here: http://json-schema.org
+
+```json
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "X-Wing Squadron Format Schema",
+	"description": "A squadron for the X-Wing Miniatures Game in app-independent format for sharing, saving and moving between apps.",
+	"type": "object",
+	"required": ["version","faction","pilots"],
+	"additionalProperties" : false,
+	"properties": {
+		"version": {
+			"type": "string",
+			"pattern" : "^[0-9]+\.[0-9]+\.[0-9]+$",
+			"description": "The version of the XWS spec used to create this data"
+		},
+		"name": {
+			"type": "string",
+			"description": "The name of the squadron."
+		},
+		"points": {
+			"type": "integer",
+			"description": "The total points spent creating this squadron."
+		},
+		"faction": {
+			"type": "string",
+			"enum": [ "rebels", "empire", "scum" ],
+			"description": "The faction this squadron belongs to."
+		},
+		"description": {
+			"type": "string",
+			"description": "A description of this squadron."
+		},
+		"pilots": {
+			"type": "array",
+			"description": "The members of this squadron.",
+            "items": {
+                "type": "object",
+                "required": ["name","ship"],
+                "additionalProperties" : false,
+                "properties": {
+                    "name": {
+	                    "type": "string",
+	                    "pattern" : "^[0-9a-z]+$"
+		            },
+                    "ship": {
+	                    "type": "string",
+	                    "pattern" : "^[0-9a-z]+$"
+		            },
+                    "upgrades": {
+	                    "type": "object",
+	                    "additionalProperties": false,
+	                    "minProperties": 1,
+	                    "patternProperties": {
+	                        "^[0-9a-z]+$": {
+								"type": "array",
+								"minItems": 1,
+								"items": {
+									"type": "string",
+									"pattern" : "^[0-9a-z]+$"
+		                    	}
+	                        }
+	                    }
+		             },
+		             "vendor": {
+		            	"type": "object",
+		     			"minProperties": 1,
+		     			"maxProperties": 1,
+		     			"description": "An extensible object containing app-specific data. Developers should put extra data here under their own namespace."
+		             }
+                }
+            }
+		},
+		"vendor": {
+			"type": "object",
+			"minProperties": 1,
+			"maxProperties": 1,
+			"description": "An extensible object containing app-specific data. Developers should put extra data here under their own namespace."
+		}
+	}
+}
+```
