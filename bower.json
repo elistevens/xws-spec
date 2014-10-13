@@ -1,0 +1,22 @@
+{
+    "name": "xws-spec",
+    "version": "0.0.1",
+    "homepage": "https://github.com/elistevens/xws-spec",
+    "authors": [
+        { "name": "Eli Stevens", "homepage": "https://github.com/elistevens" },
+        { "name": "Fergus", "homepage": "https://github.com/voidstate" },
+        { "name": "Geordan Rosario", "homepage": "https://github.com/geordanr" },
+        { "name": "Fab", "homepage": "https://github.com/fab7431" }
+    ],
+    "description": "X-Wing Squadron Specification",
+    "license": "MIT",
+    "private": false,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "tests"
+    ],
+    "dependencies": {
+    }
+}

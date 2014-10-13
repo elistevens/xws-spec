@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+    head
+        title X-Wing Squadron Specification
+
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css')
+
+        script(src='https://code.jquery.com/jquery-1.11.1.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')
+        script(src='dist/xws.min.js')
+
+
+
+
+    body(style="padding: 1em;")
+        h1 XWS Specification and Validator
+        div
+            h2 Specification Links
+            p
+                a(href="https://github.com/elistevens/xws-spec/README.md") XWS Specification Text (Human Readable)
+            p
+                a(href="/schema.json") JSON Schema Validator Document
+            p
+                a(href="https://github.com/geraintluff/tv4") Tiny Validator for JSON Schema v4
+        div
+            h2 Enter XWS JSON
+            textarea#input_json(style="width: 50em; height: 20em;")
+        div
+            p
+                button#button_validate.btn.btn-primary Validate XWS JSON
+
+        div
+            h2 Validation Errors
+            #errors (Enter JSON First)
+        script $('#button_validate').click(function (event) {
+            |   try {
+            |       var ret = window.xws.validateSquadron(JSON.parse($('#input_json').val()));
+            |       if(ret[1]) {
+            |           $('#errors').html('<p>' + ret[1].join('</p><p>') + '</p>');
+            |       } else {
+            |           $('#errors').html('<p>No validation errors.</p>');
+            |       }
+            |   } catch(error) {
+            |       $('#errors').html('<p>' + error + '</p>');
+            |   }
+            | })

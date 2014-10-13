@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>X-Wing Squadron Specification</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="dist/xws.min.js"></script>
+  </head>
+  <body style="padding: 1em;">
+    <h1>XWS Specification Validator</h1>
+    <div>
+      <h2>Specification Links</h2>
+      <p><a href="https://github.com/elistevens/xws-spec/README.md">Specification Text</a></p>
+      <p><a href="/schema.json">JSON Schema Validator Document</a></p>
+    </div>
+    <div>
+      <h2>Enter XWS JSON</h2>
+      <textarea id="input_json" style="width: 50em; height: 20em;"></textarea>
+    </div>
+    <div>
+      <p>
+        <button id="button_validate" class="btn btn-primary">Validate XWS JSON</button>
+      </p>
+    </div>
+    <div>
+      <h2>Validation Errors</h2>
+      <div id="errors">(Enter JSON First)</div>
+    </div>
+    <script>
+      $('#button_validate').click(function (event) {
+        try {
+            var ret = window.xws.validateSquadron(JSON.parse($('#input_json').val()));
+            if(ret[1]) {
+                $('#errors').html('<p>' + ret[1].join('</p><p>') + '</p>');
+            } else {
+                $('#errors').html('<p>No validation errors.</p>');
+            }
+        } catch(error) {
+            $('#errors').html('<p>' + error + '</p>');
+        }
+      })
+    </script>
+  </body>
+</html>

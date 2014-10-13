@@ -1,0 +1,62 @@
+{
+  "name": "xws-spec",
+  "version": "0.0.1",
+  "description": "X-Wing Squadron Specification",
+  "main": "express/server.coffee",
+  "private": true,
+  "scripts": {
+    "build": "make",
+    "postinstall": "./node_modules/bower/bin/bower install --config.interactive=false",
+    "start": "coffee express/server.coffee",
+    "test": "make test"
+  },
+  "author": {
+    "name": "Eli Stevens",
+    "homepage": "https://github.com/elistevens"
+  },
+  "contributors": [
+    {
+      "name": "Fergus",
+      "homepage": "https://github.com/voidstate"
+    },
+    {
+      "name": "Geordan Rosario",
+      "homepage": "https://github.com/geordanr"
+    },
+    {
+      "name": "Fab",
+      "homepage": "https://github.com/fab7431"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elistevens/xws-spec"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "jade": "^1.6.0",
+    "karma": "^0.12.23",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-coffee-preprocessor": "^0.2.1",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-mocha": "^0.1.9",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "mocha": "^1.21.4",
+    "sass": "^0.5.0",
+    "supertest": "^0.13.0",
+    "supertest-chai": "0.0.8",
+    "optimizer": "1.1.7",
+    "uglify-js": "^2.4.15"
+  },
+  "dependencies": {
+    "bower": "^1.3.9",
+    "coffee-script": "^1.8.0",
+    "express": "^4.9.0",
+    "morgan": "^1.3.0"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
