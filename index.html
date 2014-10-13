@@ -2,18 +2,19 @@
 <html lang="en">
   <head>
     <title>X-Wing Squadron Specification</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="dist/xws.min.js"></script>
   </head>
   <body style="padding: 1em;">
-    <h1>XWS Specification Validator</h1>
+    <h1>XWS Specification and Validator</h1>
     <div>
       <h2>Specification Links</h2>
-      <p><a href="https://github.com/elistevens/xws-spec/README.md">Specification Text</a></p>
+      <p><a href="https://github.com/elistevens/xws-spec/README.md">XWS Specification Text (Human Readable)</a></p>
       <p><a href="/schema.json">JSON Schema Validator Document</a></p>
+      <p><a href="https://github.com/geraintluff/tv4">Tiny Validator for JSON Schema v4</a></p>
     </div>
     <div>
       <h2>Enter XWS JSON</h2>
@@ -32,7 +33,7 @@
       $('#button_validate').click(function (event) {
         try {
             var ret = window.xws.validateSquadron(JSON.parse($('#input_json').val()));
-            if(ret[1]) {
+            if(ret[1].length) {
                 $('#errors').html('<p>' + ret[1].join('</p><p>') + '</p>');
             } else {
                 $('#errors').html('<p>No validation errors.</p>');

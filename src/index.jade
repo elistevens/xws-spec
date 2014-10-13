@@ -36,7 +36,7 @@ html(lang="en")
         script $('#button_validate').click(function (event) {
             |   try {
             |       var ret = window.xws.validateSquadron(JSON.parse($('#input_json').val()));
-            |       if(ret[1]) {
+            |       if(ret[1].length) {
             |           $('#errors').html('<p>' + ret[1].join('</p><p>') + '</p>');
             |       } else {
             |           $('#errors').html('<p>No validation errors.</p>');
