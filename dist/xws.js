@@ -1214,7 +1214,7 @@
     $exp.xws = {};
   }
 
-  $exp.xws.version = '0.1.0';
+  $exp.xws.version = '0.1.1';
 
   $exp.xws.canonicalizationExceptions_dict = {
     "Rebel Alliance": "rebels",
