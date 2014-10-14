@@ -32,7 +32,6 @@ The "squadron" MAY contain the following:
 * A squadron name with the key "name"
 * A squadron description with the key "description"
 * The point total for the *squadron* with the key "points". Note that this MUST NOT be used when importing; it is just for readability and convenience.
-* Points values for a *pilot* with the key "points". This is the total point value, after upgrades. Again, these are only for convenience, apps MUST ignore them when importing.
 * A "vendor" property, under which an dictionary of app-specific data can be stored. Each vendor should use a key specific to their app to contain their data, eg. "voidstate". 
 * If a "squadron"-level vendor property is added, some properties keys are reserved for specific data.
   * The key "link" should contain a link back to the original squadron. 
@@ -44,6 +43,7 @@ A "pilot" MUST contain:
 * A unique ID for the ship with the key "ship"
   
 A "pilot" MAY contain:
+* A point values for a *pilot* with the key "points". This is the total point value, after upgrades. As with squadrons, these are only for convenience, apps MUST ignore them when importing.
 * A dictionary of upgrades with the key "upgrades", each with:
   * A key identifying the type of upgrade, eg. "crew", "missile", "torpedo", etc.
   * A value which is an array of unique IDs for each upgrade of that type, eg. "pushthelimit", "outmaneuver", etc.
@@ -279,20 +279,7 @@ Title | title
 Torpedo | torpedo
 Turret Weapon | turretweapon
 
-######Actions 
-
-Name | Canonical
-----|-----
-Barrel Roll | barrelroll
-Boost | boost
-Cloak | cloak
-Coordinate | coordinate
-Evade | evade
-Focus | focus
-Jam | jam
-Recover | recover
-Reinforce | reinforce
-Target Lock | targetlock
+######Pilots
 
 Name | Canonical
 ----|-----
