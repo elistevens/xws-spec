@@ -47,12 +47,12 @@ application is free to structure the internal dictionary as desired, however the
 following keys SHOULD be used consistently if provided at the top level of the
 application-specific dictionary:
 
-Requirement | Key | Type | Notes
--|-|-|-
+Requirement  | Key |  Type  | Notes
+---|---|---|---
 Optional | url | String | URL to this item in the exporting application.
 Optional | builder | String | Name of the exporting squad-building application.
 Optional | builder_url | String | URL to the exporting squad-building application.
--|-|-|-
+---|---|---|---
 Ignored | ??? | Any | Other properties can be added as desired by the implementation.
 
 After importing a squadron or collection, the application SHOULD remove all
@@ -74,9 +74,9 @@ a squad builder application, the set of lists used by a player during an
 escalation league, the top 8 tables from a tournament, etc.
 
 Requirement | Key | Type | Notes
--|-|-|-
+---|---|---|---
 Mandatory | container | Array | List of squadron objects; see below.
--|-|-|-
+---|---|---|---
 Ignored | vendor | Dictionary | An object used to store vendor-specific data; see above.
 
 In situations where the type of data being imported is not known, a container
@@ -103,13 +103,13 @@ about the appropriate nature of a list for any given purpose.
 ### Squadron Attributes
 
 Requirement | Key | Type | Notes
--|-|-|-
+---|---|---|---
 Mandatory | faction | String | Canonicalized faction name. Possible values: "rebels", "empire", "scum".
 Mandatory | pilots | Array | List of one or more pilots; see below.
--|-|-|-
+---|---|---|---
 Optional | name | String | Human-readable squadron name.
 Optional | description | String | Text description or notes for the squadron.
--|-|-|-
+---|---|---|---
 Ignored | points | Integer | Total point cost of the squadron. MUST be ignored by importing applications; for human readability only.
 Ignored | vendor | Dictionary | An object used to store vendor-specific data; see above.
 
@@ -127,12 +127,12 @@ A squadron MUST have at least one pilot entry.
 ### Pilot Attributes
 
 Requirement | Key | Type | Notes
--|-|-|-
+---|---|---|---
 Mandatory | name | String | Canonicalized pilot name.
 Mandatory | ship | String | Canonicalized ship name.
--|-|-|-
+---|---|---|---
 Optional | upgrades | Dictionary | Equipped upgrade cards for this pilot; see below.
--|-|-|-
+---|---|---|---
 Ignored | points | Integer | Total point cost of the pilot plus upgrades. MUST be ignored by importing applications; for human readability only.
 Ignored | vendor | Dictionary | An object used to store vendor-specific data; see above.
 
