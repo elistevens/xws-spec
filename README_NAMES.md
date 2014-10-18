@@ -1,7 +1,11 @@
 
 # Canonicalized Names
-This is a listing of canonicalized card names for app authors to check their output
-against (for all cards released by 14th Oct 2014).
+This is a listing of canonicalized card names for app authors to check their
+output against (for all cards released by 14th Oct 2014).
+
+Implementation authors should not rely on this listing to be updated promptly
+upon the release of new content. It is intended to be a useful check of an
+implementation's canonicalization routines.
 
 This information is also provided as part of the `xws-spec` bower package. See
 the `window.xws.pilot_faction2ship2pilot2obj_dict` and

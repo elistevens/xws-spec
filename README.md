@@ -21,7 +21,9 @@ is available.
 
 The version number SHOULD NOT be used to reject squadrons on import. An
 exporting implementation might support content through wave 6 but a given
-squadron could be valid for wave 4.
+squadron could be valid for wave 4. An importing application that has content
+through wave 5 should not reject the squadron based on the spec version
+indicated in the export JSON.
 
 The version number SHALL be incremented when FFG releases errata that changes
 the point cost of any pilots or cards.
@@ -52,7 +54,7 @@ Requirement  | Key |  Type  | Notes
 Optional | url | String | URL to this item in the exporting application.
 Optional | builder | String | Name of the exporting squad-building application.
 Optional | builder_url | String | URL to the exporting squad-building application.
----|---|---|---
+ | | |
 Ignored | ??? | Any | Other properties can be added as desired by the implementation.
 
 After importing a squadron or collection, the application SHOULD remove all
@@ -62,7 +64,7 @@ implementations' vendor keys to accomplish this.
 
 
 ## Multiple Squadron Data Format (X-Wing Squadron Container Format or .XWC)
-A container can be represeted as a stand-alone JSON file encoded in UTF-8 with
+A container can be represented as a stand-alone JSON file encoded in UTF-8 with
 either an .xwc or a .json extension. MIME types of application/json or
 text/plain SHOULD be accepted by API endpoints.
 
@@ -76,7 +78,7 @@ escalation league, the top 8 tables from a tournament, etc.
 Requirement | Key | Type | Notes
 ---|---|---|---
 Mandatory | container | Array | List of squadron objects; see below.
----|---|---|---
+ | | |
 Ignored | vendor | Dictionary | An object used to store vendor-specific data; see above.
 
 In situations where the type of data being imported is not known, a container
@@ -106,14 +108,14 @@ Requirement | Key | Type | Notes
 ---|---|---|---
 Mandatory | faction | String | Canonicalized faction name. Possible values: "rebels", "empire", "scum".
 Mandatory | pilots | Array | List of one or more pilots; see below.
----|---|---|---
+ | | |
 Optional | name | String | Human-readable squadron name.
 Optional | description | String | Text description or notes for the squadron.
----|---|---|---
+ | | |
 Ignored | points | Integer | Total point cost of the squadron. MUST be ignored by importing applications; for human readability only.
 Ignored | vendor | Dictionary | An object used to store vendor-specific data; see above.
 
-In situations where the type of data being imported is not known, a squardon
+In situations where the type of data being imported is not known, a squadron
 data structure can be identified by the mandatory `faction` and `pilots` keys.
 
 
@@ -130,9 +132,9 @@ Requirement | Key | Type | Notes
 ---|---|---|---
 Mandatory | name | String | Canonicalized pilot name.
 Mandatory | ship | String | Canonicalized ship name.
----|---|---|---
+ | | |
 Optional | upgrades | Dictionary | Equipped upgrade cards for this pilot; see below.
----|---|---|---
+ | | |
 Ignored | points | Integer | Total point cost of the pilot plus upgrades. MUST be ignored by importing applications; for human readability only.
 Ignored | vendor | Dictionary | An object used to store vendor-specific data; see above.
 
@@ -176,7 +178,7 @@ Key | Canonicalization
 "Rebel Alliance" |    "rebels"
 "Galactic Empire" |    "empire",
 "Scum and Villainy" |    "scum",
--|-
+ |
 "Astromech Droid" |    "amd",
 "Salvaged Astromech Droid" |    "samd",
 "Elite Pilot Talent" |    "ept",
@@ -187,6 +189,10 @@ A full list of canonicalized card names for app authors to check their output
 against (for all cards released by 14th Oct 2014) can be found here:
 
 [http://github.com/elistevens/xws-spec/blob/gh-pages/README_NAMES.md](./README_NAMES.md)
+
+Implementation authors should not rely on this listing to be updated promptly
+upon the release of new content. It is intended to be a useful check of an
+implementation's canonicalization routines.
 
 This information is also provided as part of the `xws-spec` bower package. See
 the `window.xws.pilot_faction2ship2pilot2obj_dict` and
@@ -205,7 +211,11 @@ provide the ability to export them.
 
 ### Exporting Examples
 * A button to download a text file containing one or multiple squadrons
-* A button for exporting a squadron directly to a different app. So, you'd click "export to Voidstate", for example, which would generate the JSON version of the squadron, POST it to an API endpoint (eg. http://xwing-builder.co.uk/import), where the app would parse the JSON and reload the page with the squadron builder populated with that squadron
+* A button for exporting a squadron directly to a different app. So, you'd click "export to Voidstate", for example, which would:
+  * generate the JSON version of the squadron,
+  * POST it to an API endpoint (eg. http://xwing-builder.co.uk/import),
+  * where the app would parse the JSON and
+  * reload the page with the squadron builder populated with that squadron
 
 ### Import Failures
 When encountering a canonicalized name that is not recognized, an implementation
