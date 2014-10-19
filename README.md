@@ -1,7 +1,7 @@
-# X-Wing Squadron Specification version 0.1.1
-
+# X-Wing Squadron Specification version 0.2.0
 This specification facilitates the export and subsequent import of squadrons for
 FFG's X-Wing Miniatures game from one compliant application to another.
+
 
 ## Goals
 * Allow users to easily move a squadron from one squadron building app to another
@@ -10,57 +10,6 @@ FFG's X-Wing Miniatures game from one compliant application to another.
 * Be future-proof
 * Be human-readable
 * Be human-writeable (with just a text editor)
-
-## Versioning
-This spec SHALL have a version number. 
-
-Future versions of this specification will increment the version number
-according to http://semver.org/ . Due to this spec being tied to validation
-functions, this specification will get a patch-level revision when new content
-is available.
-
-The version number SHOULD NOT be used to reject squadrons on import. An
-exporting implementation might support content through wave 6 but a given
-squadron could be valid for wave 4. An importing application that has content
-through wave 5 should not reject the squadron based on the spec version
-indicated in the export JSON.
-
-The version number SHALL be incremented when FFG releases errata that changes
-the point cost of any pilots or cards.
-
-## Vendor-Specific Extensions
-
-To accomodate vendor-specific metadata, every Dictionary can optionally include
-the `"vendor"` key. To prevent collisions between different implementations'
-metadata, any data placed into the `"vendor"` key MUST be structured as follows:
-
-```json
-{
-    "vendor": {
-        "IMPLEMENTATION_NAME": {
-            ...,
-        }
-    }
-}
-```
-
-Where IMPLEMENTATION_NAME is a unique identifier for the application. An
-application is free to structure the internal dictionary as desired, however the
-following keys SHOULD be used consistently if provided at the top level of the
-application-specific dictionary:
-
-Requirement  | Key |  Type  | Notes
----|---|---|---
-Optional | url | String | URL to this item in the exporting application.
-Optional | builder | String | Name of the exporting squad-building application.
-Optional | builder_url | String | URL to the exporting squad-building application.
- | | |
-Ignored | ??? | Any | Other properties can be added as desired by the implementation.
-
-After importing a squadron or collection, the application SHOULD remove all
-unrecognized vendor properties before exporting again. This is to prevent
-obsolete data being exported. It is acceptable to entirely remove all other
-implementations' vendor keys to accomplish this.
 
 
 ## Multiple Squadron Data Format (X-Wing Squadron Container Format or .XWC)
@@ -102,8 +51,8 @@ pilots having the required upgrade slots for an upgrade card, etc.).
 Importing implementations MUST perform validation before making assumptions
 about the appropriate nature of a list for any given purpose.
 
-### Squadron Attributes
 
+### Squadron Attributes
 Requirement | Key | Type | Notes
 ---|---|---|---
 Mandatory | faction | String | Canonicalized faction name. Possible values: "rebels", "empire", "scum".
@@ -120,14 +69,19 @@ data structure can be identified by the mandatory `faction` and `pilots` keys.
 
 
 ## Pilot Data Format
-
 Each entry in the `squadron.pilots` list represents a separate model in the
 squadron. Duplicates are repeated verbatim.
 
 A squadron MUST have at least one pilot entry.
 
-### Pilot Attributes
+Pilot entries come in two forms. The first is one for small; large; and huge
+ships with one section. The second is for huge ships with multiple sections. The
+two can be distinguished by the `ship` key having the value `"cr90corvette"`.
+Other ships yet to be released may also be special-cased to have multiple
+sections.
 
+
+### Pilot Attributes - Single-Section Ship
 Requirement | Key | Type | Notes
 ---|---|---|---
 Mandatory | name | String | Canonicalized pilot name.
@@ -138,8 +92,32 @@ Optional | upgrades | Dictionary | Equipped upgrade cards for this pilot; see be
 Ignored | points | Integer | Total point cost of the pilot plus upgrades. MUST be ignored by importing applications; for human readability only.
 Ignored | vendor | Dictionary | An object used to store vendor-specific data; see above.
 
-## Upgrades Data Format
 
+### Pilot Attributes - Multi-Section Ship
+Requirement | Key | Type | Notes
+---|---|---|---
+Mandatory | ship | String | Canonicalized ship name; must be `"cr90corvette"`.
+Mandatory | sections | Array | List of sections for this ship.
+ | | |
+Ignored | points | Integer | Total point cost of the pilot plus upgrades. MUST be ignored by importing applications; for human readability only.
+Ignored | vendor | Dictionary | An object used to store vendor-specific data; see above.
+
+
+### Section Attributes
+A section is very similar to the single-section pilot attributes, except that
+the ship key is not present.
+
+Requirement | Key | Type | Notes
+---|---|---|---
+Mandatory | name | String | Canonicalized pilot name.
+ | | |
+Optional | upgrades | Dictionary | Equipped upgrade cards for this pilot; see below.
+ | | |
+Ignored | points | Integer | Total point cost of the pilot plus upgrades. MUST be ignored by importing applications; for human readability only.
+Ignored | vendor | Dictionary | An object used to store vendor-specific data; see above.
+
+
+## Upgrades Data Format
 Each entry in the `pilot.upgrades` dictionary MUST have a key of a canonicalized
 name of an upgrade slot. The value is an Array of Strings, each the
 canonicalized name of an upgrade card for the appropriate slot type.
@@ -163,12 +141,14 @@ best solution is to canonicalize the card names, taking into account some cards
 share the same name (eg. Chewbacca as pilot and as crew, R2-D2 as astromech and
 as crew, etc.)
 
+
 ### Canonicalization Rules
 1. Take the English-language name as printed on the card
 2. Check for special case exceptions to these rules (see below)
 3. Lowercase the name
 4. Convert non-ASCII characters to closest ASCII equivalent (to remove umlauts, etc.)
 5. Remove non-alphanumeric characters
+
 
 ### Canonicalization Special Cases
 The following factions and card names are abbreviated to reduce the data length.
@@ -184,6 +164,7 @@ Key | Canonicalization
 "Elite Pilot Talent" |    "ept",
 "Modification" |    "mod"
 
+
 ### Canonicalized Name Listing
 A full list of canonicalized card names for app authors to check their output
 against (for all cards released by 14th Oct 2014) can be found here:
@@ -198,16 +179,19 @@ This information is also provided as part of the `xws-spec` bower package. See
 the `window.xws.pilot_faction2ship2pilot2obj_dict` and
 `window.xws.upgrade_slot2key2obj_dict` variables.
 
+
 # Requirements for Application Developers
 
 ## Import / Export
 Apps that provide the ability to import squadrons in these formats SHOULD
 provide the ability to export them.
 
+
 ### Importing Examples
 * A form containing a textarea where users can paste the JSON and the app will parse it and load that squadron.
 * A file uploader that will accept .json, .XWS and .XWC files
 * An API endpoint which would receive a squadron in this format, parse and display it.
+
 
 ### Exporting Examples
 * A button to download a text file containing one or multiple squadrons
@@ -216,6 +200,7 @@ provide the ability to export them.
   * POST it to an API endpoint (eg. http://xwing-builder.co.uk/import),
   * where the app would parse the JSON and
   * reload the page with the squadron builder populated with that squadron
+
 
 ### Import Failures
 When encountering a canonicalized name that is not recognized, an implementation
@@ -239,6 +224,40 @@ including ensuring that:
 * Factions are not mixed
 
 
+## Vendor-Specific Extensions
+To accomodate vendor-specific metadata, every Dictionary can optionally include
+the `"vendor"` key. To prevent collisions between different implementations'
+metadata, any data placed into the `"vendor"` key MUST be structured as follows:
+
+```json
+{
+    "vendor": {
+        "IMPLEMENTATION_NAME": {
+            ...,
+        }
+    }
+}
+```
+
+Where IMPLEMENTATION_NAME is a unique identifier for the application. An
+application is free to structure the internal dictionary as desired, however the
+following keys SHOULD be used consistently if provided at the top level of the
+application-specific dictionary:
+
+Requirement  | Key |  Type  | Notes
+---|---|---|---
+Optional | url | String | URL to this item in the exporting application.
+Optional | builder | String | Name of the exporting squad-building application.
+Optional | builder_url | String | URL to the exporting squad-building application.
+ | | |
+Ignored | ??? | Any | Other properties can be added as desired by the implementation.
+
+After importing a squadron or collection, the application SHOULD remove all
+unrecognized vendor properties before exporting again. This is to prevent
+obsolete data being exported. It is acceptable to entirely remove all other
+implementations' vendor keys to accomplish this.
+
+
 # Sample XWS Data Structure
 This sample shows a build with lots of upgrades, some added dynamically by other
 upgrades (A-Wing Test Pilot). It includes all required and optional data as well
@@ -257,9 +276,29 @@ More on JSON schemas can be fond at:
 - http://json-schema.org
 - https://github.com/geraintluff/tv4
 
-
 Additionally, the `xws-spec` bower package has custom validation functions that
 can be used to validate single-squadron lists. An online validator can be found
 at:
 
 http://elistevens.github.io/xws-spec/
+
+
+# Versioning
+This spec SHALL have a version number.
+
+Future versions of this specification will increment the version number
+according to http://semver.org/ . Due to this spec being tied to validation
+functions, this specification will get a patch-level revision when new content
+is available.
+
+The version number SHOULD NOT be used to reject squadrons on import. An
+exporting implementation might support content through wave 6 but a given
+squadron could be valid for wave 4. An importing application that has content
+through wave 5 should not reject the squadron based on the spec version
+indicated in the export JSON.
+
+The version number SHALL be incremented when FFG releases errata that changes
+the point cost of any pilots or cards.
+
+Updating the version should include change the number in the README.md,
+src/xws_validate.coffee, and bower.json.
