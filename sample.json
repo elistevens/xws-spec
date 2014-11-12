@@ -2,7 +2,7 @@
     "name": "2 A-Wings, 2 X-Wings",
     "faction": "rebels",
     "points": 100,
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Tycho leads a flight",
     "pilots": [
         {
@@ -19,7 +19,7 @@
                     "pushthelimit",
                     "experthandling"
                 ],
-                "modification": [
+                "mod": [
                     "experimentalinterface"
                 ]
             },
