@@ -20,9 +20,17 @@ for upgrade in upgrade_list
             upgrade.slot = 'Elite Pilot Talent'
         if upgrade.slot == 'Astromech'
             upgrade.slot = 'Astromech Droid'
+        if upgrade.slot == 'Salvaged Astromech'
+            upgrade.slot = 'Salvaged Astromech Droid'
 
         if upgrade.name == 'R2-D2 (Crew)'
             upgrade.name = 'R2-D2'
+        if upgrade.name == '"Heavy Scyk" Interceptor (Cannon)'
+            upgrade.name = '"Heavy Scyk" Interceptor'
+        if upgrade.name == '"Heavy Scyk" Interceptor (Missile)'
+            upgrade.name = '"Heavy Scyk" Interceptor'
+        if upgrade.name == '"Heavy Scyk" Interceptor (Torpedo)'
+            upgrade.name = '"Heavy Scyk" Interceptor'
 
         slot_key = $exp.xws.canonicalize(upgrade.slot)
         if slot_key not of $exp.xws.upgrade_slot2key2obj_dict
