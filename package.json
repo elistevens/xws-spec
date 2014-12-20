@@ -1,6 +1,6 @@
 {
   "name": "xws-spec",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "X-Wing Squadron Specification",
   "main": "express/server.coffee",
   "private": true,
