@@ -37,6 +37,9 @@
                 "required": ["name","ship"],
                 "additionalProperties" : false,
                 "properties": {
+                    "multisection_id": {
+                        "type": "integer"
+                    },
                     "name": {
                         "type": "string",
                         "pattern" : "^[0-9a-z]+$"

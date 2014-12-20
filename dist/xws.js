@@ -13,6 +13,7 @@
       "ships": {
         "xwing": {
           "name": "X-Wing",
+          "multisection": false,
           "pilots": {
             "wedgeantilles": {
               "name": "Wedge Antilles",
@@ -58,6 +59,7 @@
         },
         "ywing": {
           "name": "Y-Wing",
+          "multisection": false,
           "pilots": {
             "graysquadronpilot": {
               "name": "Gray Squadron Pilot",
@@ -79,6 +81,7 @@
         },
         "awing": {
           "name": "A-Wing",
+          "multisection": false,
           "pilots": {
             "tychocelchu": {
               "name": "Tycho Celchu",
@@ -108,6 +111,7 @@
         },
         "yt1300": {
           "name": "YT-1300",
+          "multisection": false,
           "pilots": {
             "outerrimsmuggler": {
               "name": "Outer Rim Smuggler",
@@ -129,6 +133,7 @@
         },
         "bwing": {
           "name": "B-Wing",
+          "multisection": false,
           "pilots": {
             "tennumb": {
               "name": "Ten Numb",
@@ -158,6 +163,7 @@
         },
         "hwk290": {
           "name": "HWK-290",
+          "multisection": false,
           "pilots": {
             "rebeloperative": {
               "name": "Rebel Operative",
@@ -179,6 +185,7 @@
         },
         "gr75mediumtransport": {
           "name": "GR-75 Medium Transport",
+          "multisection": false,
           "pilots": {
             "gr75mediumtransport": {
               "name": "GR-75 Medium Transport",
@@ -188,6 +195,7 @@
         },
         "z95headhunter": {
           "name": "Z-95 Headhunter",
+          "multisection": false,
           "pilots": {
             "banditsquadronpilot": {
               "name": "Bandit Squadron Pilot",
@@ -209,6 +217,7 @@
         },
         "ewing": {
           "name": "E-Wing",
+          "multisection": false,
           "pilots": {
             "knavesquadronpilot": {
               "name": "Knave Squadron Pilot",
@@ -230,6 +239,7 @@
         },
         "cr90corvette": {
           "name": "CR90 Corvette",
+          "multisection": true,
           "pilots": {
             "cr90corvettefore": {
               "name": "CR90 Corvette (Fore)",
@@ -243,6 +253,7 @@
         },
         "yt2400": {
           "name": "YT-2400",
+          "multisection": false,
           "pilots": {
             "wildspacefringer": {
               "name": "Wild Space Fringer",
@@ -269,6 +280,7 @@
       "ships": {
         "tiefighter": {
           "name": "TIE Fighter",
+          "multisection": false,
           "pilots": {
             "academypilot": {
               "name": "Academy Pilot",
@@ -310,6 +322,7 @@
         },
         "tieadvanced": {
           "name": "TIE Advanced",
+          "multisection": false,
           "pilots": {
             "maarekstele": {
               "name": "Maarek Stele",
@@ -326,11 +339,16 @@
             "darthvader": {
               "name": "Darth Vader",
               "points": 29
+            },
+            "commanderalozen": {
+              "name": "Commander Alozen",
+              "points": 25
             }
           }
         },
         "tieinterceptor": {
           "name": "TIE Interceptor",
+          "multisection": false,
           "pilots": {
             "alphasquadronpilot": {
               "name": "Alpha Squadron Pilot",
@@ -380,6 +398,7 @@
         },
         "firespray31": {
           "name": "Firespray-31",
+          "multisection": false,
           "pilots": {
             "kathscarlet": {
               "name": "Kath Scarlet",
@@ -401,6 +420,7 @@
         },
         "tiebomber": {
           "name": "TIE Bomber",
+          "multisection": false,
           "pilots": {
             "scimitarsquadronpilot": {
               "name": "Scimitar Squadron Pilot",
@@ -422,6 +442,7 @@
         },
         "lambdaclassshuttle": {
           "name": "Lambda-Class Shuttle",
+          "multisection": false,
           "pilots": {
             "captainkagi": {
               "name": "Captain Kagi",
@@ -443,6 +464,7 @@
         },
         "tiedefender": {
           "name": "TIE Defender",
+          "multisection": false,
           "pilots": {
             "deltasquadronpilot": {
               "name": "Delta Squadron Pilot",
@@ -464,6 +486,7 @@
         },
         "tiephantom": {
           "name": "TIE Phantom",
+          "multisection": false,
           "pilots": {
             "sigmasquadronpilot": {
               "name": "Sigma Squadron Pilot",
@@ -485,6 +508,7 @@
         },
         "vt49decimator": {
           "name": "VT-49 Decimator",
+          "multisection": false,
           "pilots": {
             "patrolleader": {
               "name": "Patrol Leader",
@@ -511,15 +535,29 @@
       "ships": {
         "starviper": {
           "name": "StarViper",
+          "multisection": false,
           "pilots": {
             "princexizor": {
               "name": "Prince Xizor",
               "points": 31
+            },
+            "guri": {
+              "name": "Guri",
+              "points": 30
+            },
+            "blacksunvigo": {
+              "name": "Black Sun Vigo",
+              "points": 27
+            },
+            "blacksunenforcer": {
+              "name": "Black Sun Enforcer",
+              "points": 25
             }
           }
         },
         "m3ainterceptor": {
           "name": "M3-A Interceptor",
+          "multisection": false,
           "pilots": {
             "serissu": {
               "name": "Serissu",
@@ -529,6 +567,7 @@
         },
         "aggressor": {
           "name": "Aggressor",
+          "multisection": false,
           "pilots": {
             "ig88d": {
               "name": "IG-88D",
@@ -538,19 +577,81 @@
         },
         "z95headhunter": {
           "name": "Z-95 Headhunter",
+          "multisection": false,
           "pilots": {
-            "unspoiledps7scumz95pilot": {
-              "name": "Unspoiled PS7 Scum Z-95 Pilot",
+            "ndrusuhlak": {
+              "name": "N'Dru Suhlak",
               "points": 17
+            },
+            "kaatoleeachos": {
+              "name": "Kaa'To Leeachos",
+              "points": 15
+            },
+            "blacksunsoldier": {
+              "name": "Black Sun Soldier",
+              "points": 13
+            },
+            "binayrepirate": {
+              "name": "Binayre Pirate",
+              "points": 12
             }
           }
         },
         "firespray31": {
           "name": "Firespray-31",
+          "multisection": false,
           "pilots": {
             "bobafett": {
               "name": "Boba Fett",
               "points": 39
+            },
+            "kathscarlet": {
+              "name": "Kath Scarlet",
+              "points": 38
+            },
+            "emonazzameen": {
+              "name": "Emon Azzameen",
+              "points": 36
+            },
+            "mandalorianmercenary": {
+              "name": "Mandalorian Mercenary",
+              "points": 35
+            }
+          }
+        },
+        "ywing": {
+          "name": "Y-Wing",
+          "multisection": false,
+          "pilots": {
+            "kavil": {
+              "name": "Kavil",
+              "points": 24
+            },
+            "drearenthal": {
+              "name": "Drea Renthal",
+              "points": 22
+            },
+            "syndicatethug": {
+              "name": "Syndicate Thug",
+              "points": 18
+            }
+          }
+        },
+        "hwk290": {
+          "name": "HWK-290",
+          "multisection": false,
+          "pilots": {
+            "dacebonearm": {
+              "name": "Dace Bonearm",
+              "points": 23
+            },
+            "palobgodalhi": {
+              "name": "Palob Godalhi",
+              "points": 20
+            },
+            "torkilmux": {
+              "name": "Torkil Mux",
+              "points": 19
             }
           }
         }
@@ -573,6 +674,10 @@
         "blasterturret": {
           "name": "Blaster Turret",
           "points": 4
+        },
+        "autoblasterturret": {
+          "name": "Autoblaster Turret",
+          "points": 2
         }
       }
     },
@@ -594,6 +699,10 @@
         "iontorpedoes": {
           "name": "Ion Torpedoes",
           "points": 5
+        },
+        "bombloadout": {
+          "name": "Bomb Loadout",
+          "points": 0
         }
       }
     },
@@ -918,6 +1027,14 @@
         "greedo": {
           "name": "Greedo",
           "points": 1
+        },
+        "k4securitydroid": {
+          "name": "K4 Security Droid",
+          "points": 3
+        },
+        "outlawtech": {
+          "name": "Outlaw Tech",
+          "points": 2
         }
       }
     },
@@ -949,8 +1066,8 @@
           "name": "Proximity Mines",
           "points": 3
         },
-        "protonbomb": {
-          "name": "Proton Bomb",
+        "protonbombs": {
+          "name": "Proton Bombs",
           "points": 5
         }
       }
@@ -977,6 +1094,10 @@
         "accuracycorrector": {
           "name": "Accuracy Corrector",
           "points": 3
+        },
+        "advancedtargetingcomputer": {
+          "name": "Advanced Targeting Computer",
+          "points": 5
         }
       }
     },
@@ -1061,6 +1182,43 @@
         "inertialdampeners": {
           "name": "Inertial Dampeners",
           "points": 1
+        },
+        "deadmansswitch": {
+          "name": "Dead Man's Switch",
+          "points": 2
+        },
+        "feedbackarray": {
+          "name": "Feedback Array",
+          "points": 2
+        },
+        "hotshotblaster": {
+          "name": "\"Hot Shot\" Blaster",
+          "points": 3
+        }
+      }
+    },
+    "samd": {
+      "name": "Salvaged Astromech Droid",
+      "upgrades": {
+        "salvagedastromech": {
+          "name": "Salvaged Astromech",
+          "points": 2
+        },
+        "genius": {
+          "name": "\"Genius\"",
+          "points": 0
+        },
+        "unhingedastromech": {
+          "name": "Unhinged Astromech",
+          "points": 1
+        },
+        "r4b11": {
+          "name": "R4-B11",
+          "points": 3
+        },
+        "r4agromech": {
+          "name": "R4 Agromech",
+          "points": 2
         }
       }
     },
@@ -1122,6 +1280,10 @@
         "tacticaljammer": {
           "name": "Tactical Jammer",
           "points": 1
+        },
+        "autothrusters": {
+          "name": "Autothrusters",
+          "points": 2
         }
       }
     },
@@ -1188,20 +1350,24 @@
           "name": "Virago",
           "points": 1
         },
-        "heavyscykinterceptorcannon": {
-          "name": "\"Heavy Scyk\" Interceptor (Cannon)",
-          "points": 2
-        },
-        "heavyscykinterceptortorpedo": {
-          "name": "\"Heavy Scyk\" Interceptor (Torpedo)",
-          "points": 2
-        },
-        "heavyscykinterceptormissile": {
-          "name": "\"Heavy Scyk\" Interceptor (Missile)",
+        "heavyscykinterceptor": {
+          "name": "\"Heavy Scyk\" Interceptor",
           "points": 2
         },
         "ig2000": {
           "name": "IG-2000",
+          "points": 0
+        },
+        "btla4ywing": {
+          "name": "BTL-A4 Y-Wing",
+          "points": 0
+        },
+        "andrasta": {
+          "name": "Andrasta",
+          "points": 0
+        },
+        "tiex1": {
+          "name": "TIE/x1",
           "points": 0
         }
       }
@@ -1214,7 +1380,7 @@
     $exp.xws = {};
   }
 
-  $exp.xws.version = '0.1.1';
+  $exp.xws.version = '0.2.0';
 
   $exp.xws.canonicalizationExceptions_dict = {
     "Rebel Alliance": "rebels",
@@ -1270,6 +1436,18 @@
     }
     clean_obj.ship = dirty_obj.ship;
     delete dirty_obj.ship;
+    if ($exp.xws.pilot_faction2ship2pilot2obj_dict[faction_key].ships[clean_obj.ship].multisection) {
+      if ('multisection_id' in dirty_obj) {
+        clean_obj.multisection_id = dirty_obj.multisection_id;
+        delete dirty_obj.multisection_id;
+      } else {
+        error_list.push("" + prefix + ".multisection_id: missing");
+      }
+    } else {
+      if ('multisection_id' in dirty_obj) {
+        error_list.push("" + prefix + ".multisection_id: not appropriate for ship type");
+      }
+    }
     if (!dirty_obj.name || !(dirty_obj.name in $exp.xws.pilot_faction2ship2pilot2obj_dict[faction_key].ships[clean_obj.ship].pilots)) {
       return [null, ["" + prefix + ".name: " + dirty_obj.name]];
     }
