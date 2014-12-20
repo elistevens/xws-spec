@@ -65,7 +65,7 @@ R7-T1 | r7t1
 
 Name | Canonical
 -----|----------
-Proton Bomb | protonbomb
+Proton Bombs | protonbombs
 Proximity Mines | proximitymines
 Seismic Charges | seismiccharges
 
@@ -195,6 +195,7 @@ Name | Canonical
 -----|----------
 Advanced Cloaking Device | advancedcloakingdevice
 Anti-Pursuit Lasers | antipursuitlasers
+Autothrusters | autothrusters
 B-Wing/E2 | bwinge2
 Combat Retrofit | combatretrofit
 Countermeasures | countermeasures
@@ -224,6 +225,7 @@ Name | Canonical
 -----|----------
 Accuracy Corrector | accuracycorrector
 Advanced Sensors | advancedsensors
+Advanced Targeting Computer | advancedtargetingcomputer
 Enhanced Scopes | enhancedscopes
 Fire-Control System | firecontrolsystem
 Sensor Jammer | sensorjammer
@@ -257,6 +259,7 @@ Quantum Storm | quantumstorm
 Royal Guard TIE | royalguardtie
 ST-321 | st321
 Slave I | slavei
+TIE/x1 | tiex1
 Tantive IV | tantiveiv
 Virago | virago
 
@@ -322,6 +325,7 @@ Omicron Group Pilot | omicrongrouppilot
 
 Name | Canonical
 -----|----------
+Commander Alozen | commanderalozen
 Darth Vader | darthvader
 Maarek Stele | maarekstele
 Storm Squadron Pilot | stormsquadronpilot
@@ -558,6 +562,9 @@ Serissu | serissu
 
 Name | Canonical
 -----|----------
+Black Sun Enforcer | blacksunenforcer
+Black Sun Vigo | blacksunvigo
+Guri | guri
 Prince Xizor | princexizor
 
 ## Scum and Villainy Y-Wing Pilots

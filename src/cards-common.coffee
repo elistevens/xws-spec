@@ -2,12 +2,11 @@
 exportObj = exports ? this
 
 exportObj.unreleasedExpansions = [
-    "YT-2400 Freighter Expansion Pack"
-    "VT-49 Decimator Expansion Pack"
     "StarViper Expansion Pack"
     "M3-A Interceptor Expansion Pack"
     "IG-2000 Expansion Pack"
     "Most Wanted Expansion Pack"
+    "Imperial Raider Expansion Pack"
 ]
 
 exportObj.isReleased = (data) ->
@@ -378,6 +377,10 @@ exportObj.basicCardData = ->
                 [ 0, 0, 1, 0, 0, 0]
                 [ 0, 0, 1, 0, 0, 0]
             ]
+            multisection: [
+                "CR90 Corvette (Aft)".canonicalize()
+            ]
+            canonical_name: "CR90 Corvette".canonicalize()
         "CR90 Corvette (Aft)":
             name: "CR90 Corvette (Aft)"
             factions: [ "Rebel Alliance", ]
@@ -398,6 +401,10 @@ exportObj.basicCardData = ->
                 [ 0, 0, 1, 0, 0, 0]
                 [ 0, 0, 1, 0, 0, 0]
             ]
+            multisection: [
+                "CR90 Corvette (Fore)".canonicalize()
+            ]
+            canonical_name: "CR90 Corvette".canonicalize()
         "YT-2400":
             name: "YT-2400"
             factions: [ "Rebel Alliance", ]
@@ -449,6 +456,13 @@ exportObj.basicCardData = ->
                 "Target Lock"
                 "Barrel Roll"
                 "Boost"
+            ]
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0, 0, 0]
+                [ 1, 2, 2, 2, 1, 0, 0, 0]
+                [ 1, 1, 2, 1, 1, 0, 0, 0]
+                [ 0, 1, 2, 1, 0, 0, 3, 3]
+                [ 0, 0, 1, 0, 0, 0, 0, 0]
             ]
         "M3-A Interceptor":
             name: "M3-A Interceptor"
@@ -1846,35 +1860,36 @@ exportObj.basicCardData = ->
             ]
         }
         {
-            name: "Unspoiled PS5 StarViper Pilot"
+            name: "Guri"
             faction: "Scum and Villainy"
             id: 101
             unique: true
             ship: "StarViper"
             skill: 5
-            points: 99
+            points: 30
             slots: [
+                "Elite"
                 "Torpedo"
             ]
         }
         {
-            name: "Black ???"
+            name: "Black Sun Vigo"
             faction: "Scum and Villainy"
             id: 102
             ship: "StarViper"
             skill: 3
-            points: 99
+            points: 27
             slots: [
                 "Torpedo"
             ]
         }
         {
-            name: "Black Sun ???"
+            name: "Black Sun Enforcer"
             faction: "Scum and Villainy"
             id: 103
             ship: "StarViper"
             skill: 1
-            points: 99
+            points: 25
             slots: [
                 "Torpedo"
             ]
@@ -2042,7 +2057,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Boba Fett (Scum)"
-            canonical_name: 'bobafett'
+            canonical_name: 'Boba Fett'.canonicalize()
             faction: "Scum and Villainy"
             id: 116
             ship: "Firespray-31"
@@ -2060,7 +2075,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Kath Scarlet (Scum)"
-            canonical_name: 'kathscarlet'
+            canonical_name: 'Kath Scarlet'.canonicalize()
             unique: true
             faction: "Scum and Villainy"
             id: 117
@@ -2221,7 +2236,19 @@ exportObj.basicCardData = ->
             slots: [
             ]
         }
-
+        {
+            name: "Commander Alozen"
+            faction: "Galactic Empire"
+            id: 128
+            ship: "TIE Advanced"
+            unique: true
+            skill: 5
+            points: 25
+            slots: [
+                "Elite"
+                "Missile"
+            ]
+        }
     ]
 
     upgradesById: [
@@ -2520,7 +2547,7 @@ exportObj.basicCardData = ->
             points: 1
         }
         {
-            name: "Proton Bomb"
+            name: "Proton Bombs"
             id: 41
             slot: "Bomb"
             points: 5
@@ -3141,6 +3168,13 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             points: 2
         }
+        {
+            name: 'Advanced Targeting Computer'
+            id: 124
+            slot: "System"
+            points: 5
+            ship: "TIE Advanced"
+        }
     ]
 
     modificationsById: [
@@ -3250,10 +3284,13 @@ exportObj.basicCardData = ->
                 ship.data.large ? false
         }
         {
-            name: "Autoth???"
+            name: "Autothrusters"
             id: 15
-            points: 99
+            points: 2
+            restriction_func: (ship) ->
+                "Boost" in ship.effectiveStats().actions
         }
+        
     ]
 
     titlesById: [
@@ -3447,6 +3484,7 @@ exportObj.basicCardData = ->
         }
         {
             name: '"Heavy Scyk" Interceptor (Cannon)'
+            canonical_name: '"Heavy Scyk" Interceptor'.canonicalize()
             id: 17
             points: 2
             ship: "M3-A Interceptor"
@@ -3459,6 +3497,7 @@ exportObj.basicCardData = ->
         }
         {
             name: '"Heavy Scyk" Interceptor (Torpedo)'
+            canonical_name: '"Heavy Scyk" Interceptor'.canonicalize()
             id: 18
             points: 2
             ship: "M3-A Interceptor"
@@ -3471,6 +3510,7 @@ exportObj.basicCardData = ->
         }
         {
             name: '"Heavy Scyk" Interceptor (Missile)'
+            canonical_name: '"Heavy Scyk" Interceptor'.canonicalize()
             id: 19
             points: 2
             ship: "M3-A Interceptor"
@@ -3507,6 +3547,22 @@ exportObj.basicCardData = ->
                 {
                     type: exportObj.Upgrade
                     slot: "Bomb"
+                }
+            ]
+        }
+        {
+            name: 'TIE/x1'
+            id: 23
+            points: 0
+            ship: "TIE Advanced"
+            confersAddons: [
+                {
+                    type: exportObj.Upgrade
+                    slot: "System"
+                    adjustment_func: (upgrade) ->
+                        copy = $.extend true, {}, upgrade
+                        copy.points = Math.max(0, copy.points - 4)
+                        copy
                 }
             ]
         }
@@ -3695,49 +3751,53 @@ exportObj.setupCardData = (basic_cards, pilot_translations, upgrade_translations
 
     exportObj.titlesByCanonicalName = {}
     for title_name, title of exportObj.titles
-        (exportObj.titlesByCanonicalName ?= {})[title.canonical_name] = title
+        # Special cases :(
+        if title.canonical_name == '"Heavy Scyk" Interceptor'.canonicalize()
+            ((exportObj.titlesByCanonicalName ?= {})[title.canonical_name] ?= []).push title
+        else
+            (exportObj.titlesByCanonicalName ?= {})[title.canonical_name] = title
 
     exportObj.expansions = Object.keys(exportObj.expansions).sort()
 
 exportObj.fixIcons = (data) ->
     if data.text?
         data.text = data.text
-            .replace(/%ASTROMECH%/g, '<i class="xwing-font xwing-font-astromech"></i>')
-            .replace(/%BANKLEFT%/g, '<i class="xwing-font xwing-font-bankleft"></i>')
-            .replace(/%BANKRIGHT%/g, '<i class="xwing-font xwing-font-bankright"></i>')
-            .replace(/%BARRELROLL%/g, '<i class="xwing-font xwing-font-barrelroll"></i>')
-            .replace(/%BOMB%/g, '<i class="xwing-font xwing-font-bomb"></i>')
-            .replace(/%BOOST%/g, '<i class="xwing-font xwing-font-boost"></i>')
-            .replace(/%CANNON%/g, '<i class="xwing-font xwing-font-cannon"></i>')
-            .replace(/%CARGO%/g, '<i class="xwing-font xwing-font-cargo"></i>')
-            .replace(/%CLOAK%/g, '<i class="xwing-font xwing-font-cloak"></i>')
-            .replace(/%COORDINATE%/g, '<i class="xwing-font xwing-font-coordinate"></i>')
-            .replace(/%CRIT%/g, '<i class="xwing-font xwing-font-crit"></i>')
-            .replace(/%CREW%/g, '<i class="xwing-font xwing-font-crew"></i>')
-            .replace(/%ELITE%/g, '<i class="xwing-font xwing-font-elite"></i>')
-            .replace(/%EVADE%/g, '<i class="xwing-font xwing-font-evade"></i>')
-            .replace(/%FOCUS%/g, '<i class="xwing-font xwing-font-focus"></i>')
-            .replace(/%HARDPOINT%/g, '<i class="xwing-font xwing-font-hardpoint"></i>')
-            .replace(/%HIT%/g, '<i class="xwing-font xwing-font-hit"></i>')
-            .replace(/%ILLICIT%/g, '<i class="xwing-font xwing-font-illicit"></i>')
-            .replace(/%JAM%/g, '<i class="xwing-font xwing-font-jam"></i>')
-            .replace(/%KTURN%/g, '<i class="xwing-font xwing-font-kturn"></i>')
-            .replace(/%MISSILE%/g, '<i class="xwing-font xwing-font-missile"></i>')
-            .replace(/%RECOVER%/g, '<i class="xwing-font xwing-font-recover"></i>')
-            .replace(/%REINFORCE%/g, '<i class="xwing-font xwing-font-reinforce"></i>')
-            .replace(/%SALVAGEDASTROMECH%/g, '<i class="xwing-font xwing-font-salvagedastromech"></i>')
-            .replace(/%SLOOPLEFT%/g, '<i class="xwing-font xwing-font-sloopleft"></i>')
-            .replace(/%SLOOPRIGHT%/g, '<i class="xwing-font xwing-font-sloopright"></i>')
-            .replace(/%STRAIGHT%/g, '<i class="xwing-font xwing-font-straight"></i>')
-            .replace(/%STOP%/g, '<i class="xwing-font xwing-font-stop"></i>')
-            .replace(/%SYSTEM%/g, '<i class="xwing-font xwing-font-system"></i>')
-            .replace(/%TARGETLOCK%/g, '<i class="xwing-font xwing-font-targetlock"></i>')
-            .replace(/%TEAM%/g, '<i class="xwing-font xwing-font-team"></i>')
-            .replace(/%TORPEDO%/g, '<i class="xwing-font xwing-font-torpedo"></i>')
-            .replace(/%TURNLEFT%/g, '<i class="xwing-font xwing-font-turnleft"></i>')
-            .replace(/%TURNRIGHT%/g, '<i class="xwing-font xwing-font-turnright"></i>')
-            .replace(/%TURRET%/g, '<i class="xwing-font xwing-font-turret"></i>')
-            .replace(/%UTURN%/g, '<i class="xwing-font xwing-font-kturn"></i>')
+            .replace(/%ASTROMECH%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-astromech"></i>')
+            .replace(/%BANKLEFT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-bankleft"></i>')
+            .replace(/%BANKRIGHT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-bankright"></i>')
+            .replace(/%BARRELROLL%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-barrelroll"></i>')
+            .replace(/%BOMB%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-bomb"></i>')
+            .replace(/%BOOST%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-boost"></i>')
+            .replace(/%CANNON%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-cannon"></i>')
+            .replace(/%CARGO%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-cargo"></i>')
+            .replace(/%CLOAK%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-cloak"></i>')
+            .replace(/%COORDINATE%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-coordinate"></i>')
+            .replace(/%CRIT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-crit"></i>')
+            .replace(/%CREW%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-crew"></i>')
+            .replace(/%ELITE%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-elite"></i>')
+            .replace(/%EVADE%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-evade"></i>')
+            .replace(/%FOCUS%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-focus"></i>')
+            .replace(/%HARDPOINT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-hardpoint"></i>')
+            .replace(/%HIT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-hit"></i>')
+            .replace(/%ILLICIT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-illicit"></i>')
+            .replace(/%JAM%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-jam"></i>')
+            .replace(/%KTURN%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-kturn"></i>')
+            .replace(/%MISSILE%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-missile"></i>')
+            .replace(/%RECOVER%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-recover"></i>')
+            .replace(/%REINFORCE%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-reinforce"></i>')
+            .replace(/%SALVAGEDASTROMECH%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-salvagedastromech"></i>')
+            .replace(/%SLOOPLEFT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-sloopleft"></i>')
+            .replace(/%SLOOPRIGHT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-sloopright"></i>')
+            .replace(/%STRAIGHT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-straight"></i>')
+            .replace(/%STOP%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-stop"></i>')
+            .replace(/%SYSTEM%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-system"></i>')
+            .replace(/%TARGETLOCK%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-targetlock"></i>')
+            .replace(/%TEAM%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-team"></i>')
+            .replace(/%TORPEDO%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-torpedo"></i>')
+            .replace(/%TURNLEFT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-turnleft"></i>')
+            .replace(/%TURNRIGHT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-turnright"></i>')
+            .replace(/%TURRET%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-turret"></i>')
+            .replace(/%UTURN%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-kturn"></i>')
             .replace(/%HUGESHIPONLY%/g, '<span class="card-restriction">Huge Ship only.</span>')
             .replace(/%LARGESHIPONLY%/g, '<span class="card-restriction">Large Ship only.</span>')
             .replace(/%REBELONLY%/g, '<span class="card-restriction">Rebel only.</span>')
@@ -3753,7 +3813,7 @@ exportObj.fixIcons = (data) ->
 exportObj.canonicalizeShipNames = (card_data) ->
     for ship_name, ship_data of card_data.ships
         ship_data.english_name = ship_name
-        ship_data.canonical_name = ship_data.english_name.canonicalize()
+        ship_data.canonical_name ?= ship_data.english_name.canonicalize()
 
 exportObj.renameShip = (english_name, new_name) ->
     exportObj.ships[new_name] = exportObj.ships[english_name]

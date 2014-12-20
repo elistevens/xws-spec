@@ -339,6 +339,10 @@
             "darthvader": {
               "name": "Darth Vader",
               "points": 29
+            },
+            "commanderalozen": {
+              "name": "Commander Alozen",
+              "points": 25
             }
           }
         },
@@ -536,6 +540,18 @@
             "princexizor": {
               "name": "Prince Xizor",
               "points": 31
+            },
+            "guri": {
+              "name": "Guri",
+              "points": 30
+            },
+            "blacksunvigo": {
+              "name": "Black Sun Vigo",
+              "points": 27
+            },
+            "blacksunenforcer": {
+              "name": "Black Sun Enforcer",
+              "points": 25
             }
           }
         },
@@ -1050,8 +1066,8 @@
           "name": "Proximity Mines",
           "points": 3
         },
-        "protonbomb": {
-          "name": "Proton Bomb",
+        "protonbombs": {
+          "name": "Proton Bombs",
           "points": 5
         }
       }
@@ -1078,6 +1094,10 @@
         "accuracycorrector": {
           "name": "Accuracy Corrector",
           "points": 3
+        },
+        "advancedtargetingcomputer": {
+          "name": "Advanced Targeting Computer",
+          "points": 5
         }
       }
     },
@@ -1260,6 +1280,10 @@
         "tacticaljammer": {
           "name": "Tactical Jammer",
           "points": 1
+        },
+        "autothrusters": {
+          "name": "Autothrusters",
+          "points": 2
         }
       }
     },
@@ -1340,6 +1364,10 @@
         },
         "andrasta": {
           "name": "Andrasta",
+          "points": 0
+        },
+        "tiex1": {
+          "name": "TIE/x1",
           "points": 0
         }
       }
