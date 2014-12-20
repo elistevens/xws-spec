@@ -1,7 +1,7 @@
 #'use strict';
 $exp = exports ? this
 $exp.xws ?= {}
-$exp.xws.version = '0.1.1'
+$exp.xws.version = '0.2.0'
 
 $exp.xws.canonicalizationExceptions_dict = {
     "Rebel Alliance": "rebels",
@@ -46,6 +46,16 @@ _validateSquadron_pilot = (faction_key, dirty_obj, prefix, vendor=true) ->
         return [null, ["#{prefix}.ship: #{dirty_obj.ship}"]]
     clean_obj.ship = dirty_obj.ship
     delete dirty_obj.ship
+
+    if $exp.xws.pilot_faction2ship2pilot2obj_dict[faction_key].ships[clean_obj.ship].multisection
+        if 'multisection_id' of dirty_obj
+            clean_obj.multisection_id = dirty_obj.multisection_id
+            delete dirty_obj.multisection_id
+        else
+            error_list.push "#{prefix}.multisection_id: missing"
+    else
+        if 'multisection_id' of dirty_obj
+            error_list.push "#{prefix}.multisection_id: not appropriate for ship type"
 
     if not dirty_obj.name or dirty_obj.name not of $exp.xws.pilot_faction2ship2pilot2obj_dict[faction_key].ships[clean_obj.ship].pilots
         return [null, ["#{prefix}.name: #{dirty_obj.name}"]]

@@ -4,8 +4,12 @@ $exp = exports ? this
 $exp.xws.pilot_faction2ship2pilot2obj_dict = {}
 for pilot in $exp.basicCardData().pilotsById
     if pilot.points < 99 and pilot.points > 0
+
+        multisection = false
+
         if pilot.ship == 'CR90 Corvette (Fore)' or pilot.ship == 'CR90 Corvette (Aft)'
             pilot.ship = 'CR90 Corvette'
+            multisection = true
 
         faction_key = $exp.xws.canonicalize(pilot.faction)
         if faction_key not of $exp.xws.pilot_faction2ship2pilot2obj_dict
@@ -18,11 +22,14 @@ for pilot in $exp.basicCardData().pilotsById
         if ship_key not of $exp.xws.pilot_faction2ship2pilot2obj_dict[faction_key].ships
             $exp.xws.pilot_faction2ship2pilot2obj_dict[faction_key].ships[ship_key] = {
                 name: pilot.ship,
+                multisection: multisection,
                 pilots: {}
             }
 
         if pilot.name == 'Boba Fett (Scum)'
             pilot.name = 'Boba Fett'
+        if pilot.name == 'Kath Scarlet (Scum)'
+            pilot.name = 'Kath Scarlet'
 
         name_key = $exp.xws.canonicalize(pilot.name)
         $exp.xws.pilot_faction2ship2pilot2obj_dict[faction_key].ships[ship_key].pilots[name_key] = {
