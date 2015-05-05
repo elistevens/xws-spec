@@ -11,6 +11,10 @@ for pilot in $exp.basicCardData().pilotsById
             pilot.ship = 'CR90 Corvette'
             multisection = true
 
+        else if pilot.ship == 'Raider-class Corvette (Fore)' or pilot.ship == 'Raider-class Corvette (Aft)'
+            pilot.ship = 'Raider-class Corvette'
+            multisection = true
+
         faction_key = $exp.xws.canonicalize(pilot.faction)
         if faction_key not of $exp.xws.pilot_faction2ship2pilot2obj_dict
             $exp.xws.pilot_faction2ship2pilot2obj_dict[faction_key] = {
