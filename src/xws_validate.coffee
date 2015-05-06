@@ -102,10 +102,36 @@ $exp.xws.validateSquadron = (dirty_obj, vendor=true, ignore=[]) ->
         clean_obj.version = $exp.xws.version
         delete dirty_obj.version
 
-        for attr in ['name', 'description', 'vendor']
+        for attr in ['name', 'description']
             if attr of dirty_obj and dirty_obj[attr]
-                clean_obj[attr] = dirty_obj[attr]
+                if typeof dirty_obj[attr] isnt typeof ''
+                    error_list.push "#{attr} isn't a string: #{dirty_obj[attr]}"
+                else
+                    clean_obj[attr] = dirty_obj[attr]
             delete dirty_obj[attr]
+
+        for attr in ['vendor']
+            if attr of dirty_obj and dirty_obj[attr]
+                if typeof dirty_obj[attr] isnt typeof {}
+                    error_list.push "#{attr} isn't a string: #{dirty_obj[attr]}"
+                else
+                    clean_obj[attr] = dirty_obj[attr]
+            delete dirty_obj[attr]
+
+        for attr in ['obstacles']
+            if attr of dirty_obj and dirty_obj[attr]
+                if typeof dirty_obj[attr] isnt typeof []
+                    error_list.push "#{attr} isn't an Array: #{dirty_obj[attr]}"
+                else
+                    for s, i in dirty_obj[attr]
+                        if typeof dirty_obj[attr][i] isnt typeof ''
+                            error_list.push "#{attr}[#{i}] isn't a string: #{typeof dirty_obj[attr][i]}"
+                    if dirty_obj[attr].length != 3
+                        error_list.push "#{attr} isn't length 3: #{dirty_obj[attr]}"
+
+                    clean_obj[attr] = dirty_obj[attr]
+            delete dirty_obj[attr]
+
         delete dirty_obj.points
 
         if not dirty_obj.faction or dirty_obj.faction not of $exp.xws.pilot_faction2ship2pilot2obj_dict

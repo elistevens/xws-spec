@@ -1633,7 +1633,7 @@
   };
 
   $exp.xws.validateSquadron = function(dirty_obj, vendor, ignore) {
-    var attr, clean_obj, dirty_key, dirty_value, error, error_list, error_sublist, i, key, pilot_clean, pilot_dirty, _i, _j, _len, _len1, _ref, _ref1, _ref2;
+    var attr, clean_obj, dirty_key, dirty_value, error, error_list, error_sublist, i, key, pilot_clean, pilot_dirty, s, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _ref, _ref1, _ref2, _ref3, _ref4, _ref5;
     if (vendor == null) {
       vendor = true;
     }
@@ -1655,11 +1655,49 @@
       }
       clean_obj.version = $exp.xws.version;
       delete dirty_obj.version;
-      _ref = ['name', 'description', 'vendor'];
+      _ref = ['name', 'description'];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         attr = _ref[_i];
         if (attr in dirty_obj && dirty_obj[attr]) {
-          clean_obj[attr] = dirty_obj[attr];
+          if (typeof dirty_obj[attr] !== typeof '') {
+            error_list.push("" + attr + " isn't a string: " + dirty_obj[attr]);
+          } else {
+            clean_obj[attr] = dirty_obj[attr];
+          }
+        }
+        delete dirty_obj[attr];
+      }
+      _ref1 = ['vendor'];
+      for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+        attr = _ref1[_j];
+        if (attr in dirty_obj && dirty_obj[attr]) {
+          if (typeof dirty_obj[attr] !== typeof {}) {
+            error_list.push("" + attr + " isn't a string: " + dirty_obj[attr]);
+          } else {
+            clean_obj[attr] = dirty_obj[attr];
+          }
+        }
+        delete dirty_obj[attr];
+      }
+      _ref2 = ['obstacles'];
+      for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
+        attr = _ref2[_k];
+        if (attr in dirty_obj && dirty_obj[attr]) {
+          if (typeof dirty_obj[attr] !== typeof []) {
+            error_list.push("" + attr + " isn't an Array: " + dirty_obj[attr]);
+          } else {
+            _ref3 = dirty_obj[attr];
+            for (i = _l = 0, _len3 = _ref3.length; _l < _len3; i = ++_l) {
+              s = _ref3[i];
+              if (typeof dirty_obj[attr][i] !== typeof '') {
+                error_list.push("" + attr + "[" + i + "] isn't a string: " + (typeof dirty_obj[attr][i]));
+              }
+            }
+            if (dirty_obj[attr].length !== 3) {
+              error_list.push("" + attr + " isn't length 3: " + dirty_obj[attr]);
+            }
+            clean_obj[attr] = dirty_obj[attr];
+          }
         }
         delete dirty_obj[attr];
       }
@@ -1669,10 +1707,10 @@
       }
       clean_obj.faction = dirty_obj.faction;
       delete dirty_obj.faction;
-      _ref1 = dirty_obj.pilots || [];
-      for (i = _j = 0, _len1 = _ref1.length; _j < _len1; i = ++_j) {
-        pilot_dirty = _ref1[i];
-        _ref2 = _validateSquadron_pilot(clean_obj.faction, pilot_dirty, "squadron.pilots[" + i + "]", vendor), pilot_clean = _ref2[0], error_sublist = _ref2[1];
+      _ref4 = dirty_obj.pilots || [];
+      for (i = _m = 0, _len4 = _ref4.length; _m < _len4; i = ++_m) {
+        pilot_dirty = _ref4[i];
+        _ref5 = _validateSquadron_pilot(clean_obj.faction, pilot_dirty, "squadron.pilots[" + i + "]", vendor), pilot_clean = _ref5[0], error_sublist = _ref5[1];
         if (pilot_clean) {
           clean_obj.pilots.push(pilot_clean);
         }

@@ -8,7 +8,7 @@
     "properties": {
         "version": {
             "type": "string",
-            "pattern" : "^[0-9]+\.[0-9]+\.[0-9]+$",
+            "pattern" : "^[0-9]+\\.[0-9]+\\.[0-9]+$",
             "description": "The version of the XWS spec used to create this data"
         },
         "name": {
@@ -27,6 +27,15 @@
         "description": {
             "type": "string",
             "description": "A description of this squadron."
+        },
+        "obstacles": {
+            "type": "array",
+            "description": "Array of three Strings, each being an identifier for the obstacle chosen for tournament use.",
+            "maxItems": 3,
+            "minItems": 3,
+            "items": {
+                "type": "string"
+            }
         },
         "pilots": {
             "type": "array",

@@ -60,6 +60,7 @@ Mandatory | pilots | Array | List of one or more pilots; see below.
  | | |
 Optional | name | String | Human-readable squadron name.
 Optional | description | String | Text description or notes for the squadron.
+Optional | obstacles | Array | Array of three Strings, each being an identifier for the obstacle chosen for tournament use.
  | | |
 Ignored | points | Integer | Total point cost of the squadron. MUST be ignored by importing applications; for human readability only.
 Ignored | vendor | Dictionary | An object used to store vendor-specific data; see above.
