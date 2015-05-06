@@ -1,4 +1,4 @@
-# X-Wing Squadron Specification version 0.2.0
+# X-Wing Squadron Specification version 0.2.1
 
 This specification facilitates the export and subsequent import of squadrons for
 FFG's X-Wing Miniatures game from one compliant application to another.
@@ -302,7 +302,7 @@ The version number SHALL be incremented when FFG releases errata that changes
 the point cost of any pilots or cards.
 
 Updating the version should include change the number in the README.md,
-src/xws_validate.coffee, and bower.json
+src/xws_validate.coffee, bower.json, and package.json files.
 
 
 # QR Code Support (Experimental)
