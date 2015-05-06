@@ -4,6 +4,7 @@
     "points": 100,
     "version": "0.2.0",
     "description": "Tycho leads a flight",
+    "obstacles": ["core-asteroid-5", "vt49decimator-debris-2", "yt2400-debris-0"],
     "pilots": [
         {
             "name": "tychocelchu",
@@ -85,9 +86,9 @@
     "vendor": {
         "voidstate": {
             "squadron_id": 2498,
-            "link": "http\/\/xwing-builder.co.uk\/view\/2498\/2-a-wings-2-x-wings",
+            "link": "http://xwing-builder.co.uk/view/2498/2-a-wings-2-x-wings",
             "builder": "Voidstate's Unofficial X-Wing Squadron Builder",
-            "builder_link": "http\/\/xwing-builder.co.uk\/build"
+            "builder_link": "http://xwing-builder.co.uk/build"
         }
     }
 }

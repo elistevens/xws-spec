@@ -272,6 +272,16 @@
               "points": 36
             }
           }
+        },
+        "kwing": {
+          "name": "K-Wing",
+          "multisection": false,
+          "pilots": {
+            "mirandadoni": {
+              "name": "Miranda Doni",
+              "points": 29
+            }
+          }
         }
       }
     },
@@ -343,6 +353,18 @@
             "commanderalozen": {
               "name": "Commander Alozen",
               "points": 25
+            },
+            "junoeclipse": {
+              "name": "Juno Eclipse",
+              "points": 28
+            },
+            "zertikstrom": {
+              "name": "Zertik Strom",
+              "points": 26
+            },
+            "lieutenantcolzet": {
+              "name": "Lieutenant Colzet",
+              "points": 23
             }
           }
         },
@@ -527,6 +549,30 @@
               "points": 46
             }
           }
+        },
+        "raiderclasscorvette": {
+          "name": "Raider-class Corvette",
+          "multisection": true,
+          "pilots": {
+            "raiderclasscorvettefore": {
+              "name": "Raider-class Corvette (Fore)",
+              "points": 50
+            },
+            "raiderclasscorvetteaft": {
+              "name": "Raider-class Corvette (Aft)",
+              "points": 50
+            }
+          }
+        },
+        "tiepunisher": {
+          "name": "TIE Punisher",
+          "multisection": false,
+          "pilots": {
+            "redline": {
+              "name": "\"Redline\"",
+              "points": 27
+            }
+          }
         }
       }
     },
@@ -562,6 +608,18 @@
             "serissu": {
               "name": "Serissu",
               "points": 20
+            },
+            "laetinashera": {
+              "name": "Laetin A'shera",
+              "points": 18
+            },
+            "tansariipointveteran": {
+              "name": "Tansarii Point Veteran",
+              "points": 17
+            },
+            "cartelspacer": {
+              "name": "Cartel Spacer",
+              "points": 14
             }
           }
         },
@@ -569,6 +627,18 @@
           "name": "Aggressor",
           "multisection": false,
           "pilots": {
+            "ig88a": {
+              "name": "IG-88A",
+              "points": 36
+            },
+            "ig88b": {
+              "name": "IG-88B",
+              "points": 36
+            },
+            "ig88c": {
+              "name": "IG-88C",
+              "points": 36
+            },
             "ig88d": {
               "name": "IG-88D",
               "points": 36
@@ -631,6 +701,10 @@
               "name": "Drea Renthal",
               "points": 22
             },
+            "hiredgun": {
+              "name": "Hired Gun",
+              "points": 20
+            },
             "syndicatethug": {
               "name": "Syndicate Thug",
               "points": 18
@@ -652,6 +726,30 @@
             "torkilmux": {
               "name": "Torkil Mux",
               "points": 19
+            },
+            "spicerunner": {
+              "name": "Spice Runner",
+              "points": 16
+            }
+          }
+        },
+        "yv666": {
+          "name": "YV-666",
+          "multisection": false,
+          "pilots": {
+            "bossk": {
+              "name": "Bossk",
+              "points": 35
+            }
+          }
+        },
+        "kihraxzfighter": {
+          "name": "Kihraxz Fighter",
+          "multisection": false,
+          "pilots": {
+            "talonbanecobra": {
+              "name": "Talonbane Cobra",
+              "points": 28
             }
           }
         }
@@ -703,6 +801,10 @@
         "bombloadout": {
           "name": "Bomb Loadout",
           "points": 0
+        },
+        "extramunitions": {
+          "name": "Extra Munitions",
+          "points": 2
         }
       }
     },
@@ -853,6 +955,10 @@
         "bodyguard": {
           "name": "Bodyguard",
           "points": 2
+        },
+        "calculation": {
+          "name": "Calculation",
+          "points": 1
         }
       }
     },
@@ -1035,6 +1141,18 @@
         "outlawtech": {
           "name": "Outlaw Tech",
           "points": 2
+        },
+        "grandmofftarkin": {
+          "name": "Grand Moff Tarkin",
+          "points": 6
+        },
+        "captainneeda": {
+          "name": "Captain Needa",
+          "points": 2
+        },
+        "admiralozzel": {
+          "name": "Admiral Ozzel",
+          "points": 2
         }
       }
     },
@@ -1052,6 +1170,14 @@
         "autoblaster": {
           "name": "Autoblaster",
           "points": 5
+        },
+        "flechettecannon": {
+          "name": "Flechette Cannon",
+          "points": 2
+        },
+        "manglercannon": {
+          "name": "\"Mangler\" Cannon",
+          "points": 4
         }
       }
     },
@@ -1069,6 +1195,10 @@
         "protonbombs": {
           "name": "Proton Bombs",
           "points": 5
+        },
+        "clustermines": {
+          "name": "Cluster Mines",
+          "points": 4
         }
       }
     },
@@ -1156,6 +1286,10 @@
         "quadlasercannons": {
           "name": "Quad Laser Cannons",
           "points": 6
+        },
+        "ioncannonbattery": {
+          "name": "Ion Cannon Battery",
+          "points": 6
         }
       }
     },
@@ -1194,6 +1328,10 @@
         "hotshotblaster": {
           "name": "\"Hot Shot\" Blaster",
           "points": 3
+        },
+        "glitterstim": {
+          "name": "Glitterstim",
+          "points": 2
         }
       }
     },
@@ -1284,6 +1422,10 @@
         "autothrusters": {
           "name": "Autothrusters",
           "points": 2
+        },
+        "advancedslam": {
+          "name": "Advanced SLAM",
+          "points": 2
         }
       }
     },
@@ -1369,6 +1511,10 @@
         "tiex1": {
           "name": "TIE/x1",
           "points": 0
+        },
+        "houndstooth": {
+          "name": "Hound's Tooth",
+          "points": 6
         }
       }
     }
@@ -1487,7 +1633,7 @@
   };
 
   $exp.xws.validateSquadron = function(dirty_obj, vendor, ignore) {
-    var attr, clean_obj, dirty_key, dirty_value, error, error_list, error_sublist, i, key, pilot_clean, pilot_dirty, _i, _j, _len, _len1, _ref, _ref1, _ref2;
+    var attr, clean_obj, dirty_key, dirty_value, error, error_list, error_sublist, i, key, pilot_clean, pilot_dirty, s, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _ref, _ref1, _ref2, _ref3, _ref4, _ref5;
     if (vendor == null) {
       vendor = true;
     }
@@ -1509,11 +1655,49 @@
       }
       clean_obj.version = $exp.xws.version;
       delete dirty_obj.version;
-      _ref = ['name', 'description', 'vendor'];
+      _ref = ['name', 'description'];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         attr = _ref[_i];
         if (attr in dirty_obj && dirty_obj[attr]) {
-          clean_obj[attr] = dirty_obj[attr];
+          if (typeof dirty_obj[attr] !== typeof '') {
+            error_list.push("" + attr + " isn't a string: " + dirty_obj[attr]);
+          } else {
+            clean_obj[attr] = dirty_obj[attr];
+          }
+        }
+        delete dirty_obj[attr];
+      }
+      _ref1 = ['vendor'];
+      for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+        attr = _ref1[_j];
+        if (attr in dirty_obj && dirty_obj[attr]) {
+          if (typeof dirty_obj[attr] !== typeof {}) {
+            error_list.push("" + attr + " isn't a string: " + dirty_obj[attr]);
+          } else {
+            clean_obj[attr] = dirty_obj[attr];
+          }
+        }
+        delete dirty_obj[attr];
+      }
+      _ref2 = ['obstacles'];
+      for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
+        attr = _ref2[_k];
+        if (attr in dirty_obj && dirty_obj[attr]) {
+          if (typeof dirty_obj[attr] !== typeof []) {
+            error_list.push("" + attr + " isn't an Array: " + dirty_obj[attr]);
+          } else {
+            _ref3 = dirty_obj[attr];
+            for (i = _l = 0, _len3 = _ref3.length; _l < _len3; i = ++_l) {
+              s = _ref3[i];
+              if (typeof dirty_obj[attr][i] !== typeof '') {
+                error_list.push("" + attr + "[" + i + "] isn't a string: " + (typeof dirty_obj[attr][i]));
+              }
+            }
+            if (dirty_obj[attr].length !== 3) {
+              error_list.push("" + attr + " isn't length 3: " + dirty_obj[attr]);
+            }
+            clean_obj[attr] = dirty_obj[attr];
+          }
         }
         delete dirty_obj[attr];
       }
@@ -1523,10 +1707,10 @@
       }
       clean_obj.faction = dirty_obj.faction;
       delete dirty_obj.faction;
-      _ref1 = dirty_obj.pilots || [];
-      for (i = _j = 0, _len1 = _ref1.length; _j < _len1; i = ++_j) {
-        pilot_dirty = _ref1[i];
-        _ref2 = _validateSquadron_pilot(clean_obj.faction, pilot_dirty, "squadron.pilots[" + i + "]", vendor), pilot_clean = _ref2[0], error_sublist = _ref2[1];
+      _ref4 = dirty_obj.pilots || [];
+      for (i = _m = 0, _len4 = _ref4.length; _m < _len4; i = ++_m) {
+        pilot_dirty = _ref4[i];
+        _ref5 = _validateSquadron_pilot(clean_obj.faction, pilot_dirty, "squadron.pilots[" + i + "]", vendor), pilot_clean = _ref5[0], error_sublist = _ref5[1];
         if (pilot_clean) {
           clean_obj.pilots.push(pilot_clean);
         }

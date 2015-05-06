@@ -2,11 +2,11 @@
 exportObj = exports ? this
 
 exportObj.unreleasedExpansions = [
-    "StarViper Expansion Pack"
-    "M3-A Interceptor Expansion Pack"
-    "IG-2000 Expansion Pack"
-    "Most Wanted Expansion Pack"
     "Imperial Raider Expansion Pack"
+    "Hound's Tooth Expansion Pack"
+    "Kihraxz Fighter Expansion Pack"
+    "K-Wing Expansion Pack"
+    "TIE Punisher Expansion Pack"
 ]
 
 exportObj.isReleased = (data) ->
@@ -18,6 +18,9 @@ String::canonicalize = ->
     this.toLowerCase()
         .replace(/[^a-z0-9]/g, '')
         .replace(/\s+/g, '-')
+
+exportObj.hugeOnly = (ship) ->
+    ship.data.huge ? false
 
 # Returns an independent copy of the data which can be modified by translation
 # modules.
@@ -407,6 +410,7 @@ exportObj.basicCardData = ->
             canonical_name: "CR90 Corvette".canonicalize()
         "YT-2400":
             name: "YT-2400"
+            canonical_name: "YT-2400 Freighter".canonicalize()
             factions: [ "Rebel Alliance", ]
             attack: 2
             agility: 2
@@ -477,6 +481,14 @@ exportObj.basicCardData = ->
                 "Barrel Roll"
                 "Evade"
             ]
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0 ]
+                [ 1, 2, 0, 2, 1, 0 ]
+                [ 1, 2, 2, 2, 1, 0 ]
+                [ 0, 1, 2, 1, 0, 3 ]
+                [ 0, 0, 1, 0, 0, 0 ]
+                [ 0, 0, 0, 0, 0, 3 ]
+            ]
         "Aggressor":
             name: "Aggressor"
             factions: [ "Scum and Villainy" ]
@@ -491,6 +503,88 @@ exportObj.basicCardData = ->
                 "Evade"
             ]
             large: true
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0, 0, 0 ]
+                [ 1, 2, 2, 2, 1, 0, 0, 0 ]
+                [ 1, 2, 2, 2, 1, 0, 0, 0 ]
+                [ 0, 2, 2, 2, 0, 0, 3, 3 ]
+                [ 0, 0, 0, 0, 0, 3, 0, 0 ]
+            ]
+        "Raider-class Corvette (Fore)":
+            name: "Raider-class Corvette (Fore)"
+            factions: [ "Galactic Empire" ]
+            attack: 4
+            agility: 0
+            hull: 8
+            shields: 6
+            actions: [
+                "Recover"
+                "Reinforce"
+            ]
+            huge: true
+        "Raider-class Corvette (Aft)":
+            name: "Raider-class Corvette (Aft)"
+            factions: [ "Galactic Empire" ]
+            energy: 6
+            agility: 0
+            hull: 8
+            shields: 4
+            actions: [
+                "Coordinate"
+                "Target Lock"
+            ]
+            huge: true
+        "YV-666":
+            name: "YV-666"
+            factions: [ "Scum and Villainy" ]
+            attack: 3
+            agility: 1
+            hull: 6
+            shields: 6
+            large: true
+            actions: [
+                "Focus"
+                "Target Lock"
+            ]
+            maneuvers: []
+        "Kihraxz Fighter":
+            name: "Kihraxz Fighter"
+            factions: ["Scum and Villainy"]
+            attack: 3
+            agility: 2
+            hull: 4
+            shields: 1
+            actions: [
+                "Focus"
+                "Target Lock"
+            ]
+            maneuvers: []
+        "K-Wing":
+            name: "K-Wing"
+            factions: ["Rebel Alliance"]
+            attack: 2
+            agility: 1
+            hull: 5
+            shields: 4
+            actions: [
+                "Focus"
+                "Target Lock"
+                "SLAM"
+            ]
+            maneuvers: []
+        "TIE Punisher":
+            name: "TIE Punisher"
+            factions: ["Galactic Empire"]
+            attack: 2
+            agility: 1
+            hull: 6
+            shields: 3
+            actions: [
+                "Focus"
+                "Target Lock"
+                "Boost"
+            ]
+            maneuvers: []
 
     # name field is for convenience only
     pilotsById: [
@@ -1912,27 +2006,28 @@ exportObj.basicCardData = ->
             id: 105
             ship: "M3-A Interceptor"
             skill: 6
-            points: 99
+            points: 18
             unique: true
             slots: [ ]
         }
         {
-            name: "Tansarii ???"
+            name: "Tansarii Point Veteran"
             faction: "Scum and Villainy"
             id: 106
             ship: "M3-A Interceptor"
             skill: 5
-            points: 99
+            points: 17
             slots: [
+                "Elite"
             ]
         }
         {
-            name: "Cartel ???"
+            name: "Cartel Spacer"
             faction: "Scum and Villainy"
             id: 107
             ship: "M3-A Interceptor"
             skill: 2
-            points: 99
+            points: 14
             slots: [ ]
         }
         {
@@ -1942,7 +2037,7 @@ exportObj.basicCardData = ->
             unique: true
             ship: "Aggressor"
             skill: 6
-            points: 99
+            points: 36
             slots: [
                 "Elite"
                 "System"
@@ -1959,7 +2054,7 @@ exportObj.basicCardData = ->
             unique: true
             ship: "Aggressor"
             skill: 6
-            points: 99
+            points: 36
             slots: [
                 "Elite"
                 "System"
@@ -1976,7 +2071,7 @@ exportObj.basicCardData = ->
             unique: true
             ship: "Aggressor"
             skill: 6
-            points: 99
+            points: 36
             slots: [
                 "Elite"
                 "System"
@@ -2155,12 +2250,12 @@ exportObj.basicCardData = ->
             ]
         }
         {
-            name: "Unspoiled PS4 Scum Y-Wing Pilot"
+            name: "Hired Gun"
             faction: "Scum and Villainy"
             id: 122
             ship: "Y-Wing"
             skill: 4
-            points: 99
+            points: 20
             slots: [
                 "Turret"
                 "Torpedo"
@@ -2227,13 +2322,16 @@ exportObj.basicCardData = ->
             ]
         }
         {
-            name: "Unspoiled PS1 Scum HWK Pilot"
+            name: "Spice Runner"
             faction: "Scum and Villainy"
             id: 127
             ship: "HWK-290"
             skill: 1
-            points: 99
+            points: 16
             slots: [
+                "Turret"
+                "Crew"
+                "Illicit"
             ]
         }
         {
@@ -2249,6 +2347,337 @@ exportObj.basicCardData = ->
                 "Missile"
             ]
         }
+        {
+            name: "Raider-class Corvette (Fore)"
+            faction: "Galactic Empire"
+            id: 129
+            ship: "Raider-class Corvette (Fore)"
+            skill: 4
+            points: 50
+            epic: true
+            slots: [
+                "Hardpoint"
+                "Team"
+                "Cargo"
+            ]
+        }
+        {
+            name: "Raider-class Corvette (Aft)"
+            faction: "Galactic Empire"
+            id: 130
+            ship: "Raider-class Corvette (Aft)"
+            skill: 4
+            points: 50
+            epic: true
+            slots: [
+                "Crew"
+                "Crew"
+                "Hardpoint"
+                "Hardpoint"
+                "Team"
+                "Team"
+                "Cargo"
+            ]
+        }
+        {
+            name: "Bossk"
+            faction: "Scum and Villainy"
+            id: 131
+            ship: "YV-666"
+            unique: true
+            skill: 7
+            points: 35
+            slots: [
+                "Elite"
+                "Cannon"
+                "Missile"
+                "Crew"
+                "Crew"
+                "Crew"
+                "Illicit"
+            ]
+        }
+        {
+            name: "Unspoiled PS6 YV-666 Pilot"
+            faction: "Scum and Villainy"
+            id: 132
+            ship: "YV-666"
+            unique: true
+            skill: 6
+            points: 99
+            slots: [
+                "Cannon"
+                "Missile"
+                "Crew"
+                "Crew"
+                "Crew"
+                "Illicit"
+            ]
+        }
+        {
+            name: "Unspoiled PS5 YV-666 Pilot"
+            faction: "Scum and Villainy"
+            id: 133
+            ship: "YV-666"
+            unique: true
+            skill: 5
+            points: 99
+            slots: [
+                "Cannon"
+                "Missile"
+                "Crew"
+                "Crew"
+                "Crew"
+                "Illicit"
+            ]
+        }
+        {
+            name: "Unspoiled PS2 YV-666 Pilot"
+            faction: "Scum and Villainy"
+            id: 134
+            ship: "YV-666"
+            skill: 2
+            points: 99
+            slots: [
+                "Cannon"
+                "Missile"
+                "Crew"
+                "Crew"
+                "Crew"
+                "Illicit"
+            ]
+        }
+        {
+            name: "Talonbane Cobra"
+            unique: true
+            id: 135
+            faction: "Scum and Villainy"
+            ship: "Kihraxz Fighter"
+            skill: 9
+            slots: [
+                "Elite"
+                "Missile"
+                "Illicit"
+            ]
+            points: 28
+        }
+        {
+            name: "Unspoiled PS6 Kihraxz Pilot"
+            unique: true
+            id: 136
+            faction: "Scum and Villainy"
+            ship: "Kihraxz Fighter"
+            skill: 6
+            slots: [
+                "Missile"
+                "Illicit"
+            ]
+            points: 99
+        }
+        {
+            name: "Unspoiled PS5 Kihraxz Pilot"
+            faction: "Scum and Villainy"
+            id: 137
+            ship: "Kihraxz Fighter"
+            skill: 5
+            slots: [
+                "Missile"
+                "Illicit"
+            ]
+            points: 99
+        }
+        {
+            name: "Unspoiled PS2 Kihraxz Pilot"
+            faction: "Scum and Villainy"
+            id: 138
+            ship: "Kihraxz Fighter"
+            skill: 2
+            slots: [
+                "Missile"
+                "Illicit"
+            ]
+            points: 99
+        }
+        {
+            name: "Miranda Doni"
+            unique: true
+            id: 139
+            faction: "Rebel Alliance"
+            ship: "K-Wing"
+            skill: 8
+            slots: [
+                "Turret"
+                "Torpedo"
+                "Torpedo"
+                "Missile"
+                "Crew"
+                "Bomb"
+                "Bomb"
+            ]
+            points: 29
+        }
+        {
+            name: "Unspoiled PS6 K-Wing Pilot"
+            unique: true
+            id: 140
+            faction: "Rebel Alliance"
+            ship: "K-Wing"
+            skill: 6
+            slots: [
+                "Turret"
+                "Torpedo"
+                "Torpedo"
+                "Missile"
+                "Crew"
+                "Bomb"
+                "Bomb"
+            ]
+            points: 99
+        }
+        {
+            name: "Unspoiled PS4 K-Wing Pilot"
+            faction: "Rebel Alliance"
+            id: 141
+            ship: "K-Wing"
+            skill: 4
+            slots: [
+                "Turret"
+                "Torpedo"
+                "Torpedo"
+                "Missile"
+                "Crew"
+                "Bomb"
+                "Bomb"
+            ]
+            points: 99
+        }
+        {
+            name: "Unspoiled PS2 K-Wing Pilot"
+            faction: "Rebel Alliance"
+            id: 142
+            ship: "K-Wing"
+            skill: 2
+            slots: [
+                "Turret"
+                "Torpedo"
+                "Torpedo"
+                "Missile"
+                "Crew"
+                "Bomb"
+                "Bomb"
+            ]
+            points: 99
+        }
+        {
+            name: '"Redline"'
+            unique: true
+            id: 143
+            faction: "Galactic Empire"
+            ship: "TIE Punisher"
+            skill: 7
+            slots: [
+                "System"
+                "Torpedo"
+                "Torpedo"
+                "Missile"
+                "Missile"
+                "Bomb"
+                "Bomb"
+            ]
+            points: 27
+        }
+        {
+            name: 'Unspoiled PS6 TIE Punisher Pilot'
+            unique: true
+            id: 144
+            faction: "Galactic Empire"
+            ship: "TIE Punisher"
+            skill: 6
+            slots: [
+                "System"
+                "Torpedo"
+                "Torpedo"
+                "Missile"
+                "Missile"
+                "Bomb"
+                "Bomb"
+            ]
+            points: 99
+        }
+        {
+            name: 'Unspoiled PS4 TIE Punisher Pilot'
+            faction: "Galactic Empire"
+            id: 145
+            ship: "TIE Punisher"
+            skill: 4
+            slots: [
+                "System"
+                "Torpedo"
+                "Torpedo"
+                "Missile"
+                "Missile"
+                "Bomb"
+                "Bomb"
+            ]
+            points: 99
+        }
+        {
+            name: 'Unspoiled PS2 TIE Punisher Pilot'
+            faction: "Galactic Empire"
+            id: 146
+            ship: "TIE Punisher"
+            skill: 2
+            slots: [
+                "System"
+                "Torpedo"
+                "Torpedo"
+                "Missile"
+                "Missile"
+                "Bomb"
+                "Bomb"
+            ]
+            points: 99
+        }
+
+        {
+            name: "Juno Eclipse"
+            id: 147
+            faction: "Galactic Empire"
+            ship: "TIE Advanced"
+            unique: true
+            skill: 8
+            points: 28
+            slots: [
+                "Elite"
+                "Missile"
+            ]
+        }
+        {
+            name: "Zertik Strom"
+            id: 148
+            faction: "Galactic Empire"
+            ship: "TIE Advanced"
+            unique: true
+            skill: 6
+            points: 26
+            slots: [
+                "Elite"
+                "Missile"
+            ]
+        }
+        {
+            name: "Lieutenant Colzet"
+            id: 149
+            faction: "Galactic Empire"
+            ship: "TIE Advanced"
+            unique: true
+            skill: 3
+            points: 23
+            slots: [
+                "Missile"
+            ]
+        }
+
     ]
 
     upgradesById: [
@@ -2500,6 +2929,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Advanced Proton Torpedoes"
+            canonical_name: 'Adv. Proton Torpedoes'.canonicalize()
             id: 34
             slot: "Torpedo"
             attack: 5
@@ -2686,6 +3116,7 @@ exportObj.basicCardData = ->
         {
             name: "R2-D2 (Crew)"
             aka: [ "R2-D2" ]
+            canonical_name: 'r2d2'
             id: 62
             unique: true
             slot: "Crew"
@@ -2813,8 +3244,7 @@ exportObj.basicCardData = ->
             slot: "Crew"
             points: 6
             faction: "Rebel Alliance"
-            restriction_func: (ship) ->
-                ship.data.huge ? false
+            restriction_func: exportObj.hugeOnly
         }
         {
             name: "R4-D6"
@@ -2835,8 +3265,7 @@ exportObj.basicCardData = ->
             id: 79
             slot: "Crew"
             points: 2
-            restriction_func: (ship) ->
-                ship.data.huge ? false
+            restriction_func: exportObj.hugeOnly
         }
         {
             name: "Carlist Rieekan"
@@ -2845,8 +3274,7 @@ exportObj.basicCardData = ->
             slot: "Crew"
             points: 3
             faction: "Rebel Alliance"
-            restriction_func: (ship) ->
-                ship.data.huge ? false
+            restriction_func: exportObj.hugeOnly
         }
         {
             name: "Jan Dodonna"
@@ -2855,8 +3283,7 @@ exportObj.basicCardData = ->
             slot: "Crew"
             points: 6
             faction: "Rebel Alliance"
-            restriction_func: (ship) ->
-                ship.data.huge ? false
+            restriction_func: exportObj.hugeOnly
         }
         {
             name: "Expanded Cargo Hold"
@@ -2916,8 +3343,7 @@ exportObj.basicCardData = ->
             unique: true
             faction: "Rebel Alliance"
             points: 6
-            restriction_func: (ship) ->
-                ship.data.huge ? false
+            restriction_func: exportObj.hugeOnly
         }
         {
             name: "Gunnery Team"
@@ -3037,10 +3463,10 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
         }
         {
-            name: "Calc???"
+            name: "Calculation"
             id: 106
             slot: "Elite"
-            points: 99
+            points: 1
         }
         {
             name: "Accuracy Corrector"
@@ -3058,13 +3484,17 @@ exportObj.basicCardData = ->
             name: "Flechette Cannon"
             id: 109
             slot: "Cannon"
-            points: 99
+            points: 2
+            attack: 3
+            range: "1-3"
         }
         {
-            name: '"Mang??? Cannon"'
+            name: '"Mangler" Cannon'
             id: 110
             slot: "Cannon"
-            points: 99
+            points: 4
+            attack: 3
+            range: "1-3"
         }
         {
             name: "Dead Man's Switch"
@@ -3170,10 +3600,69 @@ exportObj.basicCardData = ->
         }
         {
             name: 'Advanced Targeting Computer'
+            canonical_name: 'Adv. Targeting Computer'.canonicalize()
             id: 124
             slot: "System"
             points: 5
             ship: "TIE Advanced"
+        }
+        {
+            name: 'Ion Cannon Battery'
+            id: 125
+            slot: "Hardpoint"
+            points: 6
+            energy: 2
+            attack: 4
+            range: "2-4"
+        }
+        {
+            name: "Extra Munitions"
+            id: 126
+            slot: "Torpedo"
+            limited: true
+            points: 2
+        }
+        {
+            name: "Cluster Mines"
+            id: 127
+            slot: "Bomb"
+            points: 4
+        }
+        {
+            name: 'Glitterstim'
+            id: 128
+            slot: "Illicit"
+            points: 2
+        }
+        {
+            name: 'Grand Moff Tarkin'
+            unique: true
+            id: 129
+            slot: "Crew"
+            points: 6
+            faction: "Galactic Empire"
+            restriction_func: (ship) ->
+                ship.data.huge ? false
+        }
+        {
+            name: 'Captain Needa'
+            unique: true
+            id: 130
+            slot: "Crew"
+            points: 2
+            faction: "Galactic Empire"
+            restriction_func: (ship) ->
+                ship.data.huge ? false
+        }
+        {
+            name: 'Admiral Ozzel'
+            unique: true
+            id: 131
+            slot: "Crew"
+            points: 2
+            faction: "Galactic Empire"
+            restriction_func: (ship) ->
+                ship.data.huge ? false
         }
     ]
 
@@ -3290,7 +3779,11 @@ exportObj.basicCardData = ->
             restriction_func: (ship) ->
                 "Boost" in ship.effectiveStats().actions
         }
-        
+        {
+            name: "Advanced SLAM"
+            id: 16
+            points: 2
+        }
     ]
 
     titlesById: [
@@ -3470,7 +3963,7 @@ exportObj.basicCardData = ->
             points: 1
             ship: "StarViper"
             restriction_func: (ship) ->
-                ship.pilot.skill > 2
+                ship.pilot.skill > 3
             confersAddons: [
                 {
                     type: exportObj.Upgrade
@@ -3566,6 +4059,13 @@ exportObj.basicCardData = ->
                 }
             ]
         }
+        {
+            name: "Hound's Tooth"
+            id: 24
+            points: 6
+            unique: true
+            ship: "YV-666"
+        }
     ]
 
 exportObj.setupCardData = (basic_cards, pilot_translations, upgrade_translations, modification_translations, title_translations) ->
@@ -3650,6 +4150,7 @@ exportObj.setupCardData = (basic_cards, pilot_translations, upgrade_translations
     # Set sources from manifest
     for expansion, cards of exportObj.manifestByExpansion
         for card in cards
+            continue if card.skipForSource # heavy scyk special case :(
             try
                 switch card.type
                     when 'pilot'
@@ -3716,8 +4217,7 @@ exportObj.setupCardData = (basic_cards, pilot_translations, upgrade_translations
         # Modifications cannot be added to huge ships unless specifically allowed
         if modification.huge?
             unless modification.restriction_func?
-                modification.restriction_func = (ship) ->
-                    ship.data.huge ? false
+                modification.restriction_func = exportObj.hugeOnly
         else unless modification.restriction_func?
             modification.restriction_func = (ship) ->
                 not (ship.data.huge ? false)
@@ -3804,6 +4304,11 @@ exportObj.fixIcons = (data) ->
             .replace(/%IMPERIALONLY%/g, '<span class="card-restriction">Imperial only.</span>')
             .replace(/%SCUMONLY%/g, '<span class="card-restriction">Scum only.</span>')
             .replace(/%LINEBREAK%/g, '<br /><br />')
+            .replace(/%DE_HUGESHIPONLY%/g, '<span class="card-restriction">Nur für Riesen Schiffe.</span>')
+            .replace(/%DE_LARGESHIPONLY%/g, '<span class="card-restriction">Nur für grosse Schiffe.</span>')
+            .replace(/%DE_REBELONLY%/g, '<span class="card-restriction">Nur für Rebellen.</span>')
+            .replace(/%DE_IMPERIALONLY%/g, '<span class="card-restriction">Nur für das Imperium.</span>')
+            .replace(/%DE_SCUMONLY%/g, '<span class="card-restriction">Nur für Abschaum & Kriminelle.</span>')
             .replace(/%FR_HUGESHIPONLY%/g, '<span class="card-restriction">Vaisseau immense uniquement.</span>')
             .replace(/%FR_LARGESHIPONLY%/g, '<span class="card-restriction">Grand vaisseau uniquement.</span>')
             .replace(/%FR_REBELONLY%/g, '<span class="card-restriction">Rebelle uniquement.</span>')
