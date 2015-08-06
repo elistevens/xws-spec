@@ -522,6 +522,13 @@ exportObj.basicCardData = ->
                 "Reinforce"
             ]
             huge: true
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0]
+                [ 0, 1, 1, 1, 0, 0]
+                [ 0, 1, 1, 1, 0, 0]
+                [ 0, 0, 1, 0, 0, 0]
+                [ 0, 0, 1, 0, 0, 0]
+            ]
         "Raider-class Corvette (Aft)":
             name: "Raider-class Corvette (Aft)"
             factions: [ "Galactic Empire" ]
@@ -534,6 +541,13 @@ exportObj.basicCardData = ->
                 "Target Lock"
             ]
             huge: true
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0]
+                [ 0, 1, 1, 1, 0, 0]
+                [ 0, 1, 1, 1, 0, 0]
+                [ 0, 0, 1, 0, 0, 0]
+                [ 0, 0, 1, 0, 0, 0]
+            ]
         "YV-666":
             name: "YV-666"
             factions: [ "Scum and Villainy" ]
@@ -546,7 +560,13 @@ exportObj.basicCardData = ->
                 "Focus"
                 "Target Lock"
             ]
-            maneuvers: []
+            maneuvers: [
+                [ 0, 0, 3, 0, 0 ]
+                [ 0, 2, 2, 2, 0 ]
+                [ 3, 1, 2, 1, 3 ]
+                [ 1, 1, 2, 1, 1 ]
+                [ 0, 0, 1, 0, 0 ]
+            ]
         "Kihraxz Fighter":
             name: "Kihraxz Fighter"
             factions: ["Scum and Villainy"]
@@ -558,7 +578,14 @@ exportObj.basicCardData = ->
                 "Focus"
                 "Target Lock"
             ]
-            maneuvers: []
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0 ]
+                [ 1, 2, 0, 2, 1, 0 ]
+                [ 1, 2, 2, 2, 1, 0 ]
+                [ 0, 1, 1, 1, 0, 0 ]
+                [ 0, 0, 1, 0, 0, 3 ]
+                [ 0, 0, 0, 0, 0, 3 ]
+            ]
         "K-Wing":
             name: "K-Wing"
             factions: ["Rebel Alliance"]
@@ -571,7 +598,12 @@ exportObj.basicCardData = ->
                 "Target Lock"
                 "SLAM"
             ]
-            maneuvers: []
+            maneuvers: [
+                [ 0, 0, 0, 0, 0 ]
+                [ 0, 2, 2, 2, 0 ]
+                [ 1, 1, 2, 1, 1 ]
+                [ 0, 1, 1, 1, 0 ]
+            ]
         "TIE Punisher":
             name: "TIE Punisher"
             factions: ["Galactic Empire"]
@@ -584,7 +616,13 @@ exportObj.basicCardData = ->
                 "Target Lock"
                 "Boost"
             ]
-            maneuvers: []
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0 ]
+                [ 0, 2, 2, 2, 0, 0 ]
+                [ 3, 1, 2, 1, 3, 0 ]
+                [ 1, 1, 1, 1, 1, 0 ]
+                [ 0, 0, 0, 0, 0, 3 ]
+            ]
 
     # name field is for convenience only
     pilotsById: [
