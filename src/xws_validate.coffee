@@ -1,7 +1,7 @@
 #'use strict';
 $exp = exports ? this
 $exp.xws ?= {}
-$exp.xws.version = '0.2.1'
+$exp.xws.version = '0.2.2'
 
 $exp.xws.canonicalizationExceptions_dict = {
     "Rebel Alliance": "rebels",

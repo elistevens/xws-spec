@@ -66,6 +66,8 @@ R7-T1 | r7t1
 Name | Canonical
 -----|----------
 Cluster Mines | clustermines
+Conner Net | connernet
+Ion Bombs | ionbombs
 Proton Bombs | protonbombs
 Proximity Mines | proximitymines
 Seismic Charges | seismiccharges
@@ -79,6 +81,7 @@ Autoblaster | autoblaster
 Flechette Cannon | flechettecannon
 Heavy Laser Cannon | heavylasercannon
 Ion Cannon | ioncannon
+Tractor Beam | tractorbeam
 
 ## Cargo Upgrades
 
@@ -101,12 +104,16 @@ Name | Canonical
 -----|----------
 "Leebo" | leebo
 Admiral Ozzel | admiralozzel
+Agent Kallus | agentkallus
+Bombardier | bombardier
+Bossk | bossk
 C-3PO | c3po
 Captain Needa | captainneeda
 Carlist Rieekan | carlistrieekan
 Chewbacca | chewbacca
 Darth Vader | darthvader
 Dash Rendar | dashrendar
+Emperor Palpatine | emperorpalpatine
 Fleet Officer | fleetofficer
 Flight Instructor | flightinstructor
 Grand Moff Tarkin | grandmofftarkin
@@ -146,6 +153,7 @@ Name | Canonical
 Adrenaline Rush | adrenalinerush
 Bodyguard | bodyguard
 Calculation | calculation
+Crack Shot | crackshot
 Daredevil | daredevil
 Deadeye | deadeye
 Decoy | decoy
@@ -155,6 +163,7 @@ Elusiveness | elusiveness
 Expert Handling | experthandling
 Expose | expose
 Intimidation | intimidation
+Lightning Reflexes | lightningreflexes
 Lone Wolf | lonewolf
 Marksmanship | marksmanship
 Opportunist | opportunist
@@ -181,6 +190,7 @@ Single Turbolasers | singleturbolasers
 Name | Canonical
 -----|----------
 "Hot Shot" Blaster | hotshotblaster
+Cloaking Device | cloakingdevice
 Dead Man's Switch | deadmansswitch
 Feedback Array | feedbackarray
 Glitterstim | glitterstim
@@ -190,6 +200,7 @@ Inertial Dampeners | inertialdampeners
 
 Name | Canonical
 -----|----------
+Advanced Homing Missiles | advancedhomingmissiles
 Assault Missiles | assaultmissiles
 Chardaan Refit | chardaanrefit
 Cluster Missiles | clustermissiles
@@ -197,6 +208,7 @@ Concussion Missiles | concussionmissiles
 Homing Missiles | homingmissiles
 Ion Pulse Missiles | ionpulsemissiles
 Proton Rockets | protonrockets
+XX-23 S-Thread Tracers | xx23sthreadtracers
 
 ## Modification Upgrades
 
@@ -212,12 +224,15 @@ Countermeasures | countermeasures
 Engine Upgrade | engineupgrade
 Experimental Interface | experimentalinterface
 Hull Upgrade | hullupgrade
+Ion Projector | ionprojector
+Maneuvering Fins | maneuveringfins
 Munitions Failsafe | munitionsfailsafe
 Shield Upgrade | shieldupgrade
 Stealth Device | stealthdevice
 Stygium Particle Accelerator | stygiumparticleaccelerator
 Tactical Jammer | tacticaljammer
 Targeting Computer | targetingcomputer
+Twin Ion Engine Mk. II | twinionenginemkii
 
 ## Salvaged Astromech Droid Upgrades
 
@@ -260,16 +275,21 @@ Bright Hope | brighthope
 Dauntless | dauntless
 Dodonna's Pride | dodonnaspride
 Dutyfree | dutyfree
+Ghost | ghost
 Hound's Tooth | houndstooth
 IG-2000 | ig2000
 Jaina's Light | jainaslight
 Millennium Falcon | millenniumfalcon
+Mist Hunter | misthunter
 Moldy Crow | moldycrow
 Outrider | outrider
+Phantom | phantom
+Punishing One | punishingone
 Quantum Storm | quantumstorm
 Royal Guard TIE | royalguardtie
 ST-321 | st321
 Slave I | slavei
+TIE/v1 | tiev1
 TIE/x1 | tiex1
 Tantive IV | tantiveiv
 Virago | virago
@@ -283,6 +303,7 @@ Bomb Loadout | bombloadout
 Extra Munitions | extramunitions
 Flechette Torpedoes | flechettetorpedoes
 Ion Torpedoes | iontorpedoes
+Plasma Torpedoes | plasmatorpedoes
 Proton Torpedoes | protontorpedoes
 
 ## Turret Upgrades
@@ -292,6 +313,7 @@ Name | Canonical
 Autoblaster Turret | autoblasterturret
 Blaster Turret | blasterturret
 Ion Cannon Turret | ioncannonturret
+Twin Laser Turret | twinlaserturret
 
 ## Factions
 
@@ -306,9 +328,11 @@ Scum and Villainy | scum
 Name | Canonical
 -----|----------
 Firespray-31 | firespray31
+Gozanti-class Cruiser | gozanticlasscruiser
 Lambda-Class Shuttle | lambdaclassshuttle
 Raider-class Corvette | raiderclasscorvette
 TIE Advanced | tieadvanced
+TIE Advanced Prototype | tieadvancedprototype
 TIE Bomber | tiebomber
 TIE Defender | tiedefender
 TIE Fighter | tiefighter
@@ -325,6 +349,12 @@ Boba Fett | bobafett
 Bounty Hunter | bountyhunter
 Kath Scarlet | kathscarlet
 Krassis Trelix | krassistrelix
+
+## Galactic Empire Gozanti-class Cruiser Pilots
+
+Name | Canonical
+-----|----------
+Gozanti-class Cruiser | gozanticlasscruiser
 
 ## Galactic Empire Lambda-Class Shuttle Pilots
 
@@ -355,6 +385,12 @@ Storm Squadron Pilot | stormsquadronpilot
 Tempest Squadron Pilot | tempestsquadronpilot
 Zertik Strom | zertikstrom
 
+## Galactic Empire TIE Advanced Prototype Pilots
+
+Name | Canonical
+-----|----------
+The Inquisitor | theinquisitor
+
 ## Galactic Empire TIE Bomber Pilots
 
 Name | Canonical
@@ -382,6 +418,7 @@ Name | Canonical
 "Howlrunner" | howlrunner
 "Mauler Mithel" | maulermithel
 "Night Beast" | nightbeast
+"Scourge" | scourge
 "Winged Gundark" | wingedgundark
 Academy Pilot | academypilot
 Black Squadron Pilot | blacksquadronpilot
@@ -416,7 +453,10 @@ Sigma Squadron Pilot | sigmasquadronpilot
 
 Name | Canonical
 -----|----------
+"Deathrain" | deathrain
 "Redline" | redline
+Black Eight Squadron Pilot | blackeightsquadronpilot
+Cutlass Squadron Pilot | cutlasssquadronpilot
 
 ## Galactic Empire VT-49 Decimator Pilots
 
@@ -438,6 +478,7 @@ E-Wing | ewing
 GR-75 Medium Transport | gr75mediumtransport
 HWK-290 | hwk290
 K-Wing | kwing
+VCX-100 | vcx100
 X-Wing | xwing
 Y-Wing | ywing
 YT-1300 | yt1300
@@ -501,7 +542,16 @@ Roark Garnet | roarkgarnet
 
 Name | Canonical
 -----|----------
+Esege Tuketu | esegetuketu
+Guardian Squadron Pilot | guardiansquadronpilot
 Miranda Doni | mirandadoni
+Warden Squadron Pilot | wardensquadronpilot
+
+## Rebel Alliance VCX-100 Pilots
+
+Name | Canonical
+-----|----------
+Hera Syndulla | herasyndulla
 
 ## Rebel Alliance X-Wing Pilots
 
@@ -560,7 +610,9 @@ Name | Canonical
 -----|----------
 Aggressor | aggressor
 Firespray-31 | firespray31
+G-1A Starfighter | g1astarfighter
 HWK-290 | hwk290
+JumpMaster 5000 | jumpmaster5000
 Kihraxz Fighter | kihraxzfighter
 M3-A Interceptor | m3ainterceptor
 StarViper | starviper
@@ -586,6 +638,12 @@ Emon Azzameen | emonazzameen
 Kath Scarlet | kathscarlet
 Mandalorian Mercenary | mandalorianmercenary
 
+## Scum and Villainy G-1A Starfighter Pilots
+
+Name | Canonical
+-----|----------
+Zuckuss | zuckuss
+
 ## Scum and Villainy HWK-290 Pilots
 
 Name | Canonical
@@ -595,10 +653,19 @@ Palob Godalhi | palobgodalhi
 Spice Runner | spicerunner
 Torkil Mux | torkilmux
 
+## Scum and Villainy JumpMaster 5000 Pilots
+
+Name | Canonical
+-----|----------
+Dengar | dengar
+
 ## Scum and Villainy Kihraxz Fighter Pilots
 
 Name | Canonical
 -----|----------
+Black Sun Ace | blacksunace
+Cartel Marauder | cartelmarauder
+Graz the Hunter | grazthehunter
 Talonbane Cobra | talonbanecobra
 
 ## Scum and Villainy M3-A Interceptor Pilots
@@ -624,6 +691,9 @@ Prince Xizor | princexizor
 Name | Canonical
 -----|----------
 Bossk | bossk
+Latts Razzi | lattsrazzi
+Moralo Eval | moraloeval
+Trandoshan Slaver | trandoshanslaver
 
 ## Scum and Villainy Y-Wing Pilots
 

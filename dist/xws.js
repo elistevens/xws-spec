@@ -280,6 +280,28 @@
             "mirandadoni": {
               "name": "Miranda Doni",
               "points": 29
+            },
+            "esegetuketu": {
+              "name": "Esege Tuketu",
+              "points": 28
+            },
+            "guardiansquadronpilot": {
+              "name": "Guardian Squadron Pilot",
+              "points": 25
+            },
+            "wardensquadronpilot": {
+              "name": "Warden Squadron Pilot",
+              "points": 23
+            }
+          }
+        },
+        "vcx100": {
+          "name": "VCX-100",
+          "multisection": false,
+          "pilots": {
+            "herasyndulla": {
+              "name": "Hera Syndulla",
+              "points": 40
             }
           }
         }
@@ -327,6 +349,10 @@
             "howlrunner": {
               "name": "\"Howlrunner\"",
               "points": 18
+            },
+            "scourge": {
+              "name": "\"Scourge\"",
+              "points": 17
             }
           }
         },
@@ -571,6 +597,38 @@
             "redline": {
               "name": "\"Redline\"",
               "points": 27
+            },
+            "deathrain": {
+              "name": "\"Deathrain\"",
+              "points": 26
+            },
+            "blackeightsquadronpilot": {
+              "name": "Black Eight Squadron Pilot",
+              "points": 23
+            },
+            "cutlasssquadronpilot": {
+              "name": "Cutlass Squadron Pilot",
+              "points": 21
+            }
+          }
+        },
+        "gozanticlasscruiser": {
+          "name": "Gozanti-class Cruiser",
+          "multisection": false,
+          "pilots": {
+            "gozanticlasscruiser": {
+              "name": "Gozanti-class Cruiser",
+              "points": 40
+            }
+          }
+        },
+        "tieadvancedprototype": {
+          "name": "TIE Advanced Prototype",
+          "multisection": false,
+          "pilots": {
+            "theinquisitor": {
+              "name": "The Inquisitor",
+              "points": 25
             }
           }
         }
@@ -740,6 +798,18 @@
             "bossk": {
               "name": "Bossk",
               "points": 35
+            },
+            "moraloeval": {
+              "name": "Moralo Eval",
+              "points": 34
+            },
+            "lattsrazzi": {
+              "name": "Latts Razzi",
+              "points": 33
+            },
+            "trandoshanslaver": {
+              "name": "Trandoshan Slaver",
+              "points": 29
             }
           }
         },
@@ -750,6 +820,38 @@
             "talonbanecobra": {
               "name": "Talonbane Cobra",
               "points": 28
+            },
+            "grazthehunter": {
+              "name": "Graz the Hunter",
+              "points": 25
+            },
+            "blacksunace": {
+              "name": "Black Sun Ace",
+              "points": 23
+            },
+            "cartelmarauder": {
+              "name": "Cartel Marauder",
+              "points": 20
+            }
+          }
+        },
+        "g1astarfighter": {
+          "name": "G-1A Starfighter",
+          "multisection": false,
+          "pilots": {
+            "zuckuss": {
+              "name": "Zuckuss",
+              "points": 28
+            }
+          }
+        },
+        "jumpmaster5000": {
+          "name": "JumpMaster 5000",
+          "multisection": false,
+          "pilots": {
+            "dengar": {
+              "name": "Dengar",
+              "points": 33
             }
           }
         }
@@ -776,6 +878,10 @@
         "autoblasterturret": {
           "name": "Autoblaster Turret",
           "points": 2
+        },
+        "twinlaserturret": {
+          "name": "Twin Laser Turret",
+          "points": 6
         }
       }
     },
@@ -805,6 +911,10 @@
         "extramunitions": {
           "name": "Extra Munitions",
           "points": 2
+        },
+        "plasmatorpedoes": {
+          "name": "Plasma Torpedoes",
+          "points": 3
         }
       }
     },
@@ -959,6 +1069,14 @@
         "calculation": {
           "name": "Calculation",
           "points": 1
+        },
+        "lightningreflexes": {
+          "name": "Lightning Reflexes",
+          "points": 1
+        },
+        "crackshot": {
+          "name": "Crack Shot",
+          "points": 1
         }
       }
     },
@@ -992,6 +1110,14 @@
         "protonrockets": {
           "name": "Proton Rockets",
           "points": 3
+        },
+        "advancedhomingmissiles": {
+          "name": "Advanced Homing Missiles",
+          "points": 3
+        },
+        "xx23sthreadtracers": {
+          "name": "XX-23 S-Thread Tracers",
+          "points": 1
         }
       }
     },
@@ -1153,6 +1279,22 @@
         "admiralozzel": {
           "name": "Admiral Ozzel",
           "points": 2
+        },
+        "emperorpalpatine": {
+          "name": "Emperor Palpatine",
+          "points": 8
+        },
+        "bossk": {
+          "name": "Bossk",
+          "points": 2
+        },
+        "bombardier": {
+          "name": "Bombardier",
+          "points": 1
+        },
+        "agentkallus": {
+          "name": "Agent Kallus",
+          "points": 2
         }
       }
     },
@@ -1178,6 +1320,10 @@
         "manglercannon": {
           "name": "\"Mangler\" Cannon",
           "points": 4
+        },
+        "tractorbeam": {
+          "name": "Tractor Beam",
+          "points": 1
         }
       }
     },
@@ -1198,6 +1344,14 @@
         },
         "clustermines": {
           "name": "Cluster Mines",
+          "points": 4
+        },
+        "ionbombs": {
+          "name": "Ion Bombs",
+          "points": 2
+        },
+        "connernet": {
+          "name": "Conner Net",
           "points": 4
         }
       }
@@ -1332,6 +1486,10 @@
         "glitterstim": {
           "name": "Glitterstim",
           "points": 2
+        },
+        "cloakingdevice": {
+          "name": "Cloaking Device",
+          "points": 2
         }
       }
     },
@@ -1426,6 +1584,18 @@
         "advancedslam": {
           "name": "Advanced SLAM",
           "points": 2
+        },
+        "twinionenginemkii": {
+          "name": "Twin Ion Engine Mk. II",
+          "points": 1
+        },
+        "maneuveringfins": {
+          "name": "Maneuvering Fins",
+          "points": 1
+        },
+        "ionprojector": {
+          "name": "Ion Projector",
+          "points": 2
         }
       }
     },
@@ -1515,6 +1685,26 @@
         "houndstooth": {
           "name": "Hound's Tooth",
           "points": 6
+        },
+        "ghost": {
+          "name": "Ghost",
+          "points": 0
+        },
+        "phantom": {
+          "name": "Phantom",
+          "points": 0
+        },
+        "tiev1": {
+          "name": "TIE/v1",
+          "points": 1
+        },
+        "misthunter": {
+          "name": "Mist Hunter",
+          "points": 0
+        },
+        "punishingone": {
+          "name": "Punishing One",
+          "points": 12
         }
       }
     }
@@ -1526,7 +1716,7 @@
     $exp.xws = {};
   }
 
-  $exp.xws.version = '0.2.0';
+  $exp.xws.version = '0.2.1';
 
   $exp.xws.canonicalizationExceptions_dict = {
     "Rebel Alliance": "rebels",
