@@ -1,4 +1,4 @@
-# X-Wing Squadron Specification version 0.2.1
+# X-Wing Squadron Specification version 0.2.2
 
 This specification facilitates the export and subsequent import of squadrons for
 FFG's X-Wing Miniatures game from one compliant application to another.
