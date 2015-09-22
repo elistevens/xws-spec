@@ -8,11 +8,12 @@
   }
 
   (typeof exports !== "undefined" && exports !== null ? exports : this).xws.pilot_faction2ship2pilot2obj_dict = {
-    "rebels": {
-      "name": "Rebel Alliance",
+    "rebel": {
+      "name": "Rebel",
       "ships": {
         "xwing": {
           "name": "X-Wing",
+          "subfaction": "Rebel Alliance",
           "multisection": false,
           "pilots": {
             "wedgeantilles": {
@@ -59,6 +60,7 @@
         },
         "ywing": {
           "name": "Y-Wing",
+          "subfaction": "Rebel Alliance",
           "multisection": false,
           "pilots": {
             "graysquadronpilot": {
@@ -81,6 +83,7 @@
         },
         "awing": {
           "name": "A-Wing",
+          "subfaction": "Rebel Alliance",
           "multisection": false,
           "pilots": {
             "tychocelchu": {
@@ -111,6 +114,7 @@
         },
         "yt1300": {
           "name": "YT-1300",
+          "subfaction": "Rebel Alliance",
           "multisection": false,
           "pilots": {
             "outerrimsmuggler": {
@@ -133,6 +137,7 @@
         },
         "bwing": {
           "name": "B-Wing",
+          "subfaction": "Rebel Alliance",
           "multisection": false,
           "pilots": {
             "tennumb": {
@@ -163,6 +168,7 @@
         },
         "hwk290": {
           "name": "HWK-290",
+          "subfaction": "Rebel Alliance",
           "multisection": false,
           "pilots": {
             "rebeloperative": {
@@ -185,6 +191,7 @@
         },
         "gr75mediumtransport": {
           "name": "GR-75 Medium Transport",
+          "subfaction": "Rebel Alliance",
           "multisection": false,
           "pilots": {
             "gr75mediumtransport": {
@@ -195,6 +202,7 @@
         },
         "z95headhunter": {
           "name": "Z-95 Headhunter",
+          "subfaction": "Rebel Alliance",
           "multisection": false,
           "pilots": {
             "banditsquadronpilot": {
@@ -217,6 +225,7 @@
         },
         "ewing": {
           "name": "E-Wing",
+          "subfaction": "Rebel Alliance",
           "multisection": false,
           "pilots": {
             "knavesquadronpilot": {
@@ -239,6 +248,7 @@
         },
         "cr90corvette": {
           "name": "CR90 Corvette",
+          "subfaction": "Rebel Alliance",
           "multisection": true,
           "pilots": {
             "cr90corvettefore": {
@@ -253,6 +263,7 @@
         },
         "yt2400": {
           "name": "YT-2400",
+          "subfaction": "Rebel Alliance",
           "multisection": false,
           "pilots": {
             "wildspacefringer": {
@@ -275,6 +286,7 @@
         },
         "kwing": {
           "name": "K-Wing",
+          "subfaction": "Rebel Alliance",
           "multisection": false,
           "pilots": {
             "mirandadoni": {
@@ -297,6 +309,7 @@
         },
         "vcx100": {
           "name": "VCX-100",
+          "subfaction": "Rebel Alliance",
           "multisection": false,
           "pilots": {
             "herasyndulla": {
@@ -304,14 +317,42 @@
               "points": 40
             }
           }
+        },
+        "t70xwing": {
+          "name": "T-70 X-Wing",
+          "subfaction": "Resistance",
+          "multisection": false,
+          "pilots": {
+            "poedameron": {
+              "name": "Poe Dameron",
+              "points": 31
+            },
+            "blueace": {
+              "name": "\"Blue Ace\"",
+              "points": 27
+            },
+            "redsquadronveteran": {
+              "name": "Red Squadron Veteran",
+              "points": 26
+            },
+            "bluesquadronnovice": {
+              "name": "Blue Squadron Novice",
+              "points": 24
+            },
+            "redace": {
+              "name": "\"Red Ace\"",
+              "points": 29
+            }
+          }
         }
       }
     },
-    "empire": {
-      "name": "Galactic Empire",
+    "imperial": {
+      "name": "Imperial",
       "ships": {
         "tiefighter": {
           "name": "TIE Fighter",
+          "subfaction": "Galactic Empire",
           "multisection": false,
           "pilots": {
             "academypilot": {
@@ -358,6 +399,7 @@
         },
         "tieadvanced": {
           "name": "TIE Advanced",
+          "subfaction": "Galactic Empire",
           "multisection": false,
           "pilots": {
             "maarekstele": {
@@ -396,6 +438,7 @@
         },
         "tieinterceptor": {
           "name": "TIE Interceptor",
+          "subfaction": "Galactic Empire",
           "multisection": false,
           "pilots": {
             "alphasquadronpilot": {
@@ -446,6 +489,7 @@
         },
         "firespray31": {
           "name": "Firespray-31",
+          "subfaction": "Galactic Empire",
           "multisection": false,
           "pilots": {
             "kathscarlet": {
@@ -468,6 +512,7 @@
         },
         "tiebomber": {
           "name": "TIE Bomber",
+          "subfaction": "Galactic Empire",
           "multisection": false,
           "pilots": {
             "scimitarsquadronpilot": {
@@ -490,6 +535,7 @@
         },
         "lambdaclassshuttle": {
           "name": "Lambda-Class Shuttle",
+          "subfaction": "Galactic Empire",
           "multisection": false,
           "pilots": {
             "captainkagi": {
@@ -512,6 +558,7 @@
         },
         "tiedefender": {
           "name": "TIE Defender",
+          "subfaction": "Galactic Empire",
           "multisection": false,
           "pilots": {
             "deltasquadronpilot": {
@@ -534,6 +581,7 @@
         },
         "tiephantom": {
           "name": "TIE Phantom",
+          "subfaction": "Galactic Empire",
           "multisection": false,
           "pilots": {
             "sigmasquadronpilot": {
@@ -556,6 +604,7 @@
         },
         "vt49decimator": {
           "name": "VT-49 Decimator",
+          "subfaction": "Galactic Empire",
           "multisection": false,
           "pilots": {
             "patrolleader": {
@@ -578,6 +627,7 @@
         },
         "raiderclasscorvette": {
           "name": "Raider-class Corvette",
+          "subfaction": "Galactic Empire",
           "multisection": true,
           "pilots": {
             "raiderclasscorvettefore": {
@@ -592,6 +642,7 @@
         },
         "tiepunisher": {
           "name": "TIE Punisher",
+          "subfaction": "Galactic Empire",
           "multisection": false,
           "pilots": {
             "redline": {
@@ -614,6 +665,7 @@
         },
         "gozanticlasscruiser": {
           "name": "Gozanti-class Cruiser",
+          "subfaction": "Galactic Empire",
           "multisection": false,
           "pilots": {
             "gozanticlasscruiser": {
@@ -624,6 +676,7 @@
         },
         "tieadvancedprototype": {
           "name": "TIE Advanced Prototype",
+          "subfaction": "Galactic Empire",
           "multisection": false,
           "pilots": {
             "theinquisitor": {
@@ -631,14 +684,50 @@
               "points": 25
             }
           }
+        },
+        "tiefofighter": {
+          "name": "TIE/fo Fighter",
+          "subfaction": "First Order",
+          "multisection": false,
+          "pilots": {
+            "omegaace": {
+              "name": "\"Omega Ace\"",
+              "points": 20
+            },
+            "epsilonleader": {
+              "name": "\"Epsilon Leader\"",
+              "points": 19
+            },
+            "zetaace": {
+              "name": "\"Zeta Ace\"",
+              "points": 18
+            },
+            "omegasquadronpilot": {
+              "name": "Omega Squadron Pilot",
+              "points": 17
+            },
+            "zetasquadronpilot": {
+              "name": "Zeta Squadron Pilot",
+              "points": 16
+            },
+            "epsilonsquadronpilot": {
+              "name": "Epsilon Squadron Pilot",
+              "points": 15
+            },
+            "omegaleader": {
+              "name": "\"Omega Leader\"",
+              "points": 21
+            }
+          }
         }
       }
     },
     "scum": {
-      "name": "Scum and Villainy",
+      "name": "Scum",
       "ships": {
         "starviper": {
           "name": "StarViper",
+          "subfaction": "Scum and Villainy",
           "multisection": false,
           "pilots": {
             "princexizor": {
@@ -661,6 +750,7 @@
         },
         "m3ainterceptor": {
           "name": "M3-A Interceptor",
+          "subfaction": "Scum and Villainy",
           "multisection": false,
           "pilots": {
             "serissu": {
@@ -683,6 +773,7 @@
         },
         "aggressor": {
           "name": "Aggressor",
+          "subfaction": "Scum and Villainy",
           "multisection": false,
           "pilots": {
             "ig88a": {
@@ -705,6 +796,7 @@
         },
         "z95headhunter": {
           "name": "Z-95 Headhunter",
+          "subfaction": "Scum and Villainy",
           "multisection": false,
           "pilots": {
             "ndrusuhlak": {
@@ -727,6 +819,7 @@
         },
         "firespray31": {
           "name": "Firespray-31",
+          "subfaction": "Scum and Villainy",
           "multisection": false,
           "pilots": {
             "bobafett": {
@@ -749,6 +842,7 @@
         },
         "ywing": {
           "name": "Y-Wing",
+          "subfaction": "Scum and Villainy",
           "multisection": false,
           "pilots": {
             "kavil": {
@@ -771,6 +865,7 @@
         },
         "hwk290": {
           "name": "HWK-290",
+          "subfaction": "Scum and Villainy",
           "multisection": false,
           "pilots": {
             "dacebonearm": {
@@ -793,6 +888,7 @@
         },
         "yv666": {
           "name": "YV-666",
+          "subfaction": "Scum and Villainy",
           "multisection": false,
           "pilots": {
             "bossk": {
@@ -815,6 +911,7 @@
         },
         "kihraxzfighter": {
           "name": "Kihraxz Fighter",
+          "subfaction": "Scum and Villainy",
           "multisection": false,
           "pilots": {
             "talonbanecobra": {
@@ -837,6 +934,7 @@
         },
         "g1astarfighter": {
           "name": "G-1A Starfighter",
+          "subfaction": "Scum and Villainy",
           "multisection": false,
           "pilots": {
             "zuckuss": {
@@ -847,6 +945,7 @@
         },
         "jumpmaster5000": {
           "name": "JumpMaster 5000",
+          "subfaction": "Scum and Villainy",
           "multisection": false,
           "pilots": {
             "dengar": {
@@ -968,6 +1067,14 @@
         "r5p9": {
           "name": "R5-P9",
           "points": 3
+        },
+        "bb8": {
+          "name": "BB-8",
+          "points": 2
+        },
+        "r5x3": {
+          "name": "R5-X3",
+          "points": 1
         }
       }
     },
@@ -1077,6 +1184,18 @@
         "crackshot": {
           "name": "Crack Shot",
           "points": 1
+        },
+        "wired": {
+          "name": "Wired",
+          "points": 1
+        },
+        "coolhand": {
+          "name": "Cool Hand",
+          "points": 1
+        },
+        "juke": {
+          "name": "Juke",
+          "points": 2
         }
       }
     },
@@ -1295,6 +1414,10 @@
         "agentkallus": {
           "name": "Agent Kallus",
           "points": 2
+        },
+        "shieldtechnician": {
+          "name": "Shield Technician",
+          "points": 1
         }
       }
     },
@@ -1518,6 +1641,19 @@
         }
       }
     },
+    "tech": {
+      "name": "Tech",
+      "upgrades": {
+        "weaponsguidance": {
+          "name": "Weapons Guidance",
+          "points": 2
+        },
+        "commrelay": {
+          "name": "Comm Relay",
+          "points": 3
+        }
+      }
+    },
     "mod": {
       "name": "Modification",
       "upgrades": {
@@ -1596,6 +1732,10 @@
         "ionprojector": {
           "name": "Ion Projector",
           "points": 2
+        },
+        "integratedastromech": {
+          "name": "Integrated Astromech",
+          "points": 0
         }
       }
     },
@@ -1705,6 +1845,18 @@
         "punishingone": {
           "name": "Punishing One",
           "points": 12
+        },
+        "assailer": {
+          "name": "Assailer",
+          "points": 2
+        },
+        "instigator": {
+          "name": "Instigator",
+          "points": 4
+        },
+        "impetuous": {
+          "name": "Impetuous",
+          "points": 3
         }
       }
     }
@@ -1716,12 +1868,17 @@
     $exp.xws = {};
   }
 
-  $exp.xws.version = '0.2.1';
+  $exp.xws.version = '0.3.0';
+
+  $exp.xws.subfaction2faction_dict = {
+    "Rebel Alliance": "Rebel",
+    "Resistance": "Rebel",
+    "Galactic Empire": "Imperial",
+    "First Order": "Imperial",
+    "Scum and Villainy": "Scum"
+  };
 
   $exp.xws.canonicalizationExceptions_dict = {
-    "Rebel Alliance": "rebels",
-    "Galactic Empire": "empire",
-    "Scum and Villainy": "scum",
     "Astromech Droid": "amd",
     "Salvaged Astromech Droid": "samd",
     "Elite Pilot Talent": "ept",
@@ -1823,7 +1980,7 @@
   };
 
   $exp.xws.validateSquadron = function(dirty_obj, vendor, ignore) {
-    var attr, clean_obj, dirty_key, dirty_value, error, error_list, error_sublist, i, key, pilot_clean, pilot_dirty, s, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _ref, _ref1, _ref2, _ref3, _ref4, _ref5;
+    var attr, clean_obj, dirty_key, dirty_value, error, error_list, error_sublist, i, key, oldFaction2newFaction_dict, pilot_clean, pilot_dirty, s, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _ref, _ref1, _ref2, _ref3, _ref4, _ref5;
     if (vendor == null) {
       vendor = true;
     }
@@ -1892,6 +2049,13 @@
         delete dirty_obj[attr];
       }
       delete dirty_obj.points;
+      oldFaction2newFaction_dict = {
+        'rebels': 'rebel',
+        'empire': 'imperial'
+      };
+      if ((dirty_obj != null ? dirty_obj.faction : void 0) in oldFaction2newFaction_dict) {
+        dirty_obj.faction = oldFaction2newFaction_dict[dirty_obj.faction];
+      }
       if (!dirty_obj.faction || !(dirty_obj.faction in $exp.xws.pilot_faction2ship2pilot2obj_dict)) {
         return [null, ["squadron.faction: " + dirty_obj.faction]];
       }

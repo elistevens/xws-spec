@@ -1,13 +1,17 @@
 #'use strict';
 $exp = exports ? this
 $exp.xws ?= {}
-$exp.xws.version = '0.2.2'
+$exp.xws.version = '0.3.0'
+
+$exp.xws.subfaction2faction_dict = {
+    "Rebel Alliance": "Rebel",
+    "Resistance": "Rebel",
+    "Galactic Empire": "Imperial",
+    "First Order": "Imperial",
+    "Scum and Villainy": "Scum",
+}
 
 $exp.xws.canonicalizationExceptions_dict = {
-    "Rebel Alliance": "rebels",
-    "Galactic Empire": "empire",
-    "Scum and Villainy": "scum",
-
     "Astromech Droid": "amd",
     "Salvaged Astromech Droid": "samd",
     "Elite Pilot Talent": "ept",
@@ -133,6 +137,15 @@ $exp.xws.validateSquadron = (dirty_obj, vendor=true, ignore=[]) ->
             delete dirty_obj[attr]
 
         delete dirty_obj.points
+
+        # This handles the clarifications from the new core set, re: subfactions, etc.
+        oldFaction2newFaction_dict = {
+            'rebels': 'rebel',
+            'empire': 'imperial',
+            # scum remains the same
+        }
+        if dirty_obj?.faction of oldFaction2newFaction_dict
+            dirty_obj.faction = oldFaction2newFaction_dict[dirty_obj.faction]
 
         if not dirty_obj.faction or dirty_obj.faction not of $exp.xws.pilot_faction2ship2pilot2obj_dict
             return [null, ["squadron.faction: #{dirty_obj.faction}"]]

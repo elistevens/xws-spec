@@ -1,8 +1,8 @@
 {
     "name": "2 A-Wings, 2 X-Wings",
-    "faction": "rebels",
+    "faction": "rebel",
     "points": 100,
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "Tycho leads a flight",
     "obstacles": ["core-asteroid-5", "vt49decimator-debris-2", "yt2400-debris-0"],
     "pilots": [

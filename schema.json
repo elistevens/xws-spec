@@ -21,7 +21,7 @@
         },
         "faction": {
             "type": "string",
-            "enum": [ "rebels", "empire", "scum" ],
+            "enum": [ "rebel", "imperial", "scum" ],
             "description": "The faction this squadron belongs to."
         },
         "description": {

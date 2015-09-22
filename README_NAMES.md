@@ -11,17 +11,24 @@ This information is also provided as part of the `xws-spec` bower package. See
 the `window.xws.pilot_faction2ship2pilot2obj_dict` and
 `window.xws.upgrade_slot2key2obj_dict` variables.
 
+## Subfactions and Factions
+
+Subfaction | Faction
+-----|----------
+First Order | Imperial
+Galactic Empire | Imperial
+Rebel Alliance | Rebel
+Resistance | Rebel
+Scum and Villainy | Scum
+
 ## Canonicalization Special Cases
 
 Name | Canonical
 -----|----------
 Astromech Droid | amd
 Elite Pilot Talent | ept
-Galactic Empire | empire
 Modification | mod
-Rebel Alliance | rebels
 Salvaged Astromech Droid | samd
-Scum and Villainy | scum
 
 ## Upgrade Slots
 
@@ -40,6 +47,7 @@ Modification | mod
 Salvaged Astromech Droid | samd
 System | system
 Team | team
+Tech | tech
 Title | title
 Torpedo | torpedo
 Turret | turret
@@ -48,6 +56,7 @@ Turret | turret
 
 Name | Canonical
 -----|----------
+BB-8 | bb8
 R2 Astromech | r2astromech
 R2-D2 | r2d2
 R2-D6 | r2d6
@@ -58,6 +67,7 @@ R5 Astromech | r5astromech
 R5-D8 | r5d8
 R5-K6 | r5k6
 R5-P9 | r5p9
+R5-X3 | r5x3
 R7 Astromech | r7astromech
 R7-T1 | r7t1
 
@@ -139,6 +149,7 @@ Raymus Antilles | raymusantilles
 Rebel Captive | rebelcaptive
 Recon Specialist | reconspecialist
 Saboteur | saboteur
+Shield Technician | shieldtechnician
 Tactician | tactician
 Targeting Coordinator | targetingcoordinator
 Toryn Farr | torynfarr
@@ -153,6 +164,7 @@ Name | Canonical
 Adrenaline Rush | adrenalinerush
 Bodyguard | bodyguard
 Calculation | calculation
+Cool Hand | coolhand
 Crack Shot | crackshot
 Daredevil | daredevil
 Deadeye | deadeye
@@ -163,6 +175,7 @@ Elusiveness | elusiveness
 Expert Handling | experthandling
 Expose | expose
 Intimidation | intimidation
+Juke | juke
 Lightning Reflexes | lightningreflexes
 Lone Wolf | lonewolf
 Marksmanship | marksmanship
@@ -176,6 +189,7 @@ Stay On Target | stayontarget
 Swarm Tactics | swarmtactics
 Veteran Instincts | veteraninstincts
 Wingman | wingman
+Wired | wired
 
 ## Hardpoint Upgrades
 
@@ -224,6 +238,7 @@ Countermeasures | countermeasures
 Engine Upgrade | engineupgrade
 Experimental Interface | experimentalinterface
 Hull Upgrade | hullupgrade
+Integrated Astromech | integratedastromech
 Ion Projector | ionprojector
 Maneuvering Fins | maneuveringfins
 Munitions Failsafe | munitionsfailsafe
@@ -263,6 +278,13 @@ Engineering Team | engineeringteam
 Gunnery Team | gunneryteam
 Sensor Team | sensorteam
 
+## Tech Upgrades
+
+Name | Canonical
+-----|----------
+Comm Relay | commrelay
+Weapons Guidance | weaponsguidance
+
 ## Title Upgrades
 
 Name | Canonical
@@ -270,6 +292,7 @@ Name | Canonical
 "Heavy Scyk" Interceptor | heavyscykinterceptor
 A-Wing Test Pilot | awingtestpilot
 Andrasta | andrasta
+Assailer | assailer
 BTL-A4 Y-Wing | btla4ywing
 Bright Hope | brighthope
 Dauntless | dauntless
@@ -278,6 +301,8 @@ Dutyfree | dutyfree
 Ghost | ghost
 Hound's Tooth | houndstooth
 IG-2000 | ig2000
+Impetuous | impetuous
+Instigator | instigator
 Jaina's Light | jainaslight
 Millennium Falcon | millenniumfalcon
 Mist Hunter | misthunter
@@ -319,11 +344,11 @@ Twin Laser Turret | twinlaserturret
 
 Name | Canonical
 -----|----------
-Galactic Empire | empire
-Rebel Alliance | rebels
-Scum and Villainy | scum
+Imperial | imperial
+Rebel | rebel
+Scum | scum
 
-## Galactic Empire Ships
+## Imperial Ships
 
 Name | Canonical
 -----|----------
@@ -339,9 +364,10 @@ TIE Fighter | tiefighter
 TIE Interceptor | tieinterceptor
 TIE Phantom | tiephantom
 TIE Punisher | tiepunisher
+TIE/fo Fighter | tiefofighter
 VT-49 Decimator | vt49decimator
 
-## Galactic Empire Firespray-31 Pilots
+## Imperial Firespray-31 Pilots
 
 Name | Canonical
 -----|----------
@@ -350,13 +376,13 @@ Bounty Hunter | bountyhunter
 Kath Scarlet | kathscarlet
 Krassis Trelix | krassistrelix
 
-## Galactic Empire Gozanti-class Cruiser Pilots
+## Imperial Gozanti-class Cruiser Pilots
 
 Name | Canonical
 -----|----------
 Gozanti-class Cruiser | gozanticlasscruiser
 
-## Galactic Empire Lambda-Class Shuttle Pilots
+## Imperial Lambda-Class Shuttle Pilots
 
 Name | Canonical
 -----|----------
@@ -365,14 +391,14 @@ Captain Yorr | captainyorr
 Colonel Jendon | coloneljendon
 Omicron Group Pilot | omicrongrouppilot
 
-## Galactic Empire Raider-class Corvette Pilots
+## Imperial Raider-class Corvette Pilots
 
 Name | Canonical
 -----|----------
 Raider-class Corvette (Aft) | raiderclasscorvetteaft
 Raider-class Corvette (Fore) | raiderclasscorvettefore
 
-## Galactic Empire TIE Advanced Pilots
+## Imperial TIE Advanced Pilots
 
 Name | Canonical
 -----|----------
@@ -385,13 +411,13 @@ Storm Squadron Pilot | stormsquadronpilot
 Tempest Squadron Pilot | tempestsquadronpilot
 Zertik Strom | zertikstrom
 
-## Galactic Empire TIE Advanced Prototype Pilots
+## Imperial TIE Advanced Prototype Pilots
 
 Name | Canonical
 -----|----------
 The Inquisitor | theinquisitor
 
-## Galactic Empire TIE Bomber Pilots
+## Imperial TIE Bomber Pilots
 
 Name | Canonical
 -----|----------
@@ -400,7 +426,7 @@ Gamma Squadron Pilot | gammasquadronpilot
 Major Rhymer | majorrhymer
 Scimitar Squadron Pilot | scimitarsquadronpilot
 
-## Galactic Empire TIE Defender Pilots
+## Imperial TIE Defender Pilots
 
 Name | Canonical
 -----|----------
@@ -409,7 +435,7 @@ Delta Squadron Pilot | deltasquadronpilot
 Onyx Squadron Pilot | onyxsquadronpilot
 Rexler Brath | rexlerbrath
 
-## Galactic Empire TIE Fighter Pilots
+## Imperial TIE Fighter Pilots
 
 Name | Canonical
 -----|----------
@@ -424,7 +450,19 @@ Academy Pilot | academypilot
 Black Squadron Pilot | blacksquadronpilot
 Obsidian Squadron Pilot | obsidiansquadronpilot
 
-## Galactic Empire TIE Interceptor Pilots
+## Imperial TIE/fo Fighter Pilots
+
+Name | Canonical
+-----|----------
+"Epsilon Leader" | epsilonleader
+"Omega Ace" | omegaace
+"Omega Leader" | omegaleader
+"Zeta Ace" | zetaace
+Epsilon Squadron Pilot | epsilonsquadronpilot
+Omega Squadron Pilot | omegasquadronpilot
+Zeta Squadron Pilot | zetasquadronpilot
+
+## Imperial TIE Interceptor Pilots
 
 Name | Canonical
 -----|----------
@@ -440,7 +478,7 @@ Soontir Fel | soontirfel
 Tetran Cowall | tetrancowall
 Turr Phennir | turrphennir
 
-## Galactic Empire TIE Phantom Pilots
+## Imperial TIE Phantom Pilots
 
 Name | Canonical
 -----|----------
@@ -449,7 +487,7 @@ Name | Canonical
 Shadow Squadron Pilot | shadowsquadronpilot
 Sigma Squadron Pilot | sigmasquadronpilot
 
-## Galactic Empire TIE Punisher Pilots
+## Imperial TIE Punisher Pilots
 
 Name | Canonical
 -----|----------
@@ -458,7 +496,7 @@ Name | Canonical
 Black Eight Squadron Pilot | blackeightsquadronpilot
 Cutlass Squadron Pilot | cutlasssquadronpilot
 
-## Galactic Empire VT-49 Decimator Pilots
+## Imperial VT-49 Decimator Pilots
 
 Name | Canonical
 -----|----------
@@ -467,7 +505,7 @@ Commander Kenkirk | commanderkenkirk
 Patrol Leader | patrolleader
 Rear Admiral Chiraneau | rearadmiralchiraneau
 
-## Rebel Alliance Ships
+## Rebel Ships
 
 Name | Canonical
 -----|----------
@@ -478,6 +516,7 @@ E-Wing | ewing
 GR-75 Medium Transport | gr75mediumtransport
 HWK-290 | hwk290
 K-Wing | kwing
+T-70 X-Wing | t70xwing
 VCX-100 | vcx100
 X-Wing | xwing
 Y-Wing | ywing
@@ -485,7 +524,7 @@ YT-1300 | yt1300
 YT-2400 | yt2400
 Z-95 Headhunter | z95headhunter
 
-## Rebel Alliance A-Wing Pilots
+## Rebel A-Wing Pilots
 
 Name | Canonical
 -----|----------
@@ -496,7 +535,7 @@ Jake Farrell | jakefarrell
 Prototype Pilot | prototypepilot
 Tycho Celchu | tychocelchu
 
-## Rebel Alliance B-Wing Pilots
+## Rebel B-Wing Pilots
 
 Name | Canonical
 -----|----------
@@ -507,14 +546,14 @@ Keyan Farlander | keyanfarlander
 Nera Dantels | neradantels
 Ten Numb | tennumb
 
-## Rebel Alliance CR90 Corvette Pilots
+## Rebel CR90 Corvette Pilots
 
 Name | Canonical
 -----|----------
 CR90 Corvette (Aft) | cr90corvetteaft
 CR90 Corvette (Fore) | cr90corvettefore
 
-## Rebel Alliance E-Wing Pilots
+## Rebel E-Wing Pilots
 
 Name | Canonical
 -----|----------
@@ -523,13 +562,13 @@ Corran Horn | corranhorn
 Etahn A'baht | etahnabaht
 Knave Squadron Pilot | knavesquadronpilot
 
-## Rebel Alliance GR-75 Medium Transport Pilots
+## Rebel GR-75 Medium Transport Pilots
 
 Name | Canonical
 -----|----------
 GR-75 Medium Transport | gr75mediumtransport
 
-## Rebel Alliance HWK-290 Pilots
+## Rebel HWK-290 Pilots
 
 Name | Canonical
 -----|----------
@@ -538,7 +577,7 @@ Kyle Katarn | kylekatarn
 Rebel Operative | rebeloperative
 Roark Garnet | roarkgarnet
 
-## Rebel Alliance K-Wing Pilots
+## Rebel K-Wing Pilots
 
 Name | Canonical
 -----|----------
@@ -547,13 +586,23 @@ Guardian Squadron Pilot | guardiansquadronpilot
 Miranda Doni | mirandadoni
 Warden Squadron Pilot | wardensquadronpilot
 
-## Rebel Alliance VCX-100 Pilots
+## Rebel T-70 X-Wing Pilots
+
+Name | Canonical
+-----|----------
+"Blue Ace" | blueace
+"Red Ace" | redace
+Blue Squadron Novice | bluesquadronnovice
+Poe Dameron | poedameron
+Red Squadron Veteran | redsquadronveteran
+
+## Rebel VCX-100 Pilots
 
 Name | Canonical
 -----|----------
 Hera Syndulla | herasyndulla
 
-## Rebel Alliance X-Wing Pilots
+## Rebel X-Wing Pilots
 
 Name | Canonical
 -----|----------
@@ -568,7 +617,7 @@ Tarn Mison | tarnmison
 Wedge Antilles | wedgeantilles
 Wes Janson | wesjanson
 
-## Rebel Alliance YT-1300 Pilots
+## Rebel YT-1300 Pilots
 
 Name | Canonical
 -----|----------
@@ -577,7 +626,7 @@ Han Solo | hansolo
 Lando Calrissian | landocalrissian
 Outer Rim Smuggler | outerrimsmuggler
 
-## Rebel Alliance YT-2400 Pilots
+## Rebel YT-2400 Pilots
 
 Name | Canonical
 -----|----------
@@ -586,7 +635,7 @@ Dash Rendar | dashrendar
 Eaden Vrill | eadenvrill
 Wild Space Fringer | wildspacefringer
 
-## Rebel Alliance Y-Wing Pilots
+## Rebel Y-Wing Pilots
 
 Name | Canonical
 -----|----------
@@ -595,7 +644,7 @@ Gold Squadron Pilot | goldsquadronpilot
 Gray Squadron Pilot | graysquadronpilot
 Horton Salm | hortonsalm
 
-## Rebel Alliance Z-95 Headhunter Pilots
+## Rebel Z-95 Headhunter Pilots
 
 Name | Canonical
 -----|----------
@@ -604,7 +653,7 @@ Bandit Squadron Pilot | banditsquadronpilot
 Lieutenant Blount | lieutenantblount
 Tala Squadron Pilot | talasquadronpilot
 
-## Scum and Villainy Ships
+## Scum Ships
 
 Name | Canonical
 -----|----------
@@ -620,7 +669,7 @@ Y-Wing | ywing
 YV-666 | yv666
 Z-95 Headhunter | z95headhunter
 
-## Scum and Villainy Aggressor Pilots
+## Scum Aggressor Pilots
 
 Name | Canonical
 -----|----------
@@ -629,7 +678,7 @@ IG-88B | ig88b
 IG-88C | ig88c
 IG-88D | ig88d
 
-## Scum and Villainy Firespray-31 Pilots
+## Scum Firespray-31 Pilots
 
 Name | Canonical
 -----|----------
@@ -638,13 +687,13 @@ Emon Azzameen | emonazzameen
 Kath Scarlet | kathscarlet
 Mandalorian Mercenary | mandalorianmercenary
 
-## Scum and Villainy G-1A Starfighter Pilots
+## Scum G-1A Starfighter Pilots
 
 Name | Canonical
 -----|----------
 Zuckuss | zuckuss
 
-## Scum and Villainy HWK-290 Pilots
+## Scum HWK-290 Pilots
 
 Name | Canonical
 -----|----------
@@ -653,13 +702,13 @@ Palob Godalhi | palobgodalhi
 Spice Runner | spicerunner
 Torkil Mux | torkilmux
 
-## Scum and Villainy JumpMaster 5000 Pilots
+## Scum JumpMaster 5000 Pilots
 
 Name | Canonical
 -----|----------
 Dengar | dengar
 
-## Scum and Villainy Kihraxz Fighter Pilots
+## Scum Kihraxz Fighter Pilots
 
 Name | Canonical
 -----|----------
@@ -668,7 +717,7 @@ Cartel Marauder | cartelmarauder
 Graz the Hunter | grazthehunter
 Talonbane Cobra | talonbanecobra
 
-## Scum and Villainy M3-A Interceptor Pilots
+## Scum M3-A Interceptor Pilots
 
 Name | Canonical
 -----|----------
@@ -677,7 +726,7 @@ Laetin A'shera | laetinashera
 Serissu | serissu
 Tansarii Point Veteran | tansariipointveteran
 
-## Scum and Villainy StarViper Pilots
+## Scum StarViper Pilots
 
 Name | Canonical
 -----|----------
@@ -686,7 +735,7 @@ Black Sun Vigo | blacksunvigo
 Guri | guri
 Prince Xizor | princexizor
 
-## Scum and Villainy YV-666 Pilots
+## Scum YV-666 Pilots
 
 Name | Canonical
 -----|----------
@@ -695,7 +744,7 @@ Latts Razzi | lattsrazzi
 Moralo Eval | moraloeval
 Trandoshan Slaver | trandoshanslaver
 
-## Scum and Villainy Y-Wing Pilots
+## Scum Y-Wing Pilots
 
 Name | Canonical
 -----|----------
@@ -704,7 +753,7 @@ Hired Gun | hiredgun
 Kavil | kavil
 Syndicate Thug | syndicatethug
 
-## Scum and Villainy Z-95 Headhunter Pilots
+## Scum Z-95 Headhunter Pilots
 
 Name | Canonical
 -----|----------

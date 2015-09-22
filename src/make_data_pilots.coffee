@@ -15,10 +15,11 @@ for pilot in $exp.basicCardData().pilotsById
             pilot.ship = 'Raider-class Corvette'
             multisection = true
 
-        faction_key = $exp.xws.canonicalize(pilot.faction)
+        faction_str = $exp.xws.subfaction2faction_dict[pilot.faction]
+        faction_key = $exp.xws.canonicalize(faction_str)
         if faction_key not of $exp.xws.pilot_faction2ship2pilot2obj_dict
             $exp.xws.pilot_faction2ship2pilot2obj_dict[faction_key] = {
-                name: pilot.faction,
+                name: faction_str,
                 ships: {}
             }
 
@@ -26,6 +27,7 @@ for pilot in $exp.basicCardData().pilotsById
         if ship_key not of $exp.xws.pilot_faction2ship2pilot2obj_dict[faction_key].ships
             $exp.xws.pilot_faction2ship2pilot2obj_dict[faction_key].ships[ship_key] = {
                 name: pilot.ship,
+                subfaction: pilot.faction,
                 multisection: multisection,
                 pilots: {}
             }

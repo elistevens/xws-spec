@@ -4,10 +4,10 @@ $exp = exports ? this
 #console.log('(exports ? this).xws ?= {}')
 #console.log('(exports ? this).xws.pilot_faction2ship2pilot2obj_dict = ' + JSON.stringify($exp.xws.pilot_faction2ship2pilot2obj_dict))
 
-name2keyTable = (title, data) ->
+name2keyTable = (title, data, col1='Name', col2='Canonical') ->
     console.log("## #{title}")
     console.log("")
-    console.log("Name | Canonical")
+    console.log("#{col1} | #{col2}")
     console.log("-----|----------")
 
     key_list = Object.keys(data)
@@ -40,6 +40,7 @@ the `window.xws.pilot_faction2ship2pilot2obj_dict` and
 
 """)
 
+name2keyTable('Subfactions and Factions', $exp.xws.subfaction2faction_dict, 'Subfaction', 'Faction')
 name2keyTable('Canonicalization Special Cases', $exp.xws.canonicalizationExceptions_dict)
 
 key2objnameTable('Upgrade Slots', $exp.xws.upgrade_slot2key2obj_dict)

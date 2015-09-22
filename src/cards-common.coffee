@@ -2,16 +2,13 @@
 exportObj = exports ? this
 
 exportObj.unreleasedExpansions = [
-    "Imperial Raider Expansion Pack"
-    "Hound's Tooth Expansion Pack"
-    "Kihraxz Fighter Expansion Pack"
-    "K-Wing Expansion Pack"
-    "TIE Punisher Expansion Pack"
     "Imperial Assault Carrier Expansion Pack"
     "Ghost Expansion Pack"
     "Inquisitor's TIE Expansion Pack"
     "Mist Hunter Expansion Pack"
     "Punishing One Expansion Pack"
+    "T-70 X-Wing Expansion Pack"
+    "TIE/fo Fighter Expansion Pack"
 ]
 
 exportObj.isReleased = (data) ->
@@ -527,6 +524,7 @@ exportObj.basicCardData = ->
                 "Reinforce"
             ]
             huge: true
+            epic_points: 1.5
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0 ]
                 [ 0, 1, 1, 1, 0, 0 ]
@@ -546,6 +544,7 @@ exportObj.basicCardData = ->
                 "Target Lock"
             ]
             huge: true
+            epic_points: 1.5
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0 ]
                 [ 0, 1, 1, 1, 0, 0 ]
@@ -636,6 +635,7 @@ exportObj.basicCardData = ->
             hull: 9
             shields: 5
             huge: true
+            epic_points: 2 # guessing it's the same as rebel transport
             actions: [
                 "Recover"
                 "Reinforce"
@@ -710,6 +710,46 @@ exportObj.basicCardData = ->
                 "Barrel Roll"
             ]
             maneuvers: []
+        "T-70 X-Wing":
+            name: "T-70 X-Wing"
+            factions: ["Resistance"]
+            attack: 3
+            agility: 2
+            hull: 3
+            shields: 3
+            actions: [
+                "Focus"
+                "Target Lock"
+                "Boost"
+            ]
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+                [ 0, 2, 2, 2, 0, 0, 0, 0, 0, 0 ]
+                [ 1, 1, 2, 1, 1, 0, 0, 0, 0, 0 ]
+                [ 1, 1, 2, 1, 1, 0, 0, 0, 3, 3 ]
+                [ 0, 0, 1, 0, 0, 3, 0, 0, 0, 0 ]
+            ]
+        "TIE/fo Fighter":
+            name: "TIE/fo Fighter"
+            factions: ["First Order"]
+            attack: 2
+            agility: 3
+            hull: 3
+            shields: 1
+            actions: [
+                "Focus"
+                "Target Lock"
+                "Barrel Roll"
+                "Evade"
+            ]
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0, 0, 0 ]
+                [ 1, 0, 0, 0, 1, 0, 0, 0 ]
+                [ 2, 2, 2, 2, 2, 0, 3, 3 ]
+                [ 1, 1, 2, 1, 1, 0, 0, 0 ]
+                [ 0, 0, 1, 0, 0, 3, 0, 0 ]
+                [ 0, 0, 1, 0, 0, 0, 0, 0 ]
+            ]
 
     # name field is for convenience only
     pilotsById: [
@@ -3149,6 +3189,204 @@ exportObj.basicCardData = ->
             ]
             points: 99
         }
+
+        # T-70
+        {
+            name: "Poe Dameron"
+            id: 175
+            unique: true
+            faction: "Resistance"
+            ship: "T-70 X-Wing"
+            skill: 8
+            slots: [
+                'Elite'
+                'Torpedo'
+                'Astromech'
+                'Tech'
+            ]
+            points: 31
+        }
+        {
+            name: '"Blue Ace"'
+            id: 176
+            unique: true
+            faction: "Resistance"
+            ship: "T-70 X-Wing"
+            skill: 5
+            slots: [
+                'Torpedo'
+                'Astromech'
+                'Tech'
+            ]
+            points: 27
+        }
+        {
+            name: "Red Squadron Veteran"
+            id: 177
+            faction: "Resistance"
+            ship: "T-70 X-Wing"
+            skill: 4
+            slots: [
+                'Elite'
+                'Torpedo'
+                'Astromech'
+                'Tech'
+            ]
+            points: 26
+        }
+        {
+            name: "Blue Squadron Novice"
+            id: 178
+            faction: "Resistance"
+            ship: "T-70 X-Wing"
+            skill: 2
+            slots: [
+                'Torpedo'
+                'Astromech'
+                'Tech'
+            ]
+            points: 24
+        }
+
+        # TIE/fo
+        {
+            name: '"Omega Ace"'
+            id: 179
+            unique: true
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 7
+            slots: [
+                'Elite'
+                'Tech'
+            ]
+            points: 20
+        }
+        {
+            name: '"Epsilon Leader"'
+            id: 180
+            unique: true
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 6
+            slots: [
+                'Tech'
+            ]
+            points: 19
+        }
+        {
+            name: '"Zeta Ace"'
+            id: 181
+            unique: true
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 5
+            slots: [
+                'Elite'
+                'Tech'
+            ]
+            points: 18
+        }
+        {
+            name: "Omega Squadron Pilot"
+            id: 182
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 4
+            slots: [
+                'Elite'
+                'Tech'
+            ]
+            points: 17
+        }
+        {
+            name: "Zeta Squadron Pilot"
+            id: 183
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 3
+            slots: [
+                'Tech'
+            ]
+            points: 16
+        }
+        {
+            name: "Epsilon Squadron Pilot"
+            id: 184
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 1
+            slots: [
+                'Tech'
+            ]
+            points: 15
+        }
+
+        {
+            name: "Unspoiled PS7 T-70 X-Wing Pilot"
+            id: 185
+            unique: true
+            faction: "Resistance"
+            ship: "T-70 X-Wing"
+            skill: 7
+            slots: [
+                'Torpedo'
+                'Astromech'
+                'Tech'
+            ]
+            points: 99
+        }
+        {
+            name: '"Red Ace"'
+            id: 186
+            unique: true
+            faction: "Resistance"
+            ship: "T-70 X-Wing"
+            skill: 6
+            slots: [
+                'Torpedo'
+                'Astromech'
+                'Tech'
+            ]
+            points: 29
+        }
+        {
+            name: '"Omega Leader"'
+            id: 187
+            unique: true
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 8
+            slots: [
+                'Elite'
+                'Tech'
+            ]
+            points: 21
+        }
+        {
+            name: 'Unspoiled PS7 TIE/fo Pilot'
+            id: 188
+            unique: true
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 7
+            slots: [
+                'Tech'
+            ]
+            points: 99
+        }
+        {
+            name: 'Unspoiled PS4 TIE/fo Pilot'
+            id: 189
+            unique: true
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 4
+            slots: [
+                'Tech'
+            ]
+            points: 99
+        }
     ]
 
     upgradesById: [
@@ -3583,6 +3821,7 @@ exportObj.basicCardData = ->
             id: 61
             slot: "Crew"
             points: 2
+            limited: true
         }
         {
             name: "R2-D2 (Crew)"
@@ -4245,6 +4484,60 @@ exportObj.basicCardData = ->
             restriction_func: (ship) ->
                 not ((ship.data.large ? false) or (ship.data.huge ? false))
         }
+        {
+            name: 'Shield Technician'
+            id: 146
+            slot: "Crew"
+            points: 1
+            restriction_func: (ship) ->
+                ship.data.huge ? false
+        }
+        {
+            name: 'Weapons Guidance'
+            id: 147
+            slot: "Tech"
+            points: 2
+        }
+        {
+            name: 'BB-8'
+            id: 148
+            unique: true
+            slot: "Astromech"
+            points: 2
+        }
+        {
+            name: 'R5-X3'
+            id: 149
+            unique: true
+            slot: "Astromech"
+            points: 1
+        }
+        {
+            name: 'Wired'
+            id: 150
+            slot: "Elite"
+            points: 1
+        }
+        {
+            name: 'Cool Hand'
+            id: 151
+            slot: 'Elite'
+            points: 1
+        }
+        {
+            name: 'Juke'
+            id: 152
+            slot: 'Elite'
+            points: 2
+            restriction_func: (ship) ->
+                not ((ship.data.large ? false) or (ship.data.huge ? false))
+        }
+        {
+            name: 'Comm Relay'
+            id: 153
+            slot: 'Tech'
+            points: 3
+        }
     ]
 
     modificationsById: [
@@ -4388,6 +4681,13 @@ exportObj.basicCardData = ->
             points: 2
             restriction_func: (ship) ->
                 ship.data.large ? false
+        }
+        {
+            name: 'Integrated Astromech'
+            id: 20
+            restriction_func: (ship) ->
+                ship.data.name.indexOf('X-Wing') != -1
+            points: 0
         }
     ]
 
@@ -4718,6 +5018,27 @@ exportObj.basicCardData = ->
             modifier_func: (stats) ->
                 stats.attack += 1
         }
+        {
+            name: 'Assailer'
+            id: 30
+            points: 2
+            unique: true
+            ship: "Raider-class Corvette (Aft)"
+        }
+        {
+            name: 'Instigator'
+            id: 31
+            points: 4
+            unique: true
+            ship: "Raider-class Corvette (Aft)"
+        }
+        {
+            name: 'Impetuous'
+            id: 32
+            points: 3
+            unique: true
+            ship: "Raider-class Corvette (Aft)"
+        }
     ]
 
 exportObj.setupCardData = (basic_cards, pilot_translations, upgrade_translations, modification_translations, title_translations) ->
@@ -4846,6 +5167,12 @@ exportObj.setupCardData = (basic_cards, pilot_translations, upgrade_translations
     exportObj.pilotsByFactionCanonicalName = {}
     for pilot_name, pilot of exportObj.pilots
         ((exportObj.pilotsByFactionCanonicalName[pilot.faction] ?= {})[pilot.canonical_name] ?= []).push pilot
+        # Hack until we need to disambiguate same name pilots by subfaction
+        switch pilot.faction
+            when 'Resistance'
+                ((exportObj.pilotsByFactionCanonicalName['Rebel Alliance'] ?= {})[pilot.canonical_name] ?= []).push pilot
+            when 'First Order'
+                ((exportObj.pilotsByFactionCanonicalName['Galactic Empire'] ?= {})[pilot.canonical_name] ?= []).push pilot
 
     exportObj.upgradesById = {}
     exportObj.upgradesByLocalizedName = {}
