@@ -55,7 +55,7 @@ about the appropriate nature of a list for any given purpose.
 ### Squadron Attributes
 Requirement | Key | Type | Notes
 ---|---|---|---
-Mandatory | faction | String | Canonicalized faction name. Possible values: "rebels", "empire", "scum".
+Mandatory | faction | String | Canonicalized faction name. Possible values: "rebel", "imperial", "scum".
 Mandatory | pilots | Array | List of one or more pilots; see below.
  | | |
 Optional | name | String | Human-readable squadron name.
