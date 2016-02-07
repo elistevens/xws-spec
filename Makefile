@@ -1,9 +1,12 @@
 .PHONY: all
-all: index.html dist/xws.min.js README_NAMES.md
+all: index.html dist/xws.min.js README_NAMES.md dist/xws_pilots.json dist/xws_upgrades.json
 
 .PHONY: yasb
 yasb:
 	curl -o src/cards-common.coffee https://raw.githubusercontent.com/geordanr/xwing/master/coffeescripts/cards-common.coffee
+
+dist/xws_%.json: src/cards-common.coffee src/xws_validate.coffee src/make_data_%.coffee
+	node_modules/.bin/coffee -p $^ | node | tail -n 1 > $@
 
 src/xws_data_%.coffee: src/cards-common.coffee src/xws_validate.coffee src/make_data_%.coffee
 	node_modules/.bin/coffee -p $^ | node > $@

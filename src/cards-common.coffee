@@ -2,13 +2,10 @@
 exportObj = exports ? this
 
 exportObj.unreleasedExpansions = [
-    "Imperial Assault Carrier Expansion Pack"
     "Ghost Expansion Pack"
     "Inquisitor's TIE Expansion Pack"
     "Mist Hunter Expansion Pack"
     "Punishing One Expansion Pack"
-    "T-70 X-Wing Expansion Pack"
-    "TIE/fo Fighter Expansion Pack"
 ]
 
 exportObj.isReleased = (data) ->
@@ -642,6 +639,13 @@ exportObj.basicCardData = ->
                 "Coordinate"
                 "Target Lock"
             ]
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0 ]
+                [ 0, 1, 1, 1, 0, 0 ]
+                [ 0, 1, 1, 1, 0, 0 ]
+                [ 0, 0, 1, 0, 0, 0 ]
+                [ 0, 0, 1, 0, 0, 0 ]
+            ]
         "VCX-100":
             name: "VCX-100"
             factions: ["Rebel Alliance"]
@@ -655,7 +659,14 @@ exportObj.basicCardData = ->
                 "Target Lock"
                 "Evade"
             ]
-            maneuvers: []
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0 ]
+                [ 3, 1, 2, 1, 3, 0 ]
+                [ 1, 2, 2, 2, 1, 0 ]
+                [ 3, 1, 1, 1, 3, 0 ]
+                [ 0, 0, 1, 0, 0, 0 ]
+                [ 0, 0, 0, 0, 0, 3 ]
+            ]
         "Attack Shuttle":
             name: "Attack Shuttle"
             factions: ["Rebel Alliance"]
@@ -668,9 +679,16 @@ exportObj.basicCardData = ->
                 "Barrel Roll"
                 "Evade"
             ]
-            maneuvers: []
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0 ]
+                [ 3, 2, 2, 2, 3, 0 ]
+                [ 1, 1, 2, 1, 1, 0 ]
+                [ 3, 1, 1, 1, 3, 0 ]
+                [ 0, 0, 1, 0, 0, 3 ]
+            ]
         "TIE Advanced Prototype":
             name: "TIE Advanced Prototype"
+            canonical_name: 'TIE Adv. Prototype'.canonicalize()
             factions: ["Galactic Empire"]
             attack: 2
             agility: 3
@@ -682,7 +700,14 @@ exportObj.basicCardData = ->
                 "Barrel Roll"
                 "Boost"
             ]
-            maneuvers: []
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0 ]
+                [ 2, 2, 0, 2, 2, 0 ]
+                [ 1, 1, 2, 1, 1, 0 ]
+                [ 1, 1, 2, 1, 1, 0 ]
+                [ 0, 0, 2, 0, 0, 3 ]
+                [ 0, 0, 1, 0, 0, 0 ]
+            ]
         "G-1A Starfighter":
             name: "G-1A Starfighter"
             factions: ["Scum and Villainy"]
@@ -695,7 +720,13 @@ exportObj.basicCardData = ->
                 "Target Lock"
                 "Evade"
             ]
-            maneuvers: []
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0 ]
+                [ 3, 2, 2, 2, 3, 0 ]
+                [ 1, 1, 2, 1, 1, 0 ]
+                [ 0, 3, 2, 3, 0, 3 ]
+                [ 0, 0, 1, 0, 0, 3 ]
+            ]
         "JumpMaster 5000":
             name: "JumpMaster 5000"
             factions: ["Scum and Villainy"]
@@ -2772,6 +2803,7 @@ exportObj.basicCardData = ->
         }
         {
             name: 'Black Eight Squadron Pilot'
+            canonical_name: 'Black Eight Sq. Pilot'.canonicalize()
             faction: "Galactic Empire"
             id: 145
             ship: "TIE Punisher"
@@ -2871,34 +2903,36 @@ exportObj.basicCardData = ->
             points: 17
         }
         {
-            name: 'Unspoiled PS6 TIE Fighter Pilot'
+            name: '"Youngster"'
             id: 152
             unique: true
             faction: "Galactic Empire"
             ship: "TIE Fighter"
             skill: 6
-            slots: []
-            points: 99
+            slots: [
+                'Elite'
+            ]
+            points: 15
         }
         {
-            name: 'Unspoiled PS4 TIE Fighter Pilot'
+            name: '"Wampa"'
             id: 153
             unique: true
             faction: "Galactic Empire"
             ship: "TIE Fighter"
             skill: 4
             slots: []
-            points: 99
+            points: 14
         }
         {
-            name: 'Unspoiled PS3 TIE Fighter Pilot'
+            name: '"Chaser"'
             id: 154
             unique: true
             faction: "Galactic Empire"
             ship: "TIE Fighter"
             skill: 3
             slots: []
-            points: 99
+            points: 14
         }
         {
             name: "Hera Syndulla"
@@ -2932,7 +2966,7 @@ exportObj.basicCardData = ->
                 'Crew'
                 'Crew'
             ]
-            points: 99
+            points: 38
         }
         {
             name: '"Chopper"'
@@ -2949,7 +2983,7 @@ exportObj.basicCardData = ->
                 'Crew'
                 'Crew'
             ]
-            points: 99
+            points: 37
         }
         {
             name: 'Lothal ???'
@@ -2965,7 +2999,7 @@ exportObj.basicCardData = ->
                 'Crew'
                 'Crew'
             ]
-            points: 99
+            points: 100
         }
         {
             name: 'Hera Syndulla (Attack Shuttle)'
@@ -2976,10 +3010,11 @@ exportObj.basicCardData = ->
             ship: "Attack Shuttle"
             skill: 7
             slots: [
+                'Elite'
                 'Turret'
                 'Crew'
             ]
-            points: 99
+            points: 22
         }
         {
             name: 'Sabine Wren'
@@ -2989,10 +3024,11 @@ exportObj.basicCardData = ->
             ship: "Attack Shuttle"
             skill: 5
             slots: [
+                'Elite'
                 'Turret'
                 'Crew'
             ]
-            points: 99
+            points: 21
         }
         {
             name: 'Ezra Bridger'
@@ -3002,10 +3038,11 @@ exportObj.basicCardData = ->
             ship: "Attack Shuttle"
             skill: 4
             slots: [
+                'Elite'
                 'Turret'
                 'Crew'
             ]
-            points: 99
+            points: 20
         }
         {
             name: '"Zeb" Orrelios'
@@ -3018,7 +3055,7 @@ exportObj.basicCardData = ->
                 'Turret'
                 'Crew'
             ]
-            points: 99
+            points: 18
         }
         {
             name: "The Inquisitor"
@@ -3041,9 +3078,10 @@ exportObj.basicCardData = ->
             ship: "TIE Advanced Prototype"
             skill: 6
             slots: [
+                'Elite'
                 'Missile'
             ]
-            points: 99
+            points: 22
         }
         {
             name: "Baron of ???"
@@ -3054,10 +3092,10 @@ exportObj.basicCardData = ->
             slots: [
                 'Missile'
             ]
-            points: 99
+            points: 100
         }
         {
-            name: "Sienar ???"
+            name: "Sienar Test Pilot"
             id: 166
             faction: "Galactic Empire"
             ship: "TIE Advanced Prototype"
@@ -3065,7 +3103,7 @@ exportObj.basicCardData = ->
             slots: [
                 'Missile'
             ]
-            points: 99
+            points: 16
         }
         {
             name: "Zuckuss"
@@ -3090,11 +3128,12 @@ exportObj.basicCardData = ->
             ship: "G-1A Starfighter"
             skill: 6
             slots: [
+                'Elite'
                 'Crew'
                 'System'
                 'Illicit'
             ]
-            points: 99
+            points: 27
         }
         {
             name: "Gand ???"
@@ -3107,7 +3146,7 @@ exportObj.basicCardData = ->
                 'System'
                 'Illicit'
             ]
-            points: 99
+            points: 100
         }
         {
             name: "Ruth???"
@@ -3120,7 +3159,7 @@ exportObj.basicCardData = ->
                 'System'
                 'Illicit'
             ]
-            points: 99
+            points: 100
         }
         {
             name: "Dengar"
@@ -3154,7 +3193,7 @@ exportObj.basicCardData = ->
                 'Salvaged Astromech'
                 'Illicit'
             ]
-            points: 99
+            points: 100
         }
         {
             name: "Manaroo"
@@ -3171,7 +3210,7 @@ exportObj.basicCardData = ->
                 'Salvaged Astromech'
                 'Illicit'
             ]
-            points: 99
+            points: 27
         }
         {
             name: "Contrac???"
@@ -3187,7 +3226,7 @@ exportObj.basicCardData = ->
                 'Salvaged Astromech'
                 'Illicit'
             ]
-            points: 99
+            points: 100
         }
 
         # T-70
@@ -3323,18 +3362,19 @@ exportObj.basicCardData = ->
         }
 
         {
-            name: "Unspoiled PS7 T-70 X-Wing Pilot"
+            name: "Ello Asty"
             id: 185
             unique: true
             faction: "Resistance"
             ship: "T-70 X-Wing"
             skill: 7
             slots: [
+                'Elite'
                 'Torpedo'
                 'Astromech'
                 'Tech'
             ]
-            points: 99
+            points: 30
         }
         {
             name: '"Red Ace"'
@@ -3364,19 +3404,20 @@ exportObj.basicCardData = ->
             points: 21
         }
         {
-            name: 'Unspoiled PS7 TIE/fo Pilot'
+            name: '"Zeta Leader"'
             id: 188
             unique: true
             faction: "First Order"
             ship: "TIE/fo Fighter"
             skill: 7
             slots: [
+                'Elite'
                 'Tech'
             ]
-            points: 99
+            points: 20
         }
         {
-            name: 'Unspoiled PS4 TIE/fo Pilot'
+            name: '"Epsilon Ace"'
             id: 189
             unique: true
             faction: "First Order"
@@ -3385,7 +3426,95 @@ exportObj.basicCardData = ->
             slots: [
                 'Tech'
             ]
-            points: 99
+            points: 17
+        }
+        {
+            name: "Tomax Bren"
+            id: 190
+            unique: true
+            faction: "Galactic Empire"
+            ship: "TIE Bomber"
+            skill: 8
+            slots: [
+                'Elite'
+                'Torpedo'
+                'Torpedo'
+                'Missile'
+                'Missile'
+                'Bomb'
+            ]
+            points: 24
+        }
+        {
+            name: "Gamma Squadron Veteran"
+            id: 191
+            faction: "Galactic Empire"
+            ship: "TIE Bomber"
+            skill: 5
+            slots: [
+                'Elite'
+                'Torpedo'
+                'Torpedo'
+                'Missile'
+                'Missile'
+                'Bomb'
+            ]
+            points: 19
+        }
+        {
+            name: '"Dea???"'
+            id: 192
+            unique: true
+            faction: "Galactic Empire"
+            ship: "TIE Bomber"
+            skill: 3
+            slots: [
+                'Torpedo'
+                'Torpedo'
+                'Missile'
+                'Missile'
+                'Bomb'
+            ]
+            points: 100
+        }
+        {
+            name: "Maarek Stele (TIE Defender)"
+            canonical_name: 'Maarek Stele'.canonicalize()
+            id: 193
+            unique: true
+            faction: "Galactic Empire"
+            ship: "TIE Defender"
+            skill: 7
+            slots: [
+                'Cannon'
+                'Missile'
+            ]
+            points: 100
+        }
+        {
+            name: "Glaive Squa???"
+            id: 194
+            faction: "Galactic Empire"
+            ship: "TIE Defender"
+            skill: 6
+            slots: [
+                'Cannon'
+                'Missile'
+            ]
+            points: 100
+        }
+        {
+            name: "Count???"
+            id: 195
+            unique: true
+            faction: "Galactic Empire"
+            ship: "TIE Defender"
+            skill: 5
+            slots: [
+                'Cannon'
+                'Missile'
+            ]
+            points: 100
         }
     ]
 
@@ -4445,6 +4574,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Advanced Homing Missiles"
+            canonical_name: 'Adv. Homing Missiles'.canonicalize()
             id: 141
             slot: "Missile"
             points: 3
@@ -4537,6 +4667,181 @@ exportObj.basicCardData = ->
             id: 153
             slot: 'Tech'
             points: 3
+        }
+        {
+            name: 'Dual Laser Turret'
+            id: 154
+            points: 5
+            slot: 'Hardpoint'
+            attack: 3
+            range: '1-3'
+            energy: 1
+            ship: 'Gozanti-class Cruiser'
+        }
+        {
+            name: 'Broadcast Array'
+            id: 155
+            ship: 'Gozanti-class Cruiser'
+            points: 2
+            slot: 'Cargo'
+            modifier_func: (stats) ->
+                stats.actions.push 'Jam' if 'Jam' not in stats.actions
+        }
+        {
+            name: 'Rear Admiral Chiraneau'
+            id: 156
+            unique: true
+            points: 3
+            slot: 'Crew'
+            faction: 'Galactic Empire'
+            restriction_func: (ship) ->
+                ship.data.huge ? false
+        }
+        {
+            name: 'Ordnance Experts'
+            id: 157
+            limited: true
+            points: 5
+            slot: 'Team'
+        }
+        {
+            name: 'Docking Clamps'
+            id: 158
+            points: 0
+            limited: true
+            slot: 'Cargo'
+            ship: 'Gozanti-class Cruiser'
+        }
+        {
+            name: 'Kanan Jarrus'
+            id: 159
+            unique: true
+            faction: 'Rebel Alliance'
+            points: 3
+            slot: 'Crew'
+        }
+        {
+            name: '"Zeb" Orrelios'
+            id: 160
+            unique: true
+            faction: 'Rebel Alliance'
+            points: 1
+            slot: 'Crew'
+        }
+        {
+            name: 'Reinforced Deflectors'
+            id: 161
+            points: 3
+            slot: 'System'
+            restriction_func: (ship) ->
+                ship.data.large ? false
+        }
+        {
+            name: 'Dorsal Turret'
+            id: 162
+            points: 3
+            slot: 'Turret'
+            attack: 2
+            range: '1-2'
+        }
+        {
+            name: 'Targeting Astromech'
+            id: 163
+            slot: 'Astromech'
+            points: 2
+        }
+        {
+            name: 'Hera Syndulla'
+            id: 164
+            unique: true
+            faction: 'Rebel Alliance'
+            points: 1
+            slot: 'Crew'
+        }
+        {
+            name: 'Ezra Bridger'
+            id: 165
+            unique: true
+            faction: 'Rebel Alliance'
+            points: 3
+            slot: 'Crew'
+        }
+        {
+            name: 'Sabine Wren'
+            id: 166
+            unique: true
+            faction: 'Rebel Alliance'
+            points: 2
+            slot: 'Crew'
+            confersAddons: [
+                {
+                    type: exportObj.Upgrade
+                    slot: "Bomb"
+                }
+            ]
+        }
+        {
+            name: '"Chopper"'
+            id: 167
+            unique: true
+            faction: 'Rebel Alliance'
+            points: 0
+            slot: 'Crew'
+        }
+        {
+            name: 'Construction Droid'
+            id: 168
+            points: 3
+            slot: 'Crew'
+            limited: true
+            restriction_func: (ship) ->
+                ship.data.huge ? false
+        }
+        {
+            name: 'Cluster Bombs'
+            id: 169
+            points: 4
+            slot: 'Cargo'
+        }
+        {
+            name: "Adaptability (+1)"
+            id: 170
+            canonical_name: 'Adaptability'.canonicalize()
+            slot: "Elite"
+            points: 0
+            modifier_func: (stats) ->
+                stats.skill += 1
+        }
+        {
+            name: "Adaptability (-1)"
+            id: 171
+            canonical_name: 'Adaptability'.canonicalize()
+            slot: "Elite"
+            points: 0
+            modifier_func: (stats) ->
+                stats.skill -= 1
+        }
+        {
+            name: "Electronic Baffle"
+            id: 172
+            slot: "System"
+            points: 1
+        }
+        {
+            name: "4-LOM"
+            id: 173
+            unique: true
+            slot: "Crew"
+            points: 1
+            faction: "Scum and Villainy"
+        }
+        {
+            name: "Zuckuss"
+            id: 174
+            unique: true
+            slot: "Crew"
+            points: 1
+            faction: "Scum and Villainy"
         }
     ]
 
@@ -4686,7 +4991,41 @@ exportObj.basicCardData = ->
             name: 'Integrated Astromech'
             id: 20
             restriction_func: (ship) ->
-                ship.data.name.indexOf('X-Wing') != -1
+                ship.data.canonical_name.indexOf('xwing') != -1
+            points: 0
+        }
+        {
+            name: 'Optimized Generators'
+            id: 21
+            points: 5
+            restriction_func: (ship) ->
+                ship.data.huge ? false
+        }
+        {
+            name: 'Automated Protocols'
+            id: 22
+            points: 5
+            restriction_func: (ship) ->
+                ship.data.huge ? false
+        }
+        {
+            name: 'Ordnance Tubes'
+            id: 23
+            points: 5
+            slot: 'Hardpoint'
+            restriction_func: (ship) ->
+                ship.data.huge ? false
+        }
+        {
+            name: 'Long-Range Scanners'
+            id: 24
+            points: 0
+            restriction_func: (ship) ->
+                ((upgrade for upgrade in ship.upgrades when upgrade.slot == 'Torpedo' and not upgrade.occupied_by?).length >= 1) and ((upgrade for upgrade in ship.upgrades when upgrade.slot == 'Missile' and not upgrade.occupied_by?).length >= 1)
+        }
+        {
+            name: "Guidance Chips"
+            id: 25
             points: 0
         }
     ]
@@ -5039,6 +5378,88 @@ exportObj.basicCardData = ->
             unique: true
             ship: "Raider-class Corvette (Aft)"
         }
+        {
+            name: 'TIE/x7'
+            id: 33
+            ship: 'TIE Defender'
+            points: -2
+            unequips_upgrades: [
+                'Cannon'
+                'Missile'
+            ]
+            also_occupies_upgrades: [
+                'Cannon'
+                'Missile'
+            ]
+        }
+        {
+            name: 'TIE/D'
+            id: 34
+            ship: 'TIE Defender'
+            points: 0
+        }
+        {
+            name: 'TIE Shuttle'
+            id: 35
+            ship: 'TIE Bomber'
+            points: 0
+            unequips_upgrades: [
+                'Torpedo'
+                'Torpedo'
+                'Missile'
+                'Missile'
+                'Bomb'
+            ]
+            also_occupies_upgrades: [
+                'Torpedo'
+                'Torpedo'
+                'Missile'
+                'Missile'
+                'Bomb'
+            ]
+            confersAddons: [
+                {
+                    type: exportObj.RestrictedUpgrade
+                    slot: 'Crew'
+                    filter_func: (upgrade) ->
+                        upgrade.points <= 4
+                }
+                {
+                    type: exportObj.RestrictedUpgrade
+                    slot: 'Crew'
+                    filter_func: (upgrade) ->
+                        upgrade.points <= 4
+                }
+            ]
+        }
+        {
+            name: 'Requiem'
+            id: 36
+            unique: true
+            ship: 'Gozanti-class Cruiser'
+            energy: '+0'
+            points: 4
+        }
+        {
+            name: 'Vector'
+            id: 37
+            unique: true
+            ship: 'Gozanti-class Cruiser'
+            energy: '+1'
+            points: 2
+            modifier_func: (stats) ->
+                stats.energy += 1
+        }
+        {
+            name: 'Suppressor'
+            id: 38
+            unique: true
+            ship: 'Gozanti-class Cruiser'
+            energy: '+2'
+            points: 6
+            modifier_func: (stats) ->
+                stats.energy += 2
+        }
     ]
 
 exportObj.setupCardData = (basic_cards, pilot_translations, upgrade_translations, modification_translations, title_translations) ->
@@ -5272,7 +5693,10 @@ exportObj.fixIcons = (data) ->
             .replace(/%SYSTEM%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-system"></i>')
             .replace(/%TARGETLOCK%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-targetlock"></i>')
             .replace(/%TEAM%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-team"></i>')
+            .replace(/%TECH%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-tech"></i>')
             .replace(/%TORPEDO%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-torpedo"></i>')
+            .replace(/%TROLLLEFT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-trollleft"></i>')
+            .replace(/%TROLLRIGHT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-trollright"></i>')
             .replace(/%TURNLEFT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-turnleft"></i>')
             .replace(/%TURNRIGHT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-turnright"></i>')
             .replace(/%TURRET%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-turret"></i>')
@@ -5283,17 +5707,21 @@ exportObj.fixIcons = (data) ->
             .replace(/%REBELONLY%/g, '<span class="card-restriction">Rebel only.</span>')
             .replace(/%IMPERIALONLY%/g, '<span class="card-restriction">Imperial only.</span>')
             .replace(/%SCUMONLY%/g, '<span class="card-restriction">Scum only.</span>')
+            .replace(/%LIMITED%/g, '<span class="card-restriction">Limited.</span>')
             .replace(/%LINEBREAK%/g, '<br /><br />')
-            .replace(/%DE_HUGESHIPONLY%/g, '<span class="card-restriction">Nur für Riesen Schiffe.</span>')
+            .replace(/%DE_HUGESHIPONLY%/g, '<span class="card-restriction">Nur für riesige Schiffe.</span>')
             .replace(/%DE_LARGESHIPONLY%/g, '<span class="card-restriction">Nur für grosse Schiffe.</span>')
             .replace(/%DE_REBELONLY%/g, '<span class="card-restriction">Nur für Rebellen.</span>')
             .replace(/%DE_IMPERIALONLY%/g, '<span class="card-restriction">Nur für das Imperium.</span>')
             .replace(/%DE_SCUMONLY%/g, '<span class="card-restriction">Nur für Abschaum & Kriminelle.</span>')
+            .replace(/%DE_GOZANTIONLY%/g, '<span class="card-restriction">Nur für Kreuzer der <em>Gozanti</em>-Klasse.</span>')
+            .replace(/%DE_LIMITED%/g, '<span class="card-restriction">Limitiert.</span>')
             .replace(/%FR_HUGESHIPONLY%/g, '<span class="card-restriction">Vaisseau immense uniquement.</span>')
             .replace(/%FR_LARGESHIPONLY%/g, '<span class="card-restriction">Grand vaisseau uniquement.</span>')
             .replace(/%FR_REBELONLY%/g, '<span class="card-restriction">Rebelle uniquement.</span>')
             .replace(/%FR_IMPERIALONLY%/g, '<span class="card-restriction">Impérial uniquement.</span>')
             .replace(/%FR_SCUMONLY%/g, '<span class="card-restriction">Racailles uniquement.</span>')
+            .replace(/%GOZANTIONLY%/g, '<span class="card-restriction"><em>Gozanti</em>-class cruiser only.</span>')
 
 exportObj.canonicalizeShipNames = (card_data) ->
     for ship_name, ship_data of card_data.ships

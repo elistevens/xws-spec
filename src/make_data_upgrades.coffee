@@ -32,6 +32,12 @@ for upgrade in upgrade_list
         if upgrade.name == '"Heavy Scyk" Interceptor (Torpedo)'
             upgrade.name = '"Heavy Scyk" Interceptor'
 
+        if upgrade.name == 'Adaptability (+1)'
+            upgrade.name = 'Adaptability'
+        if upgrade.name == 'Adaptability (-1)'
+            upgrade.name = 'Adaptability'
+
+
         slot_key = $exp.xws.canonicalize(upgrade.slot)
         if slot_key not of $exp.xws.upgrade_slot2key2obj_dict
             $exp.xws.upgrade_slot2key2obj_dict[slot_key] = {
@@ -47,6 +53,7 @@ for upgrade in upgrade_list
         }
 
 console.log('(exports ? this).xws ?= {}')
-console.log('(exports ? this).xws.upgrade_slot2key2obj_dict = ' + JSON.stringify($exp.xws.upgrade_slot2key2obj_dict))
+console.log('(exports ? this).xws.upgrade_slot2key2obj_dict = \\')
+console.log(JSON.stringify($exp.xws.upgrade_slot2key2obj_dict))
 #console.log('(exports ? this).upgrade_slots_list = ' + JSON.stringify($exp.xws.upgrade_slots_list))
 

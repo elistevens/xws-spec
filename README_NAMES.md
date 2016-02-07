@@ -70,6 +70,7 @@ R5-P9 | r5p9
 R5-X3 | r5x3
 R7 Astromech | r7astromech
 R7-T1 | r7t1
+Targeting Astromech | targetingastromech
 
 ## Bomb Upgrades
 
@@ -98,7 +99,10 @@ Tractor Beam | tractorbeam
 Name | Canonical
 -----|----------
 Backup Shield Generator | backupshieldgenerator
+Broadcast Array | broadcastarray
+Cluster Bombs | clusterbombs
 Comms Booster | commsbooster
+Docking Clamps | dockingclamps
 EM Emitter | ememitter
 Engine Booster | enginebooster
 Expanded Cargo Hold | expandedcargohold
@@ -112,7 +116,10 @@ Tibanna Gas Supplies | tibannagassupplies
 
 Name | Canonical
 -----|----------
+"Chopper" | chopper
 "Leebo" | leebo
+"Zeb" Orrelios | zeborrelios
+4-LOM | 4lom
 Admiral Ozzel | admiralozzel
 Agent Kallus | agentkallus
 Bombardier | bombardier
@@ -121,19 +128,23 @@ C-3PO | c3po
 Captain Needa | captainneeda
 Carlist Rieekan | carlistrieekan
 Chewbacca | chewbacca
+Construction Droid | constructiondroid
 Darth Vader | darthvader
 Dash Rendar | dashrendar
 Emperor Palpatine | emperorpalpatine
+Ezra Bridger | ezrabridger
 Fleet Officer | fleetofficer
 Flight Instructor | flightinstructor
 Grand Moff Tarkin | grandmofftarkin
 Greedo | greedo
 Gunner | gunner
 Han Solo | hansolo
+Hera Syndulla | herasyndulla
 Intelligence Agent | intelligenceagent
 Jan Dodonna | jandodonna
 Jan Ors | janors
 K4 Security Droid | k4securitydroid
+Kanan Jarrus | kananjarrus
 Kyle Katarn | kylekatarn
 Lando Calrissian | landocalrissian
 Leia Organa | leiaorgana
@@ -146,8 +157,10 @@ Nien Nunb | niennunb
 Outlaw Tech | outlawtech
 R2-D2 | r2d2
 Raymus Antilles | raymusantilles
+Rear Admiral Chiraneau | rearadmiralchiraneau
 Rebel Captive | rebelcaptive
 Recon Specialist | reconspecialist
+Sabine Wren | sabinewren
 Saboteur | saboteur
 Shield Technician | shieldtechnician
 Tactician | tactician
@@ -156,11 +169,13 @@ Toryn Farr | torynfarr
 WED-15 Repair Droid | wed15repairdroid
 Weapons Engineer | weaponsengineer
 Ysanne Isard | ysanneisard
+Zuckuss | zuckuss
 
 ## Elite Pilot Talent Upgrades
 
 Name | Canonical
 -----|----------
+Adaptability | adaptability
 Adrenaline Rush | adrenalinerush
 Bodyguard | bodyguard
 Calculation | calculation
@@ -195,6 +210,7 @@ Wired | wired
 
 Name | Canonical
 -----|----------
+Dual Laser Turret | duallaserturret
 Ion Cannon Battery | ioncannonbattery
 Quad Laser Cannons | quadlasercannons
 Single Turbolasers | singleturbolasers
@@ -231,17 +247,22 @@ Name | Canonical
 Advanced Cloaking Device | advancedcloakingdevice
 Advanced SLAM | advancedslam
 Anti-Pursuit Lasers | antipursuitlasers
+Automated Protocols | automatedprotocols
 Autothrusters | autothrusters
 B-Wing/E2 | bwinge2
 Combat Retrofit | combatretrofit
 Countermeasures | countermeasures
 Engine Upgrade | engineupgrade
 Experimental Interface | experimentalinterface
+Guidance Chips | guidancechips
 Hull Upgrade | hullupgrade
 Integrated Astromech | integratedastromech
 Ion Projector | ionprojector
+Long-Range Scanners | longrangescanners
 Maneuvering Fins | maneuveringfins
 Munitions Failsafe | munitionsfailsafe
+Optimized Generators | optimizedgenerators
+Ordnance Tubes | ordnancetubes
 Shield Upgrade | shieldupgrade
 Stealth Device | stealthdevice
 Stygium Particle Accelerator | stygiumparticleaccelerator
@@ -266,8 +287,10 @@ Name | Canonical
 Accuracy Corrector | accuracycorrector
 Advanced Sensors | advancedsensors
 Advanced Targeting Computer | advancedtargetingcomputer
+Electronic Baffle | electronicbaffle
 Enhanced Scopes | enhancedscopes
 Fire-Control System | firecontrolsystem
+Reinforced Deflectors | reinforceddeflectors
 Sensor Jammer | sensorjammer
 
 ## Team Upgrades
@@ -276,6 +299,7 @@ Name | Canonical
 -----|----------
 Engineering Team | engineeringteam
 Gunnery Team | gunneryteam
+Ordnance Experts | ordnanceexperts
 Sensor Team | sensorteam
 
 ## Tech Upgrades
@@ -311,12 +335,18 @@ Outrider | outrider
 Phantom | phantom
 Punishing One | punishingone
 Quantum Storm | quantumstorm
+Requiem | requiem
 Royal Guard TIE | royalguardtie
 ST-321 | st321
 Slave I | slavei
+Suppressor | suppressor
+TIE Shuttle | tieshuttle
+TIE/D | tied
 TIE/v1 | tiev1
 TIE/x1 | tiex1
+TIE/x7 | tiex7
 Tantive IV | tantiveiv
+Vector | vector
 Virago | virago
 
 ## Torpedo Upgrades
@@ -337,6 +367,7 @@ Name | Canonical
 -----|----------
 Autoblaster Turret | autoblasterturret
 Blaster Turret | blasterturret
+Dorsal Turret | dorsalturret
 Ion Cannon Turret | ioncannonturret
 Twin Laser Turret | twinlaserturret
 
@@ -415,7 +446,9 @@ Zertik Strom | zertikstrom
 
 Name | Canonical
 -----|----------
+Sienar Test Pilot | sienartestpilot
 The Inquisitor | theinquisitor
+Valen Rudor | valenrudor
 
 ## Imperial TIE Bomber Pilots
 
@@ -423,8 +456,10 @@ Name | Canonical
 -----|----------
 Captain Jonus | captainjonus
 Gamma Squadron Pilot | gammasquadronpilot
+Gamma Squadron Veteran | gammasquadronveteran
 Major Rhymer | majorrhymer
 Scimitar Squadron Pilot | scimitarsquadronpilot
+Tomax Bren | tomaxbren
 
 ## Imperial TIE Defender Pilots
 
@@ -440,12 +475,15 @@ Rexler Brath | rexlerbrath
 Name | Canonical
 -----|----------
 "Backstabber" | backstabber
+"Chaser" | chaser
 "Dark Curse" | darkcurse
 "Howlrunner" | howlrunner
 "Mauler Mithel" | maulermithel
 "Night Beast" | nightbeast
 "Scourge" | scourge
+"Wampa" | wampa
 "Winged Gundark" | wingedgundark
+"Youngster" | youngster
 Academy Pilot | academypilot
 Black Squadron Pilot | blacksquadronpilot
 Obsidian Squadron Pilot | obsidiansquadronpilot
@@ -454,10 +492,12 @@ Obsidian Squadron Pilot | obsidiansquadronpilot
 
 Name | Canonical
 -----|----------
+"Epsilon Ace" | epsilonace
 "Epsilon Leader" | epsilonleader
 "Omega Ace" | omegaace
 "Omega Leader" | omegaleader
 "Zeta Ace" | zetaace
+"Zeta Leader" | zetaleader
 Epsilon Squadron Pilot | epsilonsquadronpilot
 Omega Squadron Pilot | omegasquadronpilot
 Zeta Squadron Pilot | zetasquadronpilot
@@ -510,6 +550,7 @@ Rear Admiral Chiraneau | rearadmiralchiraneau
 Name | Canonical
 -----|----------
 A-Wing | awing
+Attack Shuttle | attackshuttle
 B-Wing | bwing
 CR90 Corvette | cr90corvette
 E-Wing | ewing
@@ -523,6 +564,15 @@ Y-Wing | ywing
 YT-1300 | yt1300
 YT-2400 | yt2400
 Z-95 Headhunter | z95headhunter
+
+## Rebel Attack Shuttle Pilots
+
+Name | Canonical
+-----|----------
+"Zeb" Orrelios | zeborrelios
+Ezra Bridger | ezrabridger
+Hera Syndulla | herasyndulla
+Sabine Wren | sabinewren
 
 ## Rebel A-Wing Pilots
 
@@ -593,6 +643,7 @@ Name | Canonical
 "Blue Ace" | blueace
 "Red Ace" | redace
 Blue Squadron Novice | bluesquadronnovice
+Ello Asty | elloasty
 Poe Dameron | poedameron
 Red Squadron Veteran | redsquadronveteran
 
@@ -600,7 +651,9 @@ Red Squadron Veteran | redsquadronveteran
 
 Name | Canonical
 -----|----------
+"Chopper" | chopper
 Hera Syndulla | herasyndulla
+Kanan Jarrus | kananjarrus
 
 ## Rebel X-Wing Pilots
 
@@ -691,6 +744,7 @@ Mandalorian Mercenary | mandalorianmercenary
 
 Name | Canonical
 -----|----------
+4-LOM | 4lom
 Zuckuss | zuckuss
 
 ## Scum HWK-290 Pilots
@@ -707,6 +761,7 @@ Torkil Mux | torkilmux
 Name | Canonical
 -----|----------
 Dengar | dengar
+Manaroo | manaroo
 
 ## Scum Kihraxz Fighter Pilots
 

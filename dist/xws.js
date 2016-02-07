@@ -315,6 +315,37 @@
             "herasyndulla": {
               "name": "Hera Syndulla",
               "points": 40
+            },
+            "kananjarrus": {
+              "name": "Kanan Jarrus",
+              "points": 38
+            },
+            "chopper": {
+              "name": "\"Chopper\"",
+              "points": 37
+            }
+          }
+        },
+        "attackshuttle": {
+          "name": "Attack Shuttle",
+          "subfaction": "Rebel Alliance",
+          "multisection": false,
+          "pilots": {
+            "herasyndulla": {
+              "name": "Hera Syndulla",
+              "points": 22
+            },
+            "sabinewren": {
+              "name": "Sabine Wren",
+              "points": 21
+            },
+            "ezrabridger": {
+              "name": "Ezra Bridger",
+              "points": 20
+            },
+            "zeborrelios": {
+              "name": "\"Zeb\" Orrelios",
+              "points": 18
             }
           }
         },
@@ -338,6 +369,10 @@
             "bluesquadronnovice": {
               "name": "Blue Squadron Novice",
               "points": 24
+            },
+            "elloasty": {
+              "name": "Ello Asty",
+              "points": 30
             },
             "redace": {
               "name": "\"Red Ace\"",
@@ -394,6 +429,18 @@
             "scourge": {
               "name": "\"Scourge\"",
               "points": 17
+            },
+            "youngster": {
+              "name": "\"Youngster\"",
+              "points": 15
+            },
+            "wampa": {
+              "name": "\"Wampa\"",
+              "points": 14
+            },
+            "chaser": {
+              "name": "\"Chaser\"",
+              "points": 14
             }
           }
         },
@@ -530,6 +577,14 @@
             "majorrhymer": {
               "name": "Major Rhymer",
               "points": 26
+            },
+            "tomaxbren": {
+              "name": "Tomax Bren",
+              "points": 24
+            },
+            "gammasquadronveteran": {
+              "name": "Gamma Squadron Veteran",
+              "points": 19
             }
           }
         },
@@ -682,6 +737,14 @@
             "theinquisitor": {
               "name": "The Inquisitor",
               "points": 25
+            },
+            "valenrudor": {
+              "name": "Valen Rudor",
+              "points": 22
+            },
+            "sienartestpilot": {
+              "name": "Sienar Test Pilot",
+              "points": 16
             }
           }
         },
@@ -717,6 +780,14 @@
             "omegaleader": {
               "name": "\"Omega Leader\"",
               "points": 21
+            },
+            "zetaleader": {
+              "name": "\"Zeta Leader\"",
+              "points": 20
+            },
+            "epsilonace": {
+              "name": "\"Epsilon Ace\"",
+              "points": 17
             }
           }
         }
@@ -940,6 +1011,10 @@
             "zuckuss": {
               "name": "Zuckuss",
               "points": 28
+            },
+            "4lom": {
+              "name": "4-LOM",
+              "points": 27
             }
           }
         },
@@ -951,6 +1026,10 @@
             "dengar": {
               "name": "Dengar",
               "points": 33
+            },
+            "manaroo": {
+              "name": "Manaroo",
+              "points": 27
             }
           }
         }
@@ -981,6 +1060,10 @@
         "twinlaserturret": {
           "name": "Twin Laser Turret",
           "points": 6
+        },
+        "dorsalturret": {
+          "name": "Dorsal Turret",
+          "points": 3
         }
       }
     },
@@ -1075,6 +1158,10 @@
         "r5x3": {
           "name": "R5-X3",
           "points": 1
+        },
+        "targetingastromech": {
+          "name": "Targeting Astromech",
+          "points": 2
         }
       }
     },
@@ -1196,6 +1283,10 @@
         "juke": {
           "name": "Juke",
           "points": 2
+        },
+        "adaptability": {
+          "name": "Adaptability",
+          "points": 0
         }
       }
     },
@@ -1418,6 +1509,46 @@
         "shieldtechnician": {
           "name": "Shield Technician",
           "points": 1
+        },
+        "rearadmiralchiraneau": {
+          "name": "Rear Admiral Chiraneau",
+          "points": 3
+        },
+        "kananjarrus": {
+          "name": "Kanan Jarrus",
+          "points": 3
+        },
+        "zeborrelios": {
+          "name": "\"Zeb\" Orrelios",
+          "points": 1
+        },
+        "herasyndulla": {
+          "name": "Hera Syndulla",
+          "points": 1
+        },
+        "ezrabridger": {
+          "name": "Ezra Bridger",
+          "points": 3
+        },
+        "sabinewren": {
+          "name": "Sabine Wren",
+          "points": 2
+        },
+        "chopper": {
+          "name": "\"Chopper\"",
+          "points": 0
+        },
+        "constructiondroid": {
+          "name": "Construction Droid",
+          "points": 3
+        },
+        "4lom": {
+          "name": "4-LOM",
+          "points": 1
+        },
+        "zuckuss": {
+          "name": "Zuckuss",
+          "points": 1
         }
       }
     },
@@ -1505,6 +1636,14 @@
         "advancedtargetingcomputer": {
           "name": "Advanced Targeting Computer",
           "points": 5
+        },
+        "reinforceddeflectors": {
+          "name": "Reinforced Deflectors",
+          "points": 3
+        },
+        "electronicbaffle": {
+          "name": "Electronic Baffle",
+          "points": 1
         }
       }
     },
@@ -1550,6 +1689,18 @@
         "frequencyjammer": {
           "name": "Frequency Jammer",
           "points": 4
+        },
+        "broadcastarray": {
+          "name": "Broadcast Array",
+          "points": 2
+        },
+        "dockingclamps": {
+          "name": "Docking Clamps",
+          "points": 0
+        },
+        "clusterbombs": {
+          "name": "Cluster Bombs",
+          "points": 4
         }
       }
     },
@@ -1567,6 +1718,10 @@
         "ioncannonbattery": {
           "name": "Ion Cannon Battery",
           "points": 6
+        },
+        "duallaserturret": {
+          "name": "Dual Laser Turret",
+          "points": 5
         }
       }
     },
@@ -1584,6 +1739,10 @@
         "engineeringteam": {
           "name": "Engineering Team",
           "points": 4
+        },
+        "ordnanceexperts": {
+          "name": "Ordnance Experts",
+          "points": 5
         }
       }
     },
@@ -1736,6 +1895,26 @@
         "integratedastromech": {
           "name": "Integrated Astromech",
           "points": 0
+        },
+        "optimizedgenerators": {
+          "name": "Optimized Generators",
+          "points": 5
+        },
+        "automatedprotocols": {
+          "name": "Automated Protocols",
+          "points": 5
+        },
+        "ordnancetubes": {
+          "name": "Ordnance Tubes",
+          "points": 5
+        },
+        "longrangescanners": {
+          "name": "Long-Range Scanners",
+          "points": 0
+        },
+        "guidancechips": {
+          "name": "Guidance Chips",
+          "points": 0
         }
       }
     },
@@ -1857,6 +2036,30 @@
         "impetuous": {
           "name": "Impetuous",
           "points": 3
+        },
+        "tiex7": {
+          "name": "TIE/x7",
+          "points": -2
+        },
+        "tied": {
+          "name": "TIE/D",
+          "points": 0
+        },
+        "tieshuttle": {
+          "name": "TIE Shuttle",
+          "points": 0
+        },
+        "requiem": {
+          "name": "Requiem",
+          "points": 4
+        },
+        "vector": {
+          "name": "Vector",
+          "points": 2
+        },
+        "suppressor": {
+          "name": "Suppressor",
+          "points": 6
         }
       }
     }

@@ -15,7 +15,7 @@ $exp.xws.canonicalizationExceptions_dict = {
     "Astromech Droid": "amd",
     "Salvaged Astromech Droid": "samd",
     "Elite Pilot Talent": "ept",
-    "Modification": "mod"
+    "Modification": "mod",
 }
 
 $exp.xws.canonicalize = (name) ->

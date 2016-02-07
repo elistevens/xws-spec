@@ -36,6 +36,8 @@ for pilot in $exp.basicCardData().pilotsById
             pilot.name = 'Boba Fett'
         if pilot.name == 'Kath Scarlet (Scum)'
             pilot.name = 'Kath Scarlet'
+        if pilot.name == 'Hera Syndulla (Attack Shuttle)'
+            pilot.name = 'Hera Syndulla'
 
         name_key = $exp.xws.canonicalize(pilot.name)
         $exp.xws.pilot_faction2ship2pilot2obj_dict[faction_key].ships[ship_key].pilots[name_key] = {
@@ -44,5 +46,6 @@ for pilot in $exp.basicCardData().pilotsById
         }
 
 console.log('(exports ? this).xws ?= {}')
-console.log('(exports ? this).xws.pilot_faction2ship2pilot2obj_dict = ' + JSON.stringify($exp.xws.pilot_faction2ship2pilot2obj_dict))
+console.log('(exports ? this).xws.pilot_faction2ship2pilot2obj_dict = \\')
+console.log(JSON.stringify($exp.xws.pilot_faction2ship2pilot2obj_dict))
 
