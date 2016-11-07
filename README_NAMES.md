@@ -533,7 +533,7 @@ Colonel Vessery | colonelvessery
 Countess Ryad | countessryad
 Delta Squadron Pilot | deltasquadronpilot
 Glaive Squadron Pilot | glaivesquadronpilot
-Maarek Stele | maarekstele-swx52
+Maarek Stele | maarekstele
 Onyx Squadron Pilot | onyxsquadronpilot
 Rexler Brath | rexlerbrath
 
@@ -759,7 +759,7 @@ Name | Canonical
 -----|----------
 Ahsoka Tano | ahsokatano
 Captain Rex | captainrex
-Sabine Wren | sabinewren-swx59
+Sabine Wren | sabinewren
 
 ## Rebel U-Wing Pilots
 

@@ -7,15 +7,15 @@ yasb:
 
 .PHONY: clean
 clean:
-	rm dist/xws_*.json
-	rm src_xws_data_*.coffee
-	rm README_NAMES.md
-	rm dist/xws.js
-	rm dist/xws-min.js
-	rm index.html
+	rm dist/xws_*.json || true
+	rm src/xws_data_*.coffee || true
+	rm README_NAMES.md || true
+	rm dist/xws.js || true
+	rm dist/xws-min.js || true
+	rm index.html || true
 
 dist/xws_%.json: src/cards-common.coffee src/xws_validate.coffee src/make_data_%.coffee
-	node_modules/.bin/coffee -p $^ | node | tail -n 1 > $@
+	node_modules/.bin/coffee -p $^ | node | fgrep -v '#' | fgrep -v '(exports ? this).xws' > $@
 
 src/xws_data_%.coffee: src/cards-common.coffee src/xws_validate.coffee src/make_data_%.coffee
 	node_modules/.bin/coffee -p $^ | node > $@

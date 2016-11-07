@@ -33,18 +33,18 @@ for pilot in $exp.basicCardData().pilotsById
             }
 
         xpac_str = ''
-        if pilot.name == 'Maarek Stele (TIE Defender)'
-            xpac_str = '-swx52'
+#        if pilot.name == 'Maarek Stele (TIE Defender)'
+#            xpac_str = '-swx52'
 #        else if pilot.name == 'Sabine Wren (Scum)'
 #            xpac_str = '-swx56'
-        else if pilot.name == 'Poe Dameron (PS9)'
+        if pilot.name == 'Poe Dameron (PS9)'
             xpac_str = '-swx57'
         else if pilot.name == 'Han Solo (TFA)'
             xpac_str = '-swx57'
         else if pilot.name == 'Chewbacca (TFA)'
             xpac_str = '-swx57'
-        else if pilot.name == 'Sabine Wren (TIE Fighter)'
-            xpac_str = '-swx59'
+#        else if pilot.name == 'Sabine Wren (TIE Fighter)'
+#            xpac_str = '-swx59'
 
         orig_name = pilot.name
         pilot.name = pilot.name.replace(/\ \(.*\)/, '')
@@ -65,5 +65,5 @@ for pilot in $exp.basicCardData().pilotsById
 
 console.log('(exports ? this).xws ?= {}')
 console.log('(exports ? this).xws.pilot_faction2ship2pilot2obj_dict = \\')
-console.log(JSON.stringify($exp.xws.pilot_faction2ship2pilot2obj_dict))
+console.log(JSON.stringify($exp.xws.pilot_faction2ship2pilot2obj_dict, null, 4))
 

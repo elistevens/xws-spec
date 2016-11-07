@@ -444,7 +444,7 @@
               "name": "Ahsoka Tano",
               "points": 17
             },
-            "sabinewren-swx59": {
+            "sabinewren": {
               "name": "Sabine Wren",
               "points": 15
             },
@@ -725,7 +725,7 @@
               "name": "Rexler Brath",
               "points": 37
             },
-            "maarekstele-swx52": {
+            "maarekstele": {
               "name": "Maarek Stele",
               "points": 35
             },

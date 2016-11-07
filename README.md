@@ -181,12 +181,12 @@ This information is also provided as part of the `xws-spec` bower package. See
 the `window.xws.pilot_faction2ship2pilot2obj_dict` and
 `window.xws.upgrade_slot2key2obj_dict` variables.
 
-#### Canonicalization and Collisions
+#### Canonicalization and Name Collisions
 To determine collision for upgrades, simply see if there are two cards that have the
 same canonicalized name.
 
 To determine collision for pilots, see if there are pilots that for the combination
-of (faction, pilot name) have the same canonicalized names. Note that this doesn't use
+of (faction, ship, pilot name) have the same canonicalized names. Note that this doesn't use
 subfaction, since right now we only specify faction at the list level, not the pilot
 level (since you can mix subfactions in a single list).
 
@@ -198,17 +198,7 @@ When there is a collision, then the canonicalized name becomes:
     milleniumfalcon-swx57 (HotR Title)
     poedameron-swx57 (PS9)
 
-Sabine is prbably the most complete example we have as of Heroes of the Resistance.
-
-    sabinewren (Crew)
-    sabinewren (Attack Shuttle Pilot)
-    sabinewren-swx59 (Rebel TIE Fighter Pilot)
-    sabinewren (Scum Lancer-class Pursuit Craft Pilot)
-
-Sabine's scum version doesn't get a expansion suffix, since it's a different faction.
-This is mostly to preserve backwards compatability with versions of the spec that
-didn't have comprehensive name collision rules, and that used the same canonicalization
-for both Imperial and Scum Boba Fett and Kath Scarlet.
+AS of HotR, the only pilots who need suffixes are Poe, Han and Chewie.
 
 R2-D2 deserves special note, since it's an upgrade card with the same name in two
 different slots. Those still collide, and since the droid was released first, the
@@ -218,15 +208,19 @@ canonicalization is:
     r2d2-swx22 (Crew)
 
 This is a retroactive change from earlier versions of the spec (prior to 0.3.0), which
-had both versions of R2-D2 canonicalize to "r2d2". Implementation authors are encouraged
-to automatically correct the older `"crew": ["R2-D2"]` data to the new canonicalization.
+had both versions of R2-D2 canonicalize to ``"r2d2"`. Implementation authors are encouraged
+to automatically correct the older `"crew": ["r2d2"]` data to the new canonicalization.
 
-If two pilots have the same name in the same pack, then we tack on "a" "b" etc. with the
-ordering determined first by increasing point cost, second by alphabetical ship name,
-third by alphabetical card text if the point costs and ships are the same.
+Note also that all pilot versions of Sabine Wren released as of HotR do not require suffixes,
+since they are all piloting unique ship names (and the crew, obviously, doesn't conflict
+with those either).
 
-    anakin-swx999a (Drone Fighter Pilot)
-    anakin-swx999b (Pod Racer Pilot (please no))
+If two pilots have the same name in the same pack and are flying the same ship, then we
+tack on ``"a"`, `,`"b"` etc. with the ordering determined first by increasing point cost, second
+by alphabetical card text if the point costs and ships are the same.
+
+    anakin-swx999a (Speeder Bike Pilot - Light Side (please no))
+    anakin-swx999b (Speeder Bike Pilot - Dark Side (no, just no))
 
 When a card appears in multiple expansion packs, we use the lowest numbered expansion,
 unless FFG releases packs so far out of order that we've already picked a canonicalization

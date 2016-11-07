@@ -55,6 +55,6 @@ for upgrade in upgrade_list
 
 console.log('(exports ? this).xws ?= {}')
 console.log('(exports ? this).xws.upgrade_slot2key2obj_dict = \\')
-console.log(JSON.stringify($exp.xws.upgrade_slot2key2obj_dict))
+console.log(JSON.stringify($exp.xws.upgrade_slot2key2obj_dict, undefined, 4))
 #console.log('(exports ? this).upgrade_slots_list = ' + JSON.stringify($exp.xws.upgrade_slots_list))
 
