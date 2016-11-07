@@ -34,6 +34,7 @@ Elite Pilot Talent | ept
 Modification | mod
 Original Core Set | core
 Salvaged Astromech Droid | samd
+TIE Advanced Prototype | tieadvprototype
 The Force Awakens Core Set | core2
 
 ## Upgrade Slots
@@ -447,7 +448,7 @@ Firespray-31 | firespray31
 Gozanti-class Cruiser | gozanticlasscruiser
 Lambda-Class Shuttle | lambdaclassshuttle
 Raider-class Corvette | raiderclasscorvette
-TIE Advanced Prototype | tieadvancedprototype
+TIE Advanced Prototype | tieadvprototype
 TIE Advanced | tieadvanced
 TIE Bomber | tiebomber
 TIE Defender | tiedefender

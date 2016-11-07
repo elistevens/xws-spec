@@ -828,7 +828,7 @@
                     }
                 }
             },
-            "tieadvancedprototype": {
+            "tieadvprototype": {
                 "name": "TIE Advanced Prototype",
                 "subfaction": "Galactic Empire",
                 "multisection": false,

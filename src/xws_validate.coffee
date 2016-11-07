@@ -17,6 +17,7 @@ $exp.xws.canonicalizationExceptions_dict = {
     'Elite Pilot Talent': 'ept',
     'Modification': 'mod',
     'Black Eight Squadron Pilot': 'blackeightsqpilot',
+    'TIE Advanced Prototype': 'tieadvprototype',
     'Advanced Proton Torpedoes': 'advprotontorpedoes',
     'Advanced Targeting Computer': 'advtargetingcomputer',
     'Advanced Homing Missiles': 'advhomingmissiles',
