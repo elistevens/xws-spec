@@ -5,6 +5,15 @@ all: index.html dist/xws.min.js README_NAMES.md dist/xws_pilots.json dist/xws_up
 yasb:
 	curl -o src/cards-common.coffee https://raw.githubusercontent.com/geordanr/xwing/master/coffeescripts/cards-common.coffee
 
+.PHONY: clean
+clean:
+	rm dist/xws_*.json
+	rm src_xws_data_*.coffee
+	rm README_NAMES.md
+	rm dist/xws.js
+	rm dist/xws-min.js
+	rm index.html
+
 dist/xws_%.json: src/cards-common.coffee src/xws_validate.coffee src/make_data_%.coffee
 	node_modules/.bin/coffee -p $^ | node | tail -n 1 > $@
 

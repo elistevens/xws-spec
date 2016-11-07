@@ -1,6 +1,6 @@
 {
   "name": "xws-spec",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "X-Wing Squadron Specification",
   "main": "express/server.coffee",
   "private": true,
@@ -35,7 +35,7 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^1.9.1",
-    "jade": "^1.6.0",
+    "pug": "^2.0.0-beta6",
     "karma": "^0.12.23",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.1.4",

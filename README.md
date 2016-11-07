@@ -1,4 +1,4 @@
-# X-Wing Squadron Specification version 0.3.0
+# X-Wing Squadron Specification version 1.0.0
 
 This specification facilitates the export and subsequent import of squadrons for
 FFG's X-Wing Miniatures game from one compliant application to another.
@@ -61,6 +61,7 @@ Mandatory | pilots | Array | List of one or more pilots; see below.
 Optional | name | String | Human-readable squadron name.
 Optional | description | String | Text description or notes for the squadron.
 Optional | obstacles | Array | Array of three Strings, each being an identifier for the obstacle chosen for tournament use.
+Optional | damagedeck | String | Canonical name of the package of the damage deck chosen for tournament use (one of `core` or `core2`).
  | | |
 Ignored | points | Integer | Total point cost of the squadron. MUST be ignored by importing applications; for human readability only.
 Ignored | vendor | Dictionary | An object used to store vendor-specific data; see above.
@@ -163,9 +164,9 @@ as crew, etc.)
 3. Lowercase the name
 4. Convert non-ASCII characters to closest ASCII equivalent (to remove umlauts, etc.)
 5. Remove non-alphanumeric characters
+6. Check for collisions, add expansion suffix if needed
 
-
-### Canonicalization and Special Cases
+#### Canonicalization and Special Cases
 A small number of names are abbreviated during canonicalization to reduce data
 length. Those special cases can be found at the top of the README_NAMES.md file.
 
@@ -179,6 +180,70 @@ authoritative source for what content is legal.
 This information is also provided as part of the `xws-spec` bower package. See
 the `window.xws.pilot_faction2ship2pilot2obj_dict` and
 `window.xws.upgrade_slot2key2obj_dict` variables.
+
+#### Canonicalization and Collisions
+To determine collision for upgrades, simply see if there are two cards that have the
+same canonicalized name.
+
+To determine collision for pilots, see if there are pilots that for the combination
+of (faction, pilot name) have the same canonicalized names. Note that this doesn't use
+subfaction, since right now we only specify faction at the list level, not the pilot
+level (since you can mix subfactions in a single list).
+
+Pilots and upgrades cannot collide with each other.
+
+When there is a collision, then the canonicalized name becomes:
+
+    ${name}-${expansion product code}${a, b, c, etc. if needed}
+    milleniumfalcon-swx57 (HotR Title)
+    poedameron-swx57 (PS9)
+
+Sabine is prbably the most complete example we have as of Heroes of the Resistance.
+
+    sabinewren (Crew)
+    sabinewren (Attack Shuttle Pilot)
+    sabinewren-swx59 (Rebel TIE Fighter Pilot)
+    sabinewren (Scum Lancer-class Pursuit Craft Pilot)
+
+Sabine's scum version doesn't get a expansion suffix, since it's a different faction.
+This is mostly to preserve backwards compatability with versions of the spec that
+didn't have comprehensive name collision rules, and that used the same canonicalization
+for both Imperial and Scum Boba Fett and Kath Scarlet.
+
+R2-D2 deserves special note, since it's an upgrade card with the same name in two
+different slots. Those still collide, and since the droid was released first, the
+canonicalization is:
+
+    r2d2 (Astromech Droid)
+    r2d2-swx22 (Crew)
+
+This is a retroactive change from earlier versions of the spec (prior to 0.3.0), which
+had both versions of R2-D2 canonicalize to "r2d2". Implementation authors are encouraged
+to automatically correct the older `"crew": ["R2-D2"]` data to the new canonicalization.
+
+If two pilots have the same name in the same pack, then we tack on "a" "b" etc. with the
+ordering determined first by increasing point cost, second by alphabetical ship name,
+third by alphabetical card text if the point costs and ships are the same.
+
+    anakin-swx999a (Drone Fighter Pilot)
+    anakin-swx999b (Pod Racer Pilot (please no))
+
+When a card appears in multiple expansion packs, we use the lowest numbered expansion,
+unless FFG releases packs so far out of order that we've already picked a canonicalization
+for a card before a lower swxNN shows up (seems pretty unlikely, but if it happens then
+the change will not be made retroactively).
+
+## Obstacles
+
+Obstacle canonicalization is:
+
+    ${set containing the obstacle}${astreiod or debris}${number}
+
+Obstacle outlines are roughly ordered from smallest to largest in the order they're
+listed on the official tournament sheet, but since that's somewhat
+subjective, the exact numbering of each obstacle should be considered arbitrary.
+
+![Please consult the following image.](xws-obstacles-core2.png)
 
 
 # Requirements for Application Developers

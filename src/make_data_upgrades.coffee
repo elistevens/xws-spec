@@ -23,20 +23,14 @@ for upgrade in upgrade_list
         if upgrade.slot == 'Salvaged Astromech'
             upgrade.slot = 'Salvaged Astromech Droid'
 
+        xpac_str = ''
         if upgrade.name == 'R2-D2 (Crew)'
-            upgrade.name = 'R2-D2'
-        if upgrade.name == '"Heavy Scyk" Interceptor (Cannon)'
-            upgrade.name = '"Heavy Scyk" Interceptor'
-        if upgrade.name == '"Heavy Scyk" Interceptor (Missile)'
-            upgrade.name = '"Heavy Scyk" Interceptor'
-        if upgrade.name == '"Heavy Scyk" Interceptor (Torpedo)'
-            upgrade.name = '"Heavy Scyk" Interceptor'
+            xpac_str = '-swx22'
+        else if upgrade.name == 'Millennium Falcon (TFA)'
+            xpac_str = '-swx57'
 
-        if upgrade.name == 'Adaptability (+1)'
-            upgrade.name = 'Adaptability'
-        if upgrade.name == 'Adaptability (-1)'
-            upgrade.name = 'Adaptability'
-
+        orig_name = upgrade.name
+        upgrade.name = upgrade.name.replace(/\ \(.*\)/, '')
 
         slot_key = $exp.xws.canonicalize(upgrade.slot)
         if slot_key not of $exp.xws.upgrade_slot2key2obj_dict
@@ -44,13 +38,20 @@ for upgrade in upgrade_list
                 name: upgrade.slot
                 upgrades: {}
             }
-        name_key = $exp.xws.canonicalize(upgrade.name)
+        name_key = $exp.xws.canonicalize(upgrade.name, xpac_str)
+
+        if name_key of $exp.xws.upgrade_slot2key2obj_dict[slot_key].upgrades
+            console.log("# '#{orig_name}' already present as '#{name_key}'")
+
         $exp.xws.upgrade_slot2key2obj_dict[slot_key].upgrades[name_key] = {
             name: upgrade.name
             points: upgrade.points
             #slot: upgrade.slot
             #value: "#{slot_key}:#{name_key}"
         }
+
+        if upgrade.canonical_name and upgrade.canonical_name != name_key
+            console.log("# '#{orig_name}': '#{upgrade.canonical_name}',")
 
 console.log('(exports ? this).xws ?= {}')
 console.log('(exports ? this).xws.upgrade_slot2key2obj_dict = \\')

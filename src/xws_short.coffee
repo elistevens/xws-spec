@@ -1,34 +1,28 @@
 #'use strict';
+
+# This is a non-functional work in progress.
+
 $exp = exports ? this
 $exp.xws ?= {}
-$exp.xws.version = '1.0.0'
 
-$exp.xws.subfaction2faction_dict = {
-    'Rebel Alliance': 'Rebel',
-    'Resistance': 'Rebel',
-    'Galactic Empire': 'Imperial',
-    'First Order': 'Imperial',
-    'Scum and Villainy': 'Scum',
-}
+tobits = (num_, max_) ->
+    bnum = num_.toString(2)
+    bmax = max_.toString(2)
+    while bnum.length < bmax.length
+        bnum = '0' + bnum
+    return bnum
 
-$exp.xws.canonicalizationExceptions_dict = {
-    'Astromech Droid': 'amd',
-    'Salvaged Astromech Droid': 'samd',
-    'Elite Pilot Talent': 'ept',
-    'Modification': 'mod',
-    'Black Eight Squadron Pilot': 'blackeightsqpilot',
-    'Advanced Proton Torpedoes': 'advprotontorpedoes',
-    'Advanced Targeting Computer': 'advtargetingcomputer',
-    'Advanced Homing Missiles': 'advhomingmissiles',
-    'Original Core Set': 'core',
-    'The Force Awakens Core Set': 'core2',
-}
+frombits = (bits, max_) ->
+    bmax = max_.toString(2)
 
-$exp.xws.canonicalize = (name, xpac_str) ->
-    if name of $exp.xws.canonicalizationExceptions_dict
-        return $exp.xws.canonicalizationExceptions_dict[name]
+    return [parseInt(bits[:bmax.length], 2), ]
 
-    return name.toLowerCase().replace(/[^a-z0-9]/g, '') + (xpac_str or '')
+
+
+
+
+
+$exp.xws.shortenSquadron = (squad_obj) ->
 
 
 _validateSquadron_upgrades = (slot_key, dirty_obj, prefix, vendor=true) ->
@@ -143,15 +137,6 @@ $exp.xws.validateSquadron = (dirty_obj, vendor=true, ignore=[]) ->
             delete dirty_obj[attr]
 
         delete dirty_obj.points
-
-        # This handles the clarifications from the new core set, re: subfactions, etc.
-        oldFaction2newFaction_dict = {
-            'rebels': 'rebel',
-            'empire': 'imperial',
-            # scum remains the same
-        }
-        if dirty_obj?.faction of oldFaction2newFaction_dict
-            dirty_obj.faction = oldFaction2newFaction_dict[dirty_obj.faction]
 
         if not dirty_obj.faction or dirty_obj.faction not of $exp.xws.pilot_faction2ship2pilot2obj_dict
             return [null, ["squadron.faction: #{dirty_obj.faction}"]]

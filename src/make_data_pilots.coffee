@@ -32,18 +32,36 @@ for pilot in $exp.basicCardData().pilotsById
                 pilots: {}
             }
 
-        if pilot.name == 'Boba Fett (Scum)'
-            pilot.name = 'Boba Fett'
-        if pilot.name == 'Kath Scarlet (Scum)'
-            pilot.name = 'Kath Scarlet'
-        if pilot.name == 'Hera Syndulla (Attack Shuttle)'
-            pilot.name = 'Hera Syndulla'
+        xpac_str = ''
+        if pilot.name == 'Maarek Stele (TIE Defender)'
+            xpac_str = '-swx52'
+#        else if pilot.name == 'Sabine Wren (Scum)'
+#            xpac_str = '-swx56'
+        else if pilot.name == 'Poe Dameron (PS9)'
+            xpac_str = '-swx57'
+        else if pilot.name == 'Han Solo (TFA)'
+            xpac_str = '-swx57'
+        else if pilot.name == 'Chewbacca (TFA)'
+            xpac_str = '-swx57'
+        else if pilot.name == 'Sabine Wren (TIE Fighter)'
+            xpac_str = '-swx59'
 
-        name_key = $exp.xws.canonicalize(pilot.name)
+        orig_name = pilot.name
+        pilot.name = pilot.name.replace(/\ \(.*\)/, '')
+
+        name_key = $exp.xws.canonicalize(pilot.name, xpac_str)
+
+        if name_key of $exp.xws.pilot_faction2ship2pilot2obj_dict[faction_key].ships[ship_key].pilots
+            console.log("# '#{orig_name}' already present as '#{name_key}'")
+
         $exp.xws.pilot_faction2ship2pilot2obj_dict[faction_key].ships[ship_key].pilots[name_key] = {
             name: pilot.name,
             points: pilot.points,
         }
+
+        if pilot.canonical_name and pilot.canonical_name != name_key
+            console.log("# '#{orig_name}': '#{pilot.canonical_name}',")
+
 
 console.log('(exports ? this).xws ?= {}')
 console.log('(exports ? this).xws.pilot_faction2ship2pilot2obj_dict = \\')
