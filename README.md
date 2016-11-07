@@ -392,3 +392,31 @@ http://en.wikipedia.org/wiki/QR_code#Error_correction
 Implementation authors are encouraged to share their experiences with QR codes,
 as there are a large number of possible environments and scanners, and this spec
 aims to provide guidelines for use in as many of those as possible.
+
+# Implementations and Resources
+A listing of known applications and developer resources that might be of use when working with XWS. Please submit pull requests with additions!
+
+## Applications that implement import and/or export
+- http://lists.starwarsclubhouse.com/ https://github.com/lhayhurst/xwlists
+    X-Wing List Juggler. A web site to track X-Wing Miniature Combat lists and tournament stats.
+- https://geordanr.github.io/xwing/ https://github.com/geordanr/xwing
+    (Yet Another) X-Wing Miniatures Squad Builder
+- http://xwing-builder.co.uk/ 
+    Unofficial X-Wing Squadron Builder
+- http://x-wing.fabpsb.net/
+    Fab's squadrons generator
+- http://randolphw.github.io/han-shopped-first/
+    Han Shopped First. Makes purchase suggestions for starting collections or building out factions, or getting a specific list.
+- https://github.com/kingargyle/xstreamer
+    X-Wing Squad Helper for Twitch and YouTube Streamers.
+
+## Resources for developers
+- https://github.com/guidokessels/xwing-data. 
+    An easy-to-use collection of data and images from X-Wing: The Miniatures Game by Fantasy Flight Games. 
+    It has every card in the game, and each pilot and upgrade has the XWS id so you should be able to follow the XWS spec.
+- https://github.com/voidstate/xwing-card-images 
+    A collection of card images from X-Wing: The Miniatures Game by Fantasy Flight Games, arranged and named to be compatible with the XWS format.
+    Initially forked from guidokessels/xwing-data
+- https://github.com/geordanr/xwing-miniatures-font
+    X-Wing Miniatures Font. Vector font by Hinny and armoredgear7.
+
