@@ -170,7 +170,7 @@ as crew, etc.)
 A small number of names are abbreviated during canonicalization to reduce data
 length. Those special cases can be found at the top of the README_NAMES.md file.
 
-[http://github.com/elistevens/xws-spec/blob/gh-pages/README_NAMES.md](./README_NAMES.md)
+[http://github.com/elistevens/xws-spec/blob/master/README_NAMES.md](./README_NAMES.md)
 
 Implementation authors should not rely on the rest of the canonicalization
 listing to be updated promptly upon the release of new content. It is intended
@@ -323,13 +323,13 @@ This sample shows a build with lots of upgrades, some added dynamically by other
 upgrades (A-Wing Test Pilot). It includes all required and optional data as well
 as vendor data at both top level and squadron level.
 
-[http://github.com/elistevens/xws-spec/blob/gh-pages/sample.json](./sample.json)
+[http://github.com/elistevens/xws-spec/blob/master/sample.json](./sample.json)
 
 
 # Validation
 Implementations MAY use the following JSON schema to validate XWS data.
 
-[http://github.com/elistevens/xws-spec/blob/gh-pages/schema.json](./schema.json)
+[http://github.com/elistevens/xws-spec/blob/master/schema.json](./schema.json)
 
 More on JSON schemas can be fond at:
 
