@@ -5,8 +5,7 @@ exportObj.unreleasedExpansions = [
     "Sabine's TIE Fighter Expansion Pack"
     "Upsilon-class Shuttle Expansion Pack"
     "Quadjumper Expansion Pack"
-    "U-Wing Expansion Pack"
-    "TIE Striker Expansion Pack"
+    "C-ROC Cruiser Expansion Pack"
 ]
 
 exportObj.isReleased = (data) ->
@@ -891,7 +890,12 @@ exportObj.basicCardData = ->
                 'Target Lock'
                 'Coordinate'
             ]
-            maneuvers: []
+            maneuvers: [
+              [ 0, 0, 3, 0, 0]
+              [ 3, 1, 2, 1, 3]
+              [ 1, 2, 2, 2, 1]
+              [ 3, 1, 1, 1, 3]
+            ]
         'Quadjumper':
             name: 'Quadjumper'
             factions: ["Scum and Villainy"]
@@ -903,7 +907,12 @@ exportObj.basicCardData = ->
                 'Barrel Roll'
                 'Focus'
             ]
-            maneuvers: []
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+                [ 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 3, 3, 3 ]
+                [ 1, 2, 2, 2, 1, 0, 3, 3, 0, 0, 0, 0, 0 ]
+                [ 0, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+            ]
         'U-Wing':
             name: 'U-Wing'
             factions: ["Rebel Alliance"]
@@ -916,7 +925,13 @@ exportObj.basicCardData = ->
                 'Focus'
                 'Target Lock'
             ]
-            maneuvers: []
+            maneuvers: [
+                [ 0, 0, 3, 0, 0 ]
+                [ 0, 2, 2, 2, 0 ]
+                [ 1, 2, 2, 2, 1 ]
+                [ 0, 1, 1, 1, 0 ]
+                [ 0, 0, 1, 0, 0 ]
+            ]
         'TIE Striker':
             name: 'TIE Striker'
             factions: ["Galactic Empire"]
@@ -929,7 +944,26 @@ exportObj.basicCardData = ->
                 'Barrel Roll'
                 'Evade'
             ]
-            maneuvers: []
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0, 0, 0 ]
+                [ 1, 2, 2, 2, 1, 0, 0, 0 ]
+                [ 1, 1, 2, 1, 1, 3, 3, 3 ]
+                [ 0, 1, 2, 1, 0, 0, 0, 0 ]
+            ]
+        "C-ROC Cruiser":
+            name: "C-ROC Cruiser"
+            factions: ["Scum and Villainy"]
+            energy: 4
+            agility: 0
+            hull: 10
+            shields: 4
+            huge: true
+            actions: [
+                "Recover"
+                "Reinforce"
+                "Target Lock"
+                "Jam"
+            ]
 
     # name field is for convenience only
     pilotsById: [
@@ -3627,7 +3661,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Maarek Stele (TIE Defender)"
-            canonical_name: 'maarekstele-swx52'
+            canonical_name: 'maarekstele'
             id: 193
             unique: true
             faction: "Galactic Empire"
@@ -4028,7 +4062,7 @@ exportObj.basicCardData = ->
         }
         {
             name: 'Sabine Wren (Scum)'
-            canonical_name: "sabinewren-swx56"
+            canonical_name: "sabinewren"
             id: 220
             unique: true
             faction: 'Scum and Villainy'
@@ -4069,7 +4103,7 @@ exportObj.basicCardData = ->
         {
             name: 'Sabine Wren (TIE Fighter)'
             id: 223
-            canonical_name: "sabinewren-swx59"
+            canonical_name: "sabinewren"
             unique: true
             faction: 'Rebel Alliance'
             ship: 'TIE Fighter'
@@ -4099,7 +4133,7 @@ exportObj.basicCardData = ->
             ship: 'TIE Fighter'
             skill: 3
             slots: []
-            points: 100
+            points: 13
         }
         {
             name: 'Kylo Ren'
@@ -4167,7 +4201,7 @@ exportObj.basicCardData = ->
             points: 30
         }
         {
-            name: 'Const???'
+            name: 'Constable Zuvio'
             id: 230
             unique: true
             faction: 'Scum and Villainy'
@@ -4180,7 +4214,7 @@ exportObj.basicCardData = ->
                 'Tech'
                 'Illicit'
             ]
-            points: 100
+            points: 19
         }
         {
             name: 'Sarco Plank'
@@ -4196,7 +4230,7 @@ exportObj.basicCardData = ->
                 'Tech'
                 'Illicit'
             ]
-            points: 100
+            points: 18
         }
         {
             name: 'Unkar Plutt'
@@ -4214,7 +4248,7 @@ exportObj.basicCardData = ->
             points: 17
         }
         {
-            name: 'Jakku ???'
+            name: 'Jakku Gunrunner'
             id: 233
             faction: 'Scum and Villainy'
             ship: 'Quadjumper'
@@ -4225,9 +4259,8 @@ exportObj.basicCardData = ->
                 'Tech'
                 'Illicit'
             ]
-            points: 100
+            points: 15
         }
-
         {
             name: 'Cassian Andor'
             id: 234
@@ -4245,7 +4278,7 @@ exportObj.basicCardData = ->
             points: 27
         }
         {
-            name: 'Unspoiled PS4 U-Wing Pilot'
+            name: 'Bodhi Rook'
             id: 235
             unique: true
             faction: 'Rebel Alliance'
@@ -4257,10 +4290,10 @@ exportObj.basicCardData = ->
                 'Crew'
                 'Crew'
             ]
-            points: 100
+            points: 25
         }
         {
-            name: 'Unspoiled PS3 U-Wing Pilot'
+            name: 'Heff Tobber'
             id: 236
             unique: true
             faction: 'Rebel Alliance'
@@ -4272,7 +4305,7 @@ exportObj.basicCardData = ->
                 'Crew'
                 'Crew'
             ]
-            points: 100
+            points: 24
         }
         {
             name: 'Blue Squadron Pathfinder'
@@ -4301,18 +4334,19 @@ exportObj.basicCardData = ->
             points: 23
         }
         {
-            name: '"Pure???"'
+            name: '"Pure Sabacc"'
             id: 239
             unique: true
             faction: 'Galactic Empire'
             ship: 'TIE Striker'
             skill: 6
             slots: [
+                'Elite'
             ]
-            points: 100
+            points: 22
         }
         {
-            name: 'Unspoiled PS5 TIE Striker Pilot'
+            name: '"Countdown"'
             id: 240
             unique: true
             faction: 'Galactic Empire'
@@ -4320,37 +4354,55 @@ exportObj.basicCardData = ->
             skill: 5
             slots: [
             ]
-            points: 100
+            points: 20
         }
         {
-            name: 'Unspoiled PS4 TIE Striker Pilot'
+            name: 'Black Squadron Scout'
             id: 241
             faction: 'Galactic Empire'
             ship: 'TIE Striker'
             skill: 4
             slots: [
+                'Elite'
             ]
-            points: 100
+            points: 20
         }
         {
-            name: 'Unspoiled PS3 TIE Striker Pilot'
+            name: 'Scarif Defender'
             id: 242
             faction: 'Galactic Empire'
             ship: 'TIE Striker'
             skill: 3
             slots: [
             ]
-            points: 100
+            points: 18
         }
         {
-            name: 'Unspoiled PS1 TIE Striker Pilot'
+            name: 'Imperial Trainee'
             id: 243
             faction: 'Galactic Empire'
             ship: 'TIE Striker'
             skill: 1
             slots: [
             ]
-            points: 100
+            points: 17
+        }
+        {
+            name: 'C-ROC Cruiser'
+            id: 244
+            faction: 'Scum and Villainy'
+            ship: 'C-ROC Cruiser'
+            skill: 1
+            slots: [
+                'Crew'
+                'Crew'
+                'Hardpoint'
+                'Team'
+                'Cargo'
+                'Cargo'
+                'Cargo'
+            ]
+            points: 35
         }
     ]
 
@@ -4387,7 +4439,7 @@ exportObj.basicCardData = ->
         {
             name: "R2-D2"
             aka: [ "R2-D2 (Crew)" ]
-            canonical_name: 'r2d2-swx22'
+            canonical_name: 'r2d2'
             id: 3
             unique: true
             slot: "Astromech"
@@ -4794,7 +4846,7 @@ exportObj.basicCardData = ->
         {
             name: "R2-D2 (Crew)"
             aka: [ "R2-D2" ]
-            canonical_name: 'r2d2'
+            canonical_name: 'r2d2-swx22'
             id: 62
             unique: true
             slot: "Crew"
@@ -5838,8 +5890,7 @@ exportObj.basicCardData = ->
         {
             name: 'A Score to Settle'
             id: 197
-            # uncomment when we know what A Debt to Pay does
-            # applies_condition: 'A Debt to Pay'.canonicalize()
+            applies_condition: 'A Debt to Pay'.canonicalize()
             slot: 'Elite'
             unique: true
             points: 0
@@ -5969,6 +6020,89 @@ exportObj.basicCardData = ->
             id: 214
             slot: 'Elite'
             points: 0
+        }
+        {
+            name: '''Scavenger Crane'''
+            id: 215
+            slot: 'Illicit'
+            points: 2
+        }
+        {
+            name: 'Bodhi Rook'
+            id: 216
+            slot: 'Crew'
+            unique: true
+            faction: 'Rebel Alliance'
+            points: 1
+        }
+        {
+            name: 'Baze Malbus'
+            id: 217
+            slot: 'Crew'
+            unique: true
+            faction: 'Rebel Alliance'
+            points: 3
+        }
+        {
+            name: 'Inspiring Recruit'
+            id: 218
+            slot: 'Crew'
+            points: 1
+        }
+        {
+            name: 'Swarm Leader'
+            id: 219
+            unique: true
+            slot: 'Elite'
+            points: 3
+        }
+        {
+            name: 'Expertise'
+            id: 220
+            slot: 'Elite'
+            points: 4
+        }
+        {
+            name: 'Bistan'
+            id: 221
+            slot: 'Crew'
+            unique: true
+            faction: 'Rebel Alliance'
+            points: 2
+        }
+        {
+            name: 'BoShek'
+            id: 222
+            slot: 'Crew'
+            unique: true
+            points: 2
+        }
+        {
+            name: 'Heavy Laser Turret'
+            id: 223
+            ship: 'C-ROC Cruiser'
+            slot: 'Hardpoint'
+            points: 5
+            energy: 2
+            attack: 4
+            range: '2-3'
+        }
+        {
+            name: 'Cikatro Vizago'
+            id: 224
+            unique: true
+            faction: 'Scum and Villainy'
+            slot: 'Crew'
+            points: 0
+        }
+        {
+            name: 'Azmorigan'
+            id: 225
+            faction: 'Scum and Villainy'
+            slot: 'Crew'
+            points: 2
+            restriction_func: (ship) ->
+                ship.data.huge ? false
         }
     ]
 
@@ -6196,6 +6330,19 @@ exportObj.basicCardData = ->
             ship: 'TIE Fighter'
             faction: 'Rebel Alliance'
             points: 1
+        }
+        {
+            name: 'Spacetug Tractor Array'
+            id: 30
+            ship: 'Quadjumper'
+            points: 2
+        }
+        {
+            name: 'Lightweight Frame'
+            id: 31
+            points: 2
+            restriction_func: (ship) ->
+                ship.data.name.indexOf('TIE') != -1 and ship.effectiveStats().agility < 3
         }
     ]
 
@@ -6713,6 +6860,37 @@ exportObj.basicCardData = ->
             id: 48
             ship: 'TIE Striker'
             points: 0
+        }
+        {
+            name: '''Merchant One'''
+            id: 49
+            ship: 'C-ROC Cruiser'
+            points: 2
+            energy: '+1'
+            confersAddons: [
+                {
+                    type: exportObj.Upgrade
+                    slot: "Crew"
+                }
+                {
+                    type: exportObj.Upgrade
+                    slot: "Team"
+                }
+            ]
+            unequips_upgrades: [ "Cargo" ]
+            also_occupies_upgrades: [ "Cargo" ]
+        }
+        {
+            name: '''"Light Scyk" Interceptor'''
+            id: 50
+            ship: 'M3-A Interceptor'
+            points: -2
+            unequips_modifications: true
+            also_occupies_modifications: true
+            modifier_func: (stats) ->
+                for s in (stats.maneuvers ? [])
+                    s[1] = 2 if s[1] != 0
+                    s[3] = 2 if s[3] != 0
         }
     ]
 

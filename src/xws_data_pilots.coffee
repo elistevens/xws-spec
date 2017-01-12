@@ -1,8 +1,5 @@
 # 'CR90 Corvette (Aft)' already present as 'cr90corvette'
 # 'Raider-class Corvette (Aft)' already present as 'raiderclasscorvette'
-# 'Maarek Stele (TIE Defender)': 'maarekstele-swx52',
-# 'Sabine Wren (Scum)': 'sabinewren-swx56',
-# 'Sabine Wren (TIE Fighter)': 'sabinewren-swx59',
 (exports ? this).xws ?= {}
 (exports ? this).xws.pilot_faction2ship2pilot2obj_dict = \
 {
@@ -449,6 +446,10 @@
                     "captainrex": {
                         "name": "Captain Rex",
                         "points": 14
+                    },
+                    "zeborrelios": {
+                        "name": "\"Zeb\" Orrelios",
+                        "points": 13
                     }
                 }
             },
@@ -460,6 +461,14 @@
                     "cassianandor": {
                         "name": "Cassian Andor",
                         "points": 27
+                    },
+                    "bodhirook": {
+                        "name": "Bodhi Rook",
+                        "points": 25
+                    },
+                    "hefftobber": {
+                        "name": "Heff Tobber",
+                        "points": 24
                     },
                     "bluesquadronpathfinder": {
                         "name": "Blue Squadron Pathfinder",
@@ -948,6 +957,26 @@
                     "duchess": {
                         "name": "\"Duchess\"",
                         "points": 23
+                    },
+                    "puresabacc": {
+                        "name": "\"Pure Sabacc\"",
+                        "points": 22
+                    },
+                    "countdown": {
+                        "name": "\"Countdown\"",
+                        "points": 20
+                    },
+                    "blacksquadronscout": {
+                        "name": "Black Squadron Scout",
+                        "points": 20
+                    },
+                    "scarifdefender": {
+                        "name": "Scarif Defender",
+                        "points": 18
+                    },
+                    "imperialtrainee": {
+                        "name": "Imperial Trainee",
+                        "points": 17
                     }
                 }
             }
@@ -1268,9 +1297,32 @@
                 "subfaction": "Scum and Villainy",
                 "multisection": false,
                 "pilots": {
+                    "constablezuvio": {
+                        "name": "Constable Zuvio",
+                        "points": 19
+                    },
+                    "sarcoplank": {
+                        "name": "Sarco Plank",
+                        "points": 18
+                    },
                     "unkarplutt": {
                         "name": "Unkar Plutt",
                         "points": 17
+                    },
+                    "jakkugunrunner": {
+                        "name": "Jakku Gunrunner",
+                        "points": 15
+                    }
+                }
+            },
+            "croccruiser": {
+                "name": "C-ROC Cruiser",
+                "subfaction": "Scum and Villainy",
+                "multisection": false,
+                "pilots": {
+                    "croccruiser": {
+                        "name": "C-ROC Cruiser",
+                        "points": 35
                     }
                 }
             }

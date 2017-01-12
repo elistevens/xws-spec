@@ -451,6 +451,10 @@
             "captainrex": {
               "name": "Captain Rex",
               "points": 14
+            },
+            "zeborrelios": {
+              "name": "\"Zeb\" Orrelios",
+              "points": 13
             }
           }
         },
@@ -462,6 +466,14 @@
             "cassianandor": {
               "name": "Cassian Andor",
               "points": 27
+            },
+            "bodhirook": {
+              "name": "Bodhi Rook",
+              "points": 25
+            },
+            "hefftobber": {
+              "name": "Heff Tobber",
+              "points": 24
             },
             "bluesquadronpathfinder": {
               "name": "Blue Squadron Pathfinder",
@@ -950,6 +962,26 @@
             "duchess": {
               "name": "\"Duchess\"",
               "points": 23
+            },
+            "puresabacc": {
+              "name": "\"Pure Sabacc\"",
+              "points": 22
+            },
+            "countdown": {
+              "name": "\"Countdown\"",
+              "points": 20
+            },
+            "blacksquadronscout": {
+              "name": "Black Squadron Scout",
+              "points": 20
+            },
+            "scarifdefender": {
+              "name": "Scarif Defender",
+              "points": 18
+            },
+            "imperialtrainee": {
+              "name": "Imperial Trainee",
+              "points": 17
             }
           }
         }
@@ -1270,9 +1302,32 @@
           "subfaction": "Scum and Villainy",
           "multisection": false,
           "pilots": {
+            "constablezuvio": {
+              "name": "Constable Zuvio",
+              "points": 19
+            },
+            "sarcoplank": {
+              "name": "Sarco Plank",
+              "points": 18
+            },
             "unkarplutt": {
               "name": "Unkar Plutt",
               "points": 17
+            },
+            "jakkugunrunner": {
+              "name": "Jakku Gunrunner",
+              "points": 15
+            }
+          }
+        },
+        "croccruiser": {
+          "name": "C-ROC Cruiser",
+          "subfaction": "Scum and Villainy",
+          "multisection": false,
+          "pilots": {
+            "croccruiser": {
+              "name": "C-ROC Cruiser",
+              "points": 35
             }
           }
         }
@@ -1566,6 +1621,14 @@
         "trickshot": {
           "name": "Trick Shot",
           "points": 0
+        },
+        "swarmleader": {
+          "name": "Swarm Leader",
+          "points": 3
+        },
+        "expertise": {
+          "name": "Expertise",
+          "points": 4
         }
       }
     },
@@ -1900,6 +1963,34 @@
         "hotshotcopilot": {
           "name": "Hotshot Co-pilot",
           "points": 4
+        },
+        "bodhirook": {
+          "name": "Bodhi Rook",
+          "points": 1
+        },
+        "bazemalbus": {
+          "name": "Baze Malbus",
+          "points": 3
+        },
+        "inspiringrecruit": {
+          "name": "Inspiring Recruit",
+          "points": 1
+        },
+        "bistan": {
+          "name": "Bistan",
+          "points": 2
+        },
+        "boshek": {
+          "name": "BoShek",
+          "points": 2
+        },
+        "cikatrovizago": {
+          "name": "Cikatro Vizago",
+          "points": 0
+        },
+        "azmorigan": {
+          "name": "Azmorigan",
+          "points": 2
         }
       }
     },
@@ -2081,6 +2172,10 @@
         "duallaserturret": {
           "name": "Dual Laser Turret",
           "points": 5
+        },
+        "heavylaserturret": {
+          "name": "Heavy Laser Turret",
+          "points": 5
         }
       }
     },
@@ -2146,6 +2241,10 @@
         },
         "empdevice": {
           "name": "EMP Device",
+          "points": 2
+        },
+        "scavengercrane": {
+          "name": "Scavenger Crane",
           "points": 2
         }
       }
@@ -2334,6 +2433,14 @@
         "capturedtie": {
           "name": "Captured TIE",
           "points": 1
+        },
+        "spacetugtractorarray": {
+          "name": "Spacetug Tractor Array",
+          "points": 2
+        },
+        "lightweightframe": {
+          "name": "Lightweight Frame",
+          "points": 2
         }
       }
     },
@@ -2519,6 +2626,14 @@
         "adaptiveailerons": {
           "name": "Adaptive Ailerons",
           "points": 0
+        },
+        "merchantone": {
+          "name": "Merchant One",
+          "points": 2
+        },
+        "lightscykinterceptor": {
+          "name": "\"Light Scyk\" Interceptor",
+          "points": -2
         }
       }
     }

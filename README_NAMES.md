@@ -133,7 +133,12 @@ Name | Canonical
 4-LOM | 4lom
 Admiral Ozzel | admiralozzel
 Agent Kallus | agentkallus
+Azmorigan | azmorigan
+Baze Malbus | bazemalbus
+Bistan | bistan
+BoShek | boshek
 Boba Fett | bobafett
+Bodhi Rook | bodhirook
 Bombardier | bombardier
 Bossk | bossk
 C-3PO | c3po
@@ -142,6 +147,7 @@ Captain Rex | captainrex
 Carlist Rieekan | carlistrieekan
 Cassian Andor | cassianandor
 Chewbacca | chewbacca
+Cikatro Vizago | cikatrovizago
 Construction Droid | constructiondroid
 Darth Vader | darthvader
 Dash Rendar | dashrendar
@@ -159,6 +165,7 @@ Han Solo | hansolo
 Hera Syndulla | herasyndulla
 Hotshot Co-pilot | hotshotcopilot
 IG-88D | ig88d
+Inspiring Recruit | inspiringrecruit
 Intelligence Agent | intelligenceagent
 Jan Dodonna | jandodonna
 Jan Ors | janors
@@ -218,6 +225,7 @@ Determination | determination
 Draw Their Fire | drawtheirfire
 Elusiveness | elusiveness
 Expert Handling | experthandling
+Expertise | expertise
 Expose | expose
 Fearlessness | fearlessness
 Intimidation | intimidation
@@ -234,6 +242,7 @@ Ruthlessness | ruthlessness
 Snap Shot | snapshot
 Squad Leader | squadleader
 Stay On Target | stayontarget
+Swarm Leader | swarmleader
 Swarm Tactics | swarmtactics
 Trick Shot | trickshot
 Veteran Instincts | veteraninstincts
@@ -245,6 +254,7 @@ Wired | wired
 Name | Canonical
 -----|----------
 Dual Laser Turret | duallaserturret
+Heavy Laser Turret | heavylaserturret
 Ion Cannon Battery | ioncannonbattery
 Quad Laser Cannons | quadlasercannons
 Single Turbolasers | singleturbolasers
@@ -263,6 +273,7 @@ Feedback Array | feedbackarray
 Glitterstim | glitterstim
 Inertial Dampeners | inertialdampeners
 Rigged Cargo Chute | riggedcargochute
+Scavenger Crane | scavengercrane
 
 ## Missile Upgrades
 
@@ -298,6 +309,7 @@ Gyroscopic Targeting | gyroscopictargeting
 Hull Upgrade | hullupgrade
 Integrated Astromech | integratedastromech
 Ion Projector | ionprojector
+Lightweight Frame | lightweightframe
 Long-Range Scanners | longrangescanners
 Maneuvering Fins | maneuveringfins
 Munitions Failsafe | munitionsfailsafe
@@ -305,6 +317,7 @@ Optimized Generators | optimizedgenerators
 Ordnance Tubes | ordnancetubes
 Shield Upgrade | shieldupgrade
 Smuggling Compartment | smugglingcompartment
+Spacetug Tractor Array | spacetugtractorarray
 Stealth Device | stealthdevice
 Stygium Particle Accelerator | stygiumparticleaccelerator
 Tactical Jammer | tacticaljammer
@@ -364,6 +377,7 @@ Weapons Guidance | weaponsguidance
 Name | Canonical
 -----|----------
 "Heavy Scyk" Interceptor | heavyscykinterceptor
+"Light Scyk" Interceptor | lightscykinterceptor
 A-Wing Test Pilot | awingtestpilot
 Adaptive Ailerons | adaptiveailerons
 Alliance Overhaul | allianceoverhaul
@@ -383,6 +397,7 @@ Impetuous | impetuous
 Instigator | instigator
 Jaina's Light | jainaslight
 Kylo Ren's Shuttle | kylorensshuttle
+Merchant One | merchantone
 Millennium Falcon | millenniumfalcon
 Millennium Falcon | millenniumfalcon-swx57
 Mist Hunter | misthunter
@@ -617,7 +632,12 @@ Zeta Specialist | zetaspecialist
 
 Name | Canonical
 -----|----------
+"Countdown" | countdown
 "Duchess" | duchess
+"Pure Sabacc" | puresabacc
+Black Squadron Scout | blacksquadronscout
+Imperial Trainee | imperialtrainee
+Scarif Defender | scarifdefender
 
 ## Imperial Upsilon-class Shuttle Pilots
 
@@ -758,6 +778,7 @@ Red Squadron Veteran | redsquadronveteran
 
 Name | Canonical
 -----|----------
+"Zeb" Orrelios | zeborrelios
 Ahsoka Tano | ahsokatano
 Captain Rex | captainrex
 Sabine Wren | sabinewren
@@ -767,7 +788,9 @@ Sabine Wren | sabinewren
 Name | Canonical
 -----|----------
 Blue Squadron Pathfinder | bluesquadronpathfinder
+Bodhi Rook | bodhirook
 Cassian Andor | cassianandor
+Heff Tobber | hefftobber
 
 ## Rebel VCX-100 Pilots
 
@@ -838,6 +861,7 @@ Tala Squadron Pilot | talasquadronpilot
 Name | Canonical
 -----|----------
 Aggressor | aggressor
+C-ROC Cruiser | croccruiser
 Firespray-31 | firespray31
 G-1A Starfighter | g1astarfighter
 HWK-290 | hwk290
@@ -860,6 +884,12 @@ IG-88A | ig88a
 IG-88B | ig88b
 IG-88C | ig88c
 IG-88D | ig88d
+
+## Scum C-ROC Cruiser Pilots
+
+Name | Canonical
+-----|----------
+C-ROC Cruiser | croccruiser
 
 ## Scum Firespray-31 Pilots
 
@@ -939,6 +969,9 @@ Zealous Recruit | zealousrecruit
 
 Name | Canonical
 -----|----------
+Constable Zuvio | constablezuvio
+Jakku Gunrunner | jakkugunrunner
+Sarco Plank | sarcoplank
 Unkar Plutt | unkarplutt
 
 ## Scum StarViper Pilots

@@ -1,5 +1,3 @@
-# 'R2-D2': 'r2d2-swx22',
-# 'R2-D2 (Crew)': 'r2d2',
 # 'Adaptability (old)' already present as 'adaptability'
 # '"Heavy Scyk" Interceptor (Torpedo)' already present as 'heavyscykinterceptor'
 # '"Heavy Scyk" Interceptor (Missile)' already present as 'heavyscykinterceptor'
@@ -287,6 +285,14 @@
             "trickshot": {
                 "name": "Trick Shot",
                 "points": 0
+            },
+            "swarmleader": {
+                "name": "Swarm Leader",
+                "points": 3
+            },
+            "expertise": {
+                "name": "Expertise",
+                "points": 4
             }
         }
     },
@@ -621,6 +627,34 @@
             "hotshotcopilot": {
                 "name": "Hotshot Co-pilot",
                 "points": 4
+            },
+            "bodhirook": {
+                "name": "Bodhi Rook",
+                "points": 1
+            },
+            "bazemalbus": {
+                "name": "Baze Malbus",
+                "points": 3
+            },
+            "inspiringrecruit": {
+                "name": "Inspiring Recruit",
+                "points": 1
+            },
+            "bistan": {
+                "name": "Bistan",
+                "points": 2
+            },
+            "boshek": {
+                "name": "BoShek",
+                "points": 2
+            },
+            "cikatrovizago": {
+                "name": "Cikatro Vizago",
+                "points": 0
+            },
+            "azmorigan": {
+                "name": "Azmorigan",
+                "points": 2
             }
         }
     },
@@ -802,6 +836,10 @@
             "duallaserturret": {
                 "name": "Dual Laser Turret",
                 "points": 5
+            },
+            "heavylaserturret": {
+                "name": "Heavy Laser Turret",
+                "points": 5
             }
         }
     },
@@ -867,6 +905,10 @@
             },
             "empdevice": {
                 "name": "EMP Device",
+                "points": 2
+            },
+            "scavengercrane": {
+                "name": "Scavenger Crane",
                 "points": 2
             }
         }
@@ -1055,6 +1097,14 @@
             "capturedtie": {
                 "name": "Captured TIE",
                 "points": 1
+            },
+            "spacetugtractorarray": {
+                "name": "Spacetug Tractor Array",
+                "points": 2
+            },
+            "lightweightframe": {
+                "name": "Lightweight Frame",
+                "points": 2
             }
         }
     },
@@ -1240,6 +1290,14 @@
             "adaptiveailerons": {
                 "name": "Adaptive Ailerons",
                 "points": 0
+            },
+            "merchantone": {
+                "name": "Merchant One",
+                "points": 2
+            },
+            "lightscykinterceptor": {
+                "name": "\"Light Scyk\" Interceptor",
+                "points": -2
             }
         }
     }
