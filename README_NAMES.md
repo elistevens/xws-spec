@@ -120,6 +120,7 @@ Frequency Jammer | frequencyjammer
 Ionization Reactor | ionizationreactor
 Shield Projector | shieldprojector
 Slicer Tools | slicertools
+Supercharged Power Cells | superchargedpowercells
 Tibanna Gas Supplies | tibannagassupplies
 
 ## Crew Upgrades
@@ -257,6 +258,7 @@ Dual Laser Turret | duallaserturret
 Heavy Laser Turret | heavylaserturret
 Ion Cannon Battery | ioncannonbattery
 Quad Laser Cannons | quadlasercannons
+Quick-release Cargo Locks | quickreleasecargolocks
 Single Turbolasers | singleturbolasers
 
 ## Illicit Upgrades
@@ -386,6 +388,7 @@ Assailer | assailer
 BTL-A4 Y-Wing | btla4ywing
 Black One | blackone
 Bright Hope | brighthope
+Broken Horn | brokenhorn
 Concord Dawn Protector | concorddawnprotector
 Dauntless | dauntless
 Dodonna's Pride | dodonnaspride
@@ -394,6 +397,7 @@ Ghost | ghost
 Hound's Tooth | houndstooth
 IG-2000 | ig2000
 Impetuous | impetuous
+Insatiable Worrt | insatiableworrt
 Instigator | instigator
 Jaina's Light | jainaslight
 Kylo Ren's Shuttle | kylorensshuttle
@@ -1007,6 +1011,6 @@ Name | Canonical
 -----|----------
 Binayre Pirate | binayrepirate
 Black Sun Soldier | blacksunsoldier
-Kaa'To Leeachos | kaatoleeachos
+Kaa'to Leeachos | kaatoleeachos
 N'Dru Suhlak | ndrusuhlak
 
