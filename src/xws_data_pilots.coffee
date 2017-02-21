@@ -1064,7 +1064,7 @@
                         "points": 17
                     },
                     "kaatoleeachos": {
-                        "name": "Kaa'To Leeachos",
+                        "name": "Kaa'to Leeachos",
                         "points": 15
                     },
                     "blacksunsoldier": {

@@ -815,6 +815,10 @@
             "clusterbombs": {
                 "name": "Cluster Bombs",
                 "points": 4
+            },
+            "superchargedpowercells": {
+                "name": "Supercharged Power Cells",
+                "points": 3
             }
         }
     },
@@ -840,6 +844,10 @@
             "heavylaserturret": {
                 "name": "Heavy Laser Turret",
                 "points": 5
+            },
+            "quickreleasecargolocks": {
+                "name": "Quick-release Cargo Locks",
+                "points": 2
             }
         }
     },
@@ -1298,6 +1306,14 @@
             "lightscykinterceptor": {
                 "name": "\"Light Scyk\" Interceptor",
                 "points": -2
+            },
+            "insatiableworrt": {
+                "name": "Insatiable Worrt",
+                "points": 1
+            },
+            "brokenhorn": {
+                "name": "Broken Horn",
+                "points": 5
             }
         }
     }
