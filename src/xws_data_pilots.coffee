@@ -1,5 +1,6 @@
 # 'CR90 Corvette (Aft)' already present as 'cr90corvette'
 # 'Raider-class Corvette (Aft)' already present as 'raiderclasscorvette'
+# 'Sabine Wren (TIE Fighter)': 'sabinewren-swx59',
 (exports ? this).xws ?= {}
 (exports ? this).xws.pilot_faction2ship2pilot2obj_dict = \
 {
@@ -1027,6 +1028,22 @@
                     },
                     "cartelspacer": {
                         "name": "Cartel Spacer",
+                        "points": 14
+                    },
+                    "genesisred": {
+                        "name": "Genesis Red",
+                        "points": 19
+                    },
+                    "quinnjast": {
+                        "name": "Quinn Jast",
+                        "points": 18
+                    },
+                    "inaldra": {
+                        "name": "Inaldra",
+                        "points": 15
+                    },
+                    "sunnybounder": {
+                        "name": "Sunny Bounder",
                         "points": 14
                     }
                 }

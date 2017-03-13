@@ -1024,6 +1024,22 @@
                     "cartelspacer": {
                         "name": "Cartel Spacer",
                         "points": 14
+                    },
+                    "genesisred": {
+                        "name": "Genesis Red",
+                        "points": 19
+                    },
+                    "quinnjast": {
+                        "name": "Quinn Jast",
+                        "points": 18
+                    },
+                    "inaldra": {
+                        "name": "Inaldra",
+                        "points": 15
+                    },
+                    "sunnybounder": {
+                        "name": "Sunny Bounder",
+                        "points": 14
                     }
                 }
             },

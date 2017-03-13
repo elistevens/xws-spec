@@ -1033,6 +1033,22 @@
             "cartelspacer": {
               "name": "Cartel Spacer",
               "points": 14
+            },
+            "genesisred": {
+              "name": "Genesis Red",
+              "points": 19
+            },
+            "quinnjast": {
+              "name": "Quinn Jast",
+              "points": 18
+            },
+            "inaldra": {
+              "name": "Inaldra",
+              "points": 15
+            },
+            "sunnybounder": {
+              "name": "Sunny Bounder",
+              "points": 14
             }
           }
         },
@@ -2020,6 +2036,10 @@
         "tractorbeam": {
           "name": "Tractor Beam",
           "points": 1
+        },
+        "arccaster": {
+          "name": "ARC Caster",
+          "points": 2
         }
       }
     },
@@ -2152,6 +2172,10 @@
           "name": "Cluster Bombs",
           "points": 4
         },
+        "quickreleasecargolocks": {
+          "name": "Quick-release Cargo Locks",
+          "points": 2
+        },
         "superchargedpowercells": {
           "name": "Supercharged Power Cells",
           "points": 3
@@ -2180,10 +2204,6 @@
         "heavylaserturret": {
           "name": "Heavy Laser Turret",
           "points": 5
-        },
-        "quickreleasecargolocks": {
-          "name": "Quick-release Cargo Locks",
-          "points": 2
         }
       }
     },
@@ -2448,6 +2468,10 @@
         },
         "lightweightframe": {
           "name": "Lightweight Frame",
+          "points": 2
+        },
+        "pulsedrayshield": {
+          "name": "Pulsed Ray Shield",
           "points": 2
         }
       }

@@ -409,7 +409,6 @@ exportObj.basicCardData = ->
             canonical_name: "CR90 Corvette".canonicalize()
         "YT-2400":
             name: "YT-2400"
-            canonical_name: "YT-2400 Freighter".canonicalize()
             factions: [ "Rebel Alliance", ]
             attack: 2
             agility: 2
@@ -4100,7 +4099,7 @@ exportObj.basicCardData = ->
         {
             name: 'Sabine Wren (TIE Fighter)'
             id: 223
-            canonical_name: "sabinewren"
+            canonical_name: "sabinewren-swx59"
             unique: true
             faction: 'Rebel Alliance'
             ship: 'TIE Fighter'
@@ -4400,6 +4399,52 @@ exportObj.basicCardData = ->
                 'Cargo'
             ]
             points: 35
+        }
+        {
+            name: 'Genesis Red'
+            id: 245
+            unique: true
+            faction: 'Scum and Villainy'
+            ship: 'M3-A Interceptor'
+            skill: 7
+            slots: [
+                'Elite'
+            ]
+            points: 19
+        }
+        {
+            name: 'Quinn Jast'
+            id: 246
+            unique: true
+            faction: 'Scum and Villainy'
+            ship: 'M3-A Interceptor'
+            skill: 6
+            slots: [
+                'Elite'
+            ]
+            points: 18
+        }
+        {
+            name: 'Inaldra'
+            id: 247
+            unique: true
+            faction: 'Scum and Villainy'
+            ship: 'M3-A Interceptor'
+            skill: 3
+            slots: [
+                'Elite'
+            ]
+            points: 15
+        }
+        {
+            name: 'Sunny Bounder'
+            id: 248
+            unique: true
+            faction: 'Scum and Villainy'
+            ship: 'M3-A Interceptor'
+            skill: 1
+            slots: [ ]
+            points: 14
         }
     ]
 
@@ -6104,7 +6149,7 @@ exportObj.basicCardData = ->
         {
             name: 'Quick-release Cargo Locks'
             id: 226
-            slot: 'Hardpoint'
+            slot: 'Cargo'
             points: 2
             restriction_func: (ship) ->
                 ship.data.canonical_name in [ 'C-ROC Cruiser'.canonicalize(), 'GR-75 Medium Transport'.canonicalize() ]
@@ -6115,6 +6160,15 @@ exportObj.basicCardData = ->
             limited: true
             slot: 'Cargo'
             points: 3
+        }
+        {
+            name: 'ARC Caster'
+            id: 228
+            faction: [ 'Rebel Alliance', 'Scum and Villainy' ]
+            slot: 'Cannon'
+            points: 2
+            attack: 4
+            range: '1'
         }
     ]
 
@@ -6355,6 +6409,14 @@ exportObj.basicCardData = ->
             points: 2
             restriction_func: (ship) ->
                 ship.data.name.indexOf('TIE') != -1 and ship.effectiveStats().agility < 3
+        }
+        {
+            name: 'Pulsed Ray Shield'
+            id: 32
+            faction: ['Rebel Alliance', 'Scum and Villainy']
+            points: 2
+            restriction_func: (ship) ->
+                ship.effectiveStats().shields == 1
         }
     ]
 
