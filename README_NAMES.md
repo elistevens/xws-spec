@@ -98,6 +98,7 @@ Thermal Detonators | thermaldetonators
 Name | Canonical
 -----|----------
 "Mangler" Cannon | manglercannon
+ARC Caster | arccaster
 Autoblaster | autoblaster
 Flechette Cannon | flechettecannon
 Heavy Laser Cannon | heavylasercannon
@@ -118,6 +119,7 @@ Engine Booster | enginebooster
 Expanded Cargo Hold | expandedcargohold
 Frequency Jammer | frequencyjammer
 Ionization Reactor | ionizationreactor
+Quick-release Cargo Locks | quickreleasecargolocks
 Shield Projector | shieldprojector
 Slicer Tools | slicertools
 Supercharged Power Cells | superchargedpowercells
@@ -258,7 +260,6 @@ Dual Laser Turret | duallaserturret
 Heavy Laser Turret | heavylaserturret
 Ion Cannon Battery | ioncannonbattery
 Quad Laser Cannons | quadlasercannons
-Quick-release Cargo Locks | quickreleasecargolocks
 Single Turbolasers | singleturbolasers
 
 ## Illicit Upgrades
@@ -317,6 +318,7 @@ Maneuvering Fins | maneuveringfins
 Munitions Failsafe | munitionsfailsafe
 Optimized Generators | optimizedgenerators
 Ordnance Tubes | ordnancetubes
+Pulsed Ray Shield | pulsedrayshield
 Shield Upgrade | shieldupgrade
 Smuggling Compartment | smugglingcompartment
 Spacetug Tractor Array | spacetugtractorarray
@@ -954,8 +956,12 @@ Shadowport Hunter | shadowporthunter
 Name | Canonical
 -----|----------
 Cartel Spacer | cartelspacer
+Genesis Red | genesisred
+Inaldra | inaldra
 Laetin A'shera | laetinashera
+Quinn Jast | quinnjast
 Serissu | serissu
+Sunny Bounder | sunnybounder
 Tansarii Point Veteran | tansariipointveteran
 
 ## Scum Protectorate Starfighter Pilots
