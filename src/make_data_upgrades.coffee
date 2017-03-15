@@ -51,7 +51,7 @@ for upgrade in upgrade_list
         }
 
         if upgrade.canonical_name and upgrade.canonical_name != name_key
-            console.log("# '#{orig_name}': '#{upgrade.canonical_name}',")
+            console.log("# YASB claims '#{orig_name}': '#{upgrade.canonical_name}'; double check which is correct.")
 
 console.log('(exports ? this).xws ?= {}')
 console.log('(exports ? this).xws.upgrade_slot2key2obj_dict = \\')

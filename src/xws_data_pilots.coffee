@@ -1,6 +1,5 @@
 # 'CR90 Corvette (Aft)' already present as 'cr90corvette'
 # 'Raider-class Corvette (Aft)' already present as 'raiderclasscorvette'
-# 'Sabine Wren (TIE Fighter)': 'sabinewren-swx59',
 (exports ? this).xws ?= {}
 (exports ? this).xws.pilot_faction2ship2pilot2obj_dict = \
 {

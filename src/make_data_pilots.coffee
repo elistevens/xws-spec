@@ -33,18 +33,12 @@ for pilot in $exp.basicCardData().pilotsById
             }
 
         xpac_str = ''
-#        if pilot.name == 'Maarek Stele (TIE Defender)'
-#            xpac_str = '-swx52'
-#        else if pilot.name == 'Sabine Wren (Scum)'
-#            xpac_str = '-swx56'
         if pilot.name == 'Poe Dameron (PS9)'
             xpac_str = '-swx57'
         else if pilot.name == 'Han Solo (TFA)'
             xpac_str = '-swx57'
         else if pilot.name == 'Chewbacca (TFA)'
             xpac_str = '-swx57'
-#        else if pilot.name == 'Sabine Wren (TIE Fighter)'
-#            xpac_str = '-swx59'
 
         orig_name = pilot.name
         pilot.name = pilot.name.replace(/\ \(.*\)/, '')
@@ -60,7 +54,7 @@ for pilot in $exp.basicCardData().pilotsById
         }
 
         if pilot.canonical_name and pilot.canonical_name != name_key
-            console.log("# '#{orig_name}': '#{pilot.canonical_name}',")
+            console.log("# YASB claims '#{orig_name}': '#{pilot.canonical_name}'; double check which is correct.")
 
 
 console.log('(exports ? this).xws ?= {}')
