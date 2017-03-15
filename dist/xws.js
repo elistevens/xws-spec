@@ -480,6 +480,17 @@
               "points": 23
             }
           }
+        },
+        "auzituckgunship": {
+          "name": "Auzituck Gunship",
+          "subfaction": "Rebel Alliance",
+          "multisection": false,
+          "pilots": {
+            "kashyyykdefender": {
+              "name": "Kashyyyk Defender",
+              "points": 24
+            }
+          }
         }
       }
     },
@@ -984,6 +995,17 @@
               "points": 17
             }
           }
+        },
+        "tieaggressor": {
+          "name": "TIE Aggressor",
+          "subfaction": "Galactic Empire",
+          "multisection": false,
+          "pilots": {
+            "sienarspecialist": {
+              "name": "Sienar Specialist",
+              "points": 17
+            }
+          }
         }
       }
     },
@@ -1346,6 +1368,17 @@
               "points": 35
             }
           }
+        },
+        "scurrgh6bomber": {
+          "name": "Scurrg H-6 Bomber",
+          "subfaction": "Scum and Villainy",
+          "multisection": false,
+          "pilots": {
+            "karthakkpirate": {
+              "name": "Karthakk Pirate",
+              "points": 24
+            }
+          }
         }
       }
     }
@@ -1378,6 +1411,10 @@
         "dorsalturret": {
           "name": "Dorsal Turret",
           "points": 3
+        },
+        "syncedturret": {
+          "name": "Synced Turret",
+          "points": 4
         }
       }
     },
@@ -1645,6 +1682,10 @@
         "expertise": {
           "name": "Expertise",
           "points": 4
+        },
+        "intensity": {
+          "name": "Intensity",
+          "points": 2
         }
       }
     },
@@ -1686,6 +1727,10 @@
         "xx23sthreadtracers": {
           "name": "XX-23 S-Thread Tracers",
           "points": 1
+        },
+        "unguidedrockets": {
+          "name": "Unguided Rockets",
+          "points": 2
         }
       }
     },
@@ -2007,6 +2052,10 @@
         "azmorigan": {
           "name": "Azmorigan",
           "points": 2
+        },
+        "wookieecommandos": {
+          "name": "Wookiee Commandos",
+          "points": 1
         }
       }
     },
@@ -2674,6 +2723,10 @@
         "brokenhorn": {
           "name": "Broken Horn",
           "points": 5
+        },
+        "havoc": {
+          "name": "Havoc",
+          "points": 0
         }
       }
     }

@@ -206,6 +206,7 @@ Toryn Farr | torynfarr
 Unkar Plutt | unkarplutt
 WED-15 Repair Droid | wed15repairdroid
 Weapons Engineer | weaponsengineer
+Wookiee Commandos | wookieecommandos
 Ysanne Isard | ysanneisard
 Zuckuss | zuckuss
 
@@ -231,6 +232,7 @@ Expert Handling | experthandling
 Expertise | expertise
 Expose | expose
 Fearlessness | fearlessness
+Intensity | intensity
 Intimidation | intimidation
 Juke | juke
 Lightning Reflexes | lightningreflexes
@@ -290,6 +292,7 @@ Concussion Missiles | concussionmissiles
 Homing Missiles | homingmissiles
 Ion Pulse Missiles | ionpulsemissiles
 Proton Rockets | protonrockets
+Unguided Rockets | unguidedrockets
 XX-23 S-Thread Tracers | xx23sthreadtracers
 
 ## Modification Upgrades
@@ -396,6 +399,7 @@ Dauntless | dauntless
 Dodonna's Pride | dodonnaspride
 Dutyfree | dutyfree
 Ghost | ghost
+Havoc | havoc
 Hound's Tooth | houndstooth
 IG-2000 | ig2000
 Impetuous | impetuous
@@ -451,6 +455,7 @@ Autoblaster Turret | autoblasterturret
 Blaster Turret | blasterturret
 Dorsal Turret | dorsalturret
 Ion Cannon Turret | ioncannonturret
+Synced Turret | syncedturret
 Twin Laser Turret | twinlaserturret
 
 ## Factions
@@ -471,6 +476,7 @@ Lambda-Class Shuttle | lambdaclassshuttle
 Raider-class Corvette | raiderclasscorvette
 TIE Advanced Prototype | tieadvprototype
 TIE Advanced | tieadvanced
+TIE Aggressor | tieaggressor
 TIE Bomber | tiebomber
 TIE Defender | tiedefender
 TIE Fighter | tiefighter
@@ -534,6 +540,12 @@ Baron of the Empire | baronoftheempire
 Sienar Test Pilot | sienartestpilot
 The Inquisitor | theinquisitor
 Valen Rudor | valenrudor
+
+## Imperial TIE Aggressor Pilots
+
+Name | Canonical
+-----|----------
+Sienar Specialist | sienarspecialist
 
 ## Imperial TIE Bomber Pilots
 
@@ -670,6 +682,7 @@ Name | Canonical
 A-Wing | awing
 ARC-170 | arc170
 Attack Shuttle | attackshuttle
+Auzituck Gunship | auzituckgunship
 B-Wing | bwing
 CR90 Corvette | cr90corvette
 E-Wing | ewing
@@ -703,6 +716,12 @@ Name | Canonical
 Ezra Bridger | ezrabridger
 Hera Syndulla | herasyndulla
 Sabine Wren | sabinewren
+
+## Rebel Auzituck Gunship Pilots
+
+Name | Canonical
+-----|----------
+Kashyyyk Defender | kashyyykdefender
 
 ## Rebel A-Wing Pilots
 
@@ -877,6 +896,7 @@ Lancer-class Pursuit Craft | lancerclasspursuitcraft
 M3-A Interceptor | m3ainterceptor
 Protectorate Starfighter | protectoratestarfighter
 Quadjumper | quadjumper
+Scurrg H-6 Bomber | scurrgh6bomber
 StarViper | starviper
 Y-Wing | ywing
 YV-666 | yv666
@@ -983,6 +1003,12 @@ Constable Zuvio | constablezuvio
 Jakku Gunrunner | jakkugunrunner
 Sarco Plank | sarcoplank
 Unkar Plutt | unkarplutt
+
+## Scum Scurrg H-6 Bomber Pilots
+
+Name | Canonical
+-----|----------
+Karthakk Pirate | karthakkpirate
 
 ## Scum StarViper Pilots
 

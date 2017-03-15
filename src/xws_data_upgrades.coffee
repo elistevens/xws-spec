@@ -26,6 +26,10 @@
             "dorsalturret": {
                 "name": "Dorsal Turret",
                 "points": 3
+            },
+            "syncedturret": {
+                "name": "Synced Turret",
+                "points": 4
             }
         }
     },
@@ -293,6 +297,10 @@
             "expertise": {
                 "name": "Expertise",
                 "points": 4
+            },
+            "intensity": {
+                "name": "Intensity",
+                "points": 2
             }
         }
     },
@@ -334,6 +342,10 @@
             "xx23sthreadtracers": {
                 "name": "XX-23 S-Thread Tracers",
                 "points": 1
+            },
+            "unguidedrockets": {
+                "name": "Unguided Rockets",
+                "points": 2
             }
         }
     },
@@ -655,6 +667,10 @@
             "azmorigan": {
                 "name": "Azmorigan",
                 "points": 2
+            },
+            "wookieecommandos": {
+                "name": "Wookiee Commandos",
+                "points": 1
             }
         }
     },
@@ -1322,6 +1338,10 @@
             "brokenhorn": {
                 "name": "Broken Horn",
                 "points": 5
+            },
+            "havoc": {
+                "name": "Havoc",
+                "points": 0
             }
         }
     }
