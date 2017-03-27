@@ -170,6 +170,7 @@ Hotshot Co-pilot | hotshotcopilot
 IG-88D | ig88d
 Inspiring Recruit | inspiringrecruit
 Intelligence Agent | intelligenceagent
+Jabba the Hutt | jabbathehutt
 Jan Dodonna | jandodonna
 Jan Ors | janors
 Jyn Erso | jynerso
