@@ -666,6 +666,10 @@
             "wookieecommandos": {
                 "name": "Wookiee Commandos",
                 "points": 1
+            },
+            "jabbathehutt": {
+                "name": "Jabba the Hutt",
+                "points": 5
             }
         }
     },
