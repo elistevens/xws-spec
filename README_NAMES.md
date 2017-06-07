@@ -365,6 +365,7 @@ Name | Canonical
 -----|----------
 Engineering Team | engineeringteam
 Gunnery Team | gunneryteam
+IG-RM Thug Droids | igrmthugdroids
 Ordnance Experts | ordnanceexperts
 Sensor Team | sensorteam
 
@@ -425,6 +426,7 @@ Sabine's Masterpiece | sabinesmasterpiece
 Shadow Caster | shadowcaster
 Slave I | slavei
 Special Ops Training | specialopstraining
+StarViper Mk. II | starvipermkii
 Suppressor | suppressor
 TIE Shuttle | tieshuttle
 TIE/D | tied
@@ -432,6 +434,7 @@ TIE/v1 | tiev1
 TIE/x1 | tiex1
 TIE/x7 | tiex7
 Tantive IV | tantiveiv
+Vaksai | vaksai
 Vector | vector
 Virago | virago
 
@@ -546,6 +549,9 @@ Valen Rudor | valenrudor
 
 Name | Canonical
 -----|----------
+"Double Edge" | doubleedge
+Lieutenant Kestal | lieutenantkestal
+Onyx Squadron Escort | onyxsquadronescort
 Sienar Specialist | sienarspecialist
 
 ## Imperial TIE Bomber Pilots
@@ -962,6 +968,7 @@ Black Sun Ace | blacksunace
 Cartel Marauder | cartelmarauder
 Graz the Hunter | grazthehunter
 Talonbane Cobra | talonbanecobra
+Viktor Hel | viktorhel
 
 ## Scum Lancer-class Pursuit Craft Pilots
 

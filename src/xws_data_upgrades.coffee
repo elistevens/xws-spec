@@ -893,6 +893,10 @@
             "ordnanceexperts": {
                 "name": "Ordnance Experts",
                 "points": 5
+            },
+            "igrmthugdroids": {
+                "name": "IG-RM Thug Droids",
+                "points": 1
             }
         }
     },
@@ -1346,6 +1350,14 @@
             "havoc": {
                 "name": "Havoc",
                 "points": 0
+            },
+            "vaksai": {
+                "name": "Vaksai",
+                "points": 0
+            },
+            "starvipermkii": {
+                "name": "StarViper Mk. II",
+                "points": -3
             }
         }
     }

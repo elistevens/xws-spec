@@ -999,6 +999,18 @@
                     "sienarspecialist": {
                         "name": "Sienar Specialist",
                         "points": 17
+                    },
+                    "onyxsquadronescort": {
+                        "name": "Onyx Squadron Escort",
+                        "points": 19
+                    },
+                    "doubleedge": {
+                        "name": "\"Double Edge\"",
+                        "points": 19
+                    },
+                    "lieutenantkestal": {
+                        "name": "Lieutenant Kestal",
+                        "points": 22
                     }
                 }
             }
@@ -1227,6 +1239,10 @@
                     "cartelmarauder": {
                         "name": "Cartel Marauder",
                         "points": 20
+                    },
+                    "viktorhel": {
+                        "name": "Viktor Hel",
+                        "points": 25
                     }
                 }
             },
