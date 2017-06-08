@@ -1004,6 +1004,18 @@
             "sienarspecialist": {
               "name": "Sienar Specialist",
               "points": 17
+            },
+            "onyxsquadronescort": {
+              "name": "Onyx Squadron Escort",
+              "points": 19
+            },
+            "doubleedge": {
+              "name": "\"Double Edge\"",
+              "points": 19
+            },
+            "lieutenantkestal": {
+              "name": "Lieutenant Kestal",
+              "points": 22
             }
           }
         }
@@ -1232,6 +1244,10 @@
             "cartelmarauder": {
               "name": "Cartel Marauder",
               "points": 20
+            },
+            "viktorhel": {
+              "name": "Viktor Hel",
+              "points": 25
             }
           }
         },
@@ -2278,6 +2294,10 @@
         "ordnanceexperts": {
           "name": "Ordnance Experts",
           "points": 5
+        },
+        "igrmthugdroids": {
+          "name": "IG-RM Thug Droids",
+          "points": 1
         }
       }
     },
@@ -2731,6 +2751,14 @@
         "havoc": {
           "name": "Havoc",
           "points": 0
+        },
+        "vaksai": {
+          "name": "Vaksai",
+          "points": 0
+        },
+        "starvipermkii": {
+          "name": "StarViper Mk. II",
+          "points": -3
         }
       }
     }
