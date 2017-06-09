@@ -732,7 +732,7 @@ Name | Canonical
 -----|----------
 Kashyyyk Defender | kashyyykdefender
 Lowhhrick | lowhhrick
-Wullfwarro | wullfwarro
+Wullffwarro | wullffwarro
 
 ## Rebel A-Wing Pilots
 

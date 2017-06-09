@@ -489,8 +489,8 @@
                         "name": "Lowhhrick",
                         "points": 28
                     },
-                    "wullfwarro": {
-                        "name": "Wullfwarro",
+                    "wullffwarro": {
+                        "name": "Wullffwarro",
                         "points": 30
                     }
                 }
