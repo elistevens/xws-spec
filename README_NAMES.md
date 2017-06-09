@@ -144,6 +144,7 @@ Boba Fett | bobafett
 Bodhi Rook | bodhirook
 Bombardier | bombardier
 Bossk | bossk
+Breach Specialist | breachspecialist
 C-3PO | c3po
 Captain Needa | captainneeda
 Captain Rex | captainrex
@@ -245,6 +246,7 @@ Predator | predator
 Push the Limit | pushthelimit
 Rage | rage
 Ruthlessness | ruthlessness
+Selflessness | selflessness
 Snap Shot | snapshot
 Squad Leader | squadleader
 Stay On Target | stayontarget
@@ -729,6 +731,8 @@ Sabine Wren | sabinewren
 Name | Canonical
 -----|----------
 Kashyyyk Defender | kashyyykdefender
+Lowhhrick | lowhhrick
+Wullfwarro | wullfwarro
 
 ## Rebel A-Wing Pilots
 

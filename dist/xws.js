@@ -489,6 +489,14 @@
             "kashyyykdefender": {
               "name": "Kashyyyk Defender",
               "points": 24
+            },
+            "lowhhrick": {
+              "name": "Lowhhrick",
+              "points": 28
+            },
+            "wullfwarro": {
+              "name": "Wullfwarro",
+              "points": 30
             }
           }
         }
@@ -1702,6 +1710,10 @@
         "intensity": {
           "name": "Intensity",
           "points": 2
+        },
+        "selflessness": {
+          "name": "Selflessness",
+          "points": 1
         }
       }
     },
@@ -2076,6 +2088,10 @@
         "jabbathehutt": {
           "name": "Jabba the Hutt",
           "points": 5
+        },
+        "breachspecialist": {
+          "name": "Breach Specialist",
+          "points": 1
         }
       }
     },
