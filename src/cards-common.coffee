@@ -2,7 +2,6 @@
 exportObj = exports ? this
 
 exportObj.unreleasedExpansions = [
-    "C-ROC Cruiser Expansion Pack"
     "Auzituck Gunship Expansion Pack"
     "Scurrg H-6 Bomber Expansion Pack"
     "TIE Aggressor Expansion Pack"
@@ -982,6 +981,14 @@ exportObj.basicCardData = ->
                 'Reinforce'
             ]
             attack_icon: 'xwing-miniatures-font-attack-180'
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0, 0, 0 ]
+                [ 0, 2, 2, 2, 0, 0, 0, 0 ]
+                [ 1, 1, 2, 1, 1, 0, 0, 0 ]
+                [ 1, 1, 2, 1, 1, 0, 0, 0 ]
+                [ 0, 0, 1, 0, 0, 0, 0, 0 ]
+                [ 0, 0, 3, 0, 0, 0, 0, 0 ]
+            ]
         'Scurrg H-6 Bomber':
             name: 'Scurrg H-6 Bomber'
             factions: ["Rebel Alliance", "Scum and Villainy"]
@@ -4517,30 +4524,32 @@ exportObj.basicCardData = ->
             points: 100
         }
         {
-            name: 'Lo???'
+            name: 'Lowhhrick'
             id: 251
             unique: true
             faction: 'Rebel Alliance'
             ship: 'Auzituck Gunship'
             skill: 5
             slots: [
+                'Elite'
                 'Crew'
                 'Crew'
             ]
-            points: 100
+            points: 28
         }
         {
-            name: 'Wull???'
+            name: 'Wullffwarro'
             id: 252
             faction: 'Rebel Alliance'
             unique: true
             ship: 'Auzituck Gunship'
             skill: 7
             slots: [
+                'Elite'
                 'Crew'
                 'Crew'
             ]
-            points: 100
+            points: 30
         }
         {
             name: 'Captain Nym (Scum)'
@@ -6534,6 +6543,22 @@ exportObj.basicCardData = ->
             slot: 'Team'
             points: 1
         }
+        {
+            name: 'Selflessness'
+            id: 235
+            slot: 'Elite'
+            unique: true
+            faction: 'Rebel Alliance'
+            points: 1
+            restriction_func: (ship) ->
+                not ((ship.data.large ? false) or (ship.data.huge ? false))
+        }
+        {
+            name: 'Breach Specialist'
+            id: 236
+            slot: 'Crew'
+            points: 1
+        }
     ]
 
     modificationsById: [
@@ -7020,6 +7045,7 @@ exportObj.basicCardData = ->
         }
         {
             name: 'IG-2000'
+            faction: 'Scum and Villainy'
             id: 20
             points: 0
             ship: "Aggressor"

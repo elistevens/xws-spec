@@ -484,6 +484,14 @@
                     "kashyyykdefender": {
                         "name": "Kashyyyk Defender",
                         "points": 24
+                    },
+                    "lowhhrick": {
+                        "name": "Lowhhrick",
+                        "points": 28
+                    },
+                    "wullffwarro": {
+                        "name": "Wullffwarro",
+                        "points": 30
                     }
                 }
             }
