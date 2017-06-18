@@ -85,6 +85,7 @@ Targeting Astromech | targetingastromech
 
 Name | Canonical
 -----|----------
+Bomblet Generator | bombletgenerator
 Cluster Mines | clustermines
 Conner Net | connernet
 Ion Bombs | ionbombs
@@ -146,6 +147,7 @@ Bombardier | bombardier
 Bossk | bossk
 Breach Specialist | breachspecialist
 C-3PO | c3po
+Cad Bane | cadbane
 Captain Needa | captainneeda
 Captain Rex | captainrex
 Carlist Rieekan | carlistrieekan
@@ -358,6 +360,7 @@ Collision Detector | collisiondetector
 Electronic Baffle | electronicbaffle
 Enhanced Scopes | enhancedscopes
 Fire-Control System | firecontrolsystem
+Minefield Mapper | minefieldmapper
 Reinforced Deflectors | reinforceddeflectors
 Sensor Jammer | sensorjammer
 
@@ -698,6 +701,7 @@ E-Wing | ewing
 GR-75 Medium Transport | gr75mediumtransport
 HWK-290 | hwk290
 K-Wing | kwing
+Scurrg H-6 Bomber | scurrgh6bomber
 T-70 X-Wing | t70xwing
 TIE Fighter | tiefighter
 U-Wing | uwing
@@ -794,6 +798,12 @@ Esege Tuketu | esegetuketu
 Guardian Squadron Pilot | guardiansquadronpilot
 Miranda Doni | mirandadoni
 Warden Squadron Pilot | wardensquadronpilot
+
+## Rebel Scurrg H-6 Bomber Pilots
+
+Name | Canonical
+-----|----------
+Captain Nym | captainnym
 
 ## Rebel T-70 X-Wing Pilots
 
@@ -1020,7 +1030,9 @@ Unkar Plutt | unkarplutt
 
 Name | Canonical
 -----|----------
+Captain Nym | captainnym
 Karthakk Pirate | karthakkpirate
+Sol Sixxa | solsixxa
 
 ## Scum StarViper Pilots
 

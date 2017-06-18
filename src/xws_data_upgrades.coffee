@@ -683,6 +683,10 @@
             "breachspecialist": {
                 "name": "Breach Specialist",
                 "points": 1
+            },
+            "cadbane": {
+                "name": "Cad Bane",
+                "points": 2
             }
         }
     },
@@ -749,6 +753,10 @@
             "thermaldetonators": {
                 "name": "Thermal Detonators",
                 "points": 3
+            },
+            "bombletgenerator": {
+                "name": "Bomblet Generator",
+                "points": 3
             }
         }
     },
@@ -789,6 +797,10 @@
             },
             "collisiondetector": {
                 "name": "Collision Detector",
+                "points": 0
+            },
+            "minefieldmapper": {
+                "name": "Minefield Mapper",
                 "points": 0
             }
         }

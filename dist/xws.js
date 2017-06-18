@@ -499,6 +499,17 @@
               "points": 30
             }
           }
+        },
+        "scurrgh6bomber": {
+          "name": "Scurrg H-6 Bomber",
+          "subfaction": "Rebel Alliance",
+          "multisection": false,
+          "pilots": {
+            "captainnym": {
+              "name": "Captain Nym",
+              "points": 30
+            }
+          }
         }
       }
     },
@@ -1398,6 +1409,14 @@
           "subfaction": "Scum and Villainy",
           "multisection": false,
           "pilots": {
+            "captainnym": {
+              "name": "Captain Nym",
+              "points": 30
+            },
+            "solsixxa": {
+              "name": "Sol Sixxa",
+              "points": 28
+            },
             "karthakkpirate": {
               "name": "Karthakk Pirate",
               "points": 24
@@ -2092,6 +2111,10 @@
         "breachspecialist": {
           "name": "Breach Specialist",
           "points": 1
+        },
+        "cadbane": {
+          "name": "Cad Bane",
+          "points": 2
         }
       }
     },
@@ -2158,6 +2181,10 @@
         "thermaldetonators": {
           "name": "Thermal Detonators",
           "points": 3
+        },
+        "bombletgenerator": {
+          "name": "Bomblet Generator",
+          "points": 3
         }
       }
     },
@@ -2198,6 +2225,10 @@
         },
         "collisiondetector": {
           "name": "Collision Detector",
+          "points": 0
+        },
+        "minefieldmapper": {
+          "name": "Minefield Mapper",
           "points": 0
         }
       }

@@ -490,6 +490,17 @@
                         "points": 30
                     }
                 }
+            },
+            "scurrgh6bomber": {
+                "name": "Scurrg H-6 Bomber",
+                "subfaction": "Rebel Alliance",
+                "multisection": false,
+                "pilots": {
+                    "captainnym": {
+                        "name": "Captain Nym",
+                        "points": 30
+                    }
+                }
             }
         }
     },
@@ -1389,6 +1400,14 @@
                 "subfaction": "Scum and Villainy",
                 "multisection": false,
                 "pilots": {
+                    "captainnym": {
+                        "name": "Captain Nym",
+                        "points": 30
+                    },
+                    "solsixxa": {
+                        "name": "Sol Sixxa",
+                        "points": 28
+                    },
                     "karthakkpirate": {
                         "name": "Karthakk Pirate",
                         "points": 24
