@@ -485,6 +485,10 @@
                         "name": "Kashyyyk Defender",
                         "points": 24
                     },
+                    "wookieeliberator": {
+                        "name": "Wookiee Liberator",
+                        "points": 26
+                    },
                     "lowhhrick": {
                         "name": "Lowhhrick",
                         "points": 28
@@ -1411,6 +1415,10 @@
                     "solsixxa": {
                         "name": "Sol Sixxa",
                         "points": 28
+                    },
+                    "lokrevenant": {
+                        "name": "Lok Revenant",
+                        "points": 26
                     },
                     "karthakkpirate": {
                         "name": "Karthakk Pirate",
