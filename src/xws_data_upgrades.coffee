@@ -350,6 +350,10 @@
             "unguidedrockets": {
                 "name": "Unguided Rockets",
                 "points": 2
+            },
+            "cruisemissiles": {
+                "name": "Cruise Missiles",
+                "points": 3
             }
         }
     },
@@ -998,6 +1002,10 @@
             },
             "overclockedr4": {
                 "name": "Overclocked R4",
+                "points": 1
+            },
+            "r4e1": {
+                "name": "R4-E1",
                 "points": 1
             }
         }

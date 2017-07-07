@@ -294,6 +294,7 @@ Assault Missiles | assaultmissiles
 Chardaan Refit | chardaanrefit
 Cluster Missiles | clustermissiles
 Concussion Missiles | concussionmissiles
+Cruise Missiles | cruisemissiles
 Homing Missiles | homingmissiles
 Ion Pulse Missiles | ionpulsemissiles
 Proton Rockets | protonrockets
@@ -345,6 +346,7 @@ Name | Canonical
 Overclocked R4 | overclockedr4
 R4 Agromech | r4agromech
 R4-B11 | r4b11
+R4-E1 | r4e1
 R5-P8 | r5p8
 Salvaged Astromech | salvagedastromech
 Unhinged Astromech | unhingedastromech
@@ -736,6 +738,7 @@ Name | Canonical
 -----|----------
 Kashyyyk Defender | kashyyykdefender
 Lowhhrick | lowhhrick
+Wookiee Liberator | wookieeliberator
 Wullffwarro | wullffwarro
 
 ## Rebel A-Wing Pilots
@@ -1032,6 +1035,7 @@ Name | Canonical
 -----|----------
 Captain Nym | captainnym
 Karthakk Pirate | karthakkpirate
+Lok Revenant | lokrevenant
 Sol Sixxa | solsixxa
 
 ## Scum StarViper Pilots
