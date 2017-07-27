@@ -282,6 +282,7 @@ EMP Device | empdevice
 Feedback Array | feedbackarray
 Glitterstim | glitterstim
 Inertial Dampeners | inertialdampeners
+Ion Dischargers | iondischargers
 Rigged Cargo Chute | riggedcargochute
 Scavenger Crane | scavengercrane
 
@@ -1042,10 +1043,13 @@ Sol Sixxa | solsixxa
 
 Name | Canonical
 -----|----------
+Black Sun Assassin | blacksunassassin
 Black Sun Enforcer | blacksunenforcer
 Black Sun Vigo | blacksunvigo
+Dalan Oberos | dalanoberos
 Guri | guri
 Prince Xizor | princexizor
+Thweek | thweek
 
 ## Scum YV-666 Pilots
 

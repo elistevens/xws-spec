@@ -1062,6 +1062,18 @@
                     "blacksunenforcer": {
                         "name": "Black Sun Enforcer",
                         "points": 25
+                    },
+                    "dalanoberos": {
+                        "name": "Dalan Oberos",
+                        "points": 30
+                    },
+                    "thweek": {
+                        "name": "Thweek",
+                        "points": 28
+                    },
+                    "blacksunassassin": {
+                        "name": "Black Sun Assassin",
+                        "points": 28
                     }
                 }
             },
