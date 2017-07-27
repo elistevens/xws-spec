@@ -970,6 +970,10 @@
             "scavengercrane": {
                 "name": "Scavenger Crane",
                 "points": 2
+            },
+            "iondischargers": {
+                "name": "Ion Dischargers",
+                "points": 2
             }
         }
     },
