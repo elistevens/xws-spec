@@ -1278,6 +1278,10 @@
                     "viktorhel": {
                         "name": "Viktor Hel",
                         "points": 25
+                    },
+                    "captainjostero": {
+                        "name": "Captain Jostero",
+                        "points": 24
                     }
                 }
             },
