@@ -296,7 +296,7 @@ Chardaan Refit | chardaanrefit
 Cluster Missiles | clustermissiles
 Concussion Missiles | concussionmissiles
 Cruise Missiles | cruisemissiles
-Harpoon Missile | harpoonmissile
+Harpoon Missiles | harpoonmissiles
 Homing Missiles | homingmissiles
 Ion Pulse Missiles | ionpulsemissiles
 Proton Rockets | protonrockets

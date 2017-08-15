@@ -1807,8 +1807,8 @@
           "name": "Cruise Missiles",
           "points": 3
         },
-        "harpoonmissile": {
-          "name": "Harpoon Missile",
+        "harpoonmissiles": {
+          "name": "Harpoon Missiles",
           "points": 4
         }
       }
