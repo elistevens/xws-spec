@@ -354,6 +354,10 @@
             "cruisemissiles": {
                 "name": "Cruise Missiles",
                 "points": 3
+            },
+            "harpoonmissile": {
+                "name": "Harpoon Missile",
+                "points": 4
             }
         }
     },

@@ -1283,6 +1283,10 @@
             "viktorhel": {
               "name": "Viktor Hel",
               "points": 25
+            },
+            "captainjostero": {
+              "name": "Captain Jostero",
+              "points": 24
             }
           }
         },
@@ -1802,6 +1806,10 @@
         "cruisemissiles": {
           "name": "Cruise Missiles",
           "points": 3
+        },
+        "harpoonmissile": {
+          "name": "Harpoon Missile",
+          "points": 4
         }
       }
     },

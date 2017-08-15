@@ -296,6 +296,7 @@ Chardaan Refit | chardaanrefit
 Cluster Missiles | clustermissiles
 Concussion Missiles | concussionmissiles
 Cruise Missiles | cruisemissiles
+Harpoon Missile | harpoonmissile
 Homing Missiles | homingmissiles
 Ion Pulse Missiles | ionpulsemissiles
 Proton Rockets | protonrockets
@@ -983,6 +984,7 @@ Tel Trevura | teltrevura
 Name | Canonical
 -----|----------
 Black Sun Ace | blacksunace
+Captain Jostero | captainjostero
 Cartel Marauder | cartelmarauder
 Graz the Hunter | grazthehunter
 Talonbane Cobra | talonbanecobra
