@@ -760,6 +760,10 @@
             "bombletgenerator": {
                 "name": "Bomblet Generator",
                 "points": 3
+            },
+            "ordnancesilos": {
+                "name": "Ordnance Silos",
+                "points": 2
             }
         }
     },
@@ -805,6 +809,10 @@
             "minefieldmapper": {
                 "name": "Minefield Mapper",
                 "points": 0
+            },
+            "trajectorysimulator": {
+                "name": "Trajectory Simulator",
+                "points": 1
             }
         }
     },
@@ -1389,6 +1397,22 @@
             "starvipermkii": {
                 "name": "StarViper Mk. II",
                 "points": -3
+            },
+            "xg1assaultconfiguration": {
+                "name": "XG-1 Assault Configuration",
+                "points": 1
+            },
+            "enforcer": {
+                "name": "Enforcer",
+                "points": 1
+            },
+            "phantomii": {
+                "name": "Phantom II",
+                "points": 0
+            },
+            "firstordervanguard": {
+                "name": "First Order Vanguard",
+                "points": 2
             }
         }
     }
