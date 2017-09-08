@@ -514,6 +514,28 @@
               "points": 30
             }
           }
+        },
+        "sheathipedeclassshuttle": {
+          "name": "Sheathipede-class Shuttle",
+          "subfaction": "Rebel Alliance",
+          "multisection": false,
+          "pilots": {
+            "fennrau": {
+              "name": "Fenn Rau",
+              "points": 20
+            }
+          }
+        },
+        "bsf17bomber": {
+          "name": "B/SF-17 Bomber",
+          "subfaction": "Resistance",
+          "multisection": false,
+          "pilots": {
+            "crimsonleader": {
+              "name": "\"Crimson Leader\"",
+              "points": 29
+            }
+          }
         }
       }
     },
@@ -1041,6 +1063,28 @@
               "points": 22
             }
           }
+        },
+        "alphaclassstarwing": {
+          "name": "Alpha-class Star Wing",
+          "subfaction": "Galactic Empire",
+          "multisection": false,
+          "pilots": {
+            "majorvynder": {
+              "name": "Major Vynder",
+              "points": 26
+            }
+          }
+        },
+        "tiesilencer": {
+          "name": "TIE Silencer",
+          "subfaction": "First Order",
+          "multisection": false,
+          "pilots": {
+            "kyloren": {
+              "name": "Kylo Ren",
+              "points": 35
+            }
+          }
         }
       }
     },
@@ -1444,6 +1488,17 @@
             "karthakkpirate": {
               "name": "Karthakk Pirate",
               "points": 24
+            }
+          }
+        },
+        "m12lkimogilafighter": {
+          "name": "M12-L Kimogila Fighter",
+          "subfaction": "Scum and Villainy",
+          "multisection": false,
+          "pilots": {
+            "toranikulda": {
+              "name": "Torani Kulda",
+              "points": 27
             }
           }
         }
@@ -2217,6 +2272,10 @@
         "bombletgenerator": {
           "name": "Bomblet Generator",
           "points": 3
+        },
+        "ordnancesilos": {
+          "name": "Ordnance Silos",
+          "points": 2
         }
       }
     },
@@ -2262,6 +2321,10 @@
         "minefieldmapper": {
           "name": "Minefield Mapper",
           "points": 0
+        },
+        "trajectorysimulator": {
+          "name": "Trajectory Simulator",
+          "points": 1
         }
       }
     },
@@ -2846,6 +2909,22 @@
         "starvipermkii": {
           "name": "StarViper Mk. II",
           "points": -3
+        },
+        "xg1assaultconfiguration": {
+          "name": "XG-1 Assault Configuration",
+          "points": 1
+        },
+        "enforcer": {
+          "name": "Enforcer",
+          "points": 1
+        },
+        "phantomii": {
+          "name": "Phantom II",
+          "points": 0
+        },
+        "firstordervanguard": {
+          "name": "First Order Vanguard",
+          "points": 2
         }
       }
     }
