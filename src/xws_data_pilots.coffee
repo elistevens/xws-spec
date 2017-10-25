@@ -509,6 +509,28 @@
                         "points": 30
                     }
                 }
+            },
+            "sheathipedeclassshuttle": {
+                "name": "Sheathipede-class Shuttle",
+                "subfaction": "Rebel Alliance",
+                "multisection": false,
+                "pilots": {
+                    "fennrau": {
+                        "name": "Fenn Rau",
+                        "points": 20
+                    }
+                }
+            },
+            "bsf17bomber": {
+                "name": "B/SF-17 Bomber",
+                "subfaction": "Resistance",
+                "multisection": false,
+                "pilots": {
+                    "crimsonleader": {
+                        "name": "\"Crimson Leader\"",
+                        "points": 29
+                    }
+                }
             }
         }
     },
@@ -1036,6 +1058,40 @@
                         "points": 22
                     }
                 }
+            },
+            "alphaclassstarwing": {
+                "name": "Alpha-class Star Wing",
+                "subfaction": "Galactic Empire",
+                "multisection": false,
+                "pilots": {
+                    "majorvynder": {
+                        "name": "Major Vynder",
+                        "points": 26
+                    },
+                    "lieutenantkarsabi": {
+                        "name": "Lieutenant Karsabi",
+                        "points": 24
+                    },
+                    "rhosquadronveteran": {
+                        "name": "Rho Squadron Veteran",
+                        "points": 21
+                    },
+                    "nusquadronpilot": {
+                        "name": "Nu Squadron Pilot",
+                        "points": 18
+                    }
+                }
+            },
+            "tiesilencer": {
+                "name": "TIE Silencer",
+                "subfaction": "First Order",
+                "multisection": false,
+                "pilots": {
+                    "kyloren": {
+                        "name": "Kylo Ren",
+                        "points": 35
+                    }
+                }
             }
         }
     },
@@ -1439,6 +1495,17 @@
                     "karthakkpirate": {
                         "name": "Karthakk Pirate",
                         "points": 24
+                    }
+                }
+            },
+            "m12lkimogilafighter": {
+                "name": "M12-L Kimogila Fighter",
+                "subfaction": "Scum and Villainy",
+                "multisection": false,
+                "pilots": {
+                    "toranikulda": {
+                        "name": "Torani Kulda",
+                        "points": 27
                     }
                 }
             }

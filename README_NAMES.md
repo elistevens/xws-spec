@@ -89,6 +89,7 @@ Bomblet Generator | bombletgenerator
 Cluster Mines | clustermines
 Conner Net | connernet
 Ion Bombs | ionbombs
+Ordnance Silos | ordnancesilos
 Proton Bombs | protonbombs
 Proximity Mines | proximitymines
 Seismic Charges | seismiccharges
@@ -104,6 +105,8 @@ Autoblaster | autoblaster
 Flechette Cannon | flechettecannon
 Heavy Laser Cannon | heavylasercannon
 Ion Cannon | ioncannon
+Jamming Beam | jammingbeam
+Linked Battery | linkedbattery
 Tractor Beam | tractorbeam
 
 ## Cargo Upgrades
@@ -248,6 +251,7 @@ Predator | predator
 Push the Limit | pushthelimit
 Rage | rage
 Ruthlessness | ruthlessness
+Saturation Salvo | saturationsalvo
 Selflessness | selflessness
 Snap Shot | snapshot
 Squad Leader | squadleader
@@ -367,6 +371,7 @@ Fire-Control System | firecontrolsystem
 Minefield Mapper | minefieldmapper
 Reinforced Deflectors | reinforceddeflectors
 Sensor Jammer | sensorjammer
+Trajectory Simulator | trajectorysimulator
 
 ## Team Upgrades
 
@@ -409,6 +414,8 @@ Concord Dawn Protector | concorddawnprotector
 Dauntless | dauntless
 Dodonna's Pride | dodonnaspride
 Dutyfree | dutyfree
+Enforcer | enforcer
+First Order Vanguard | firstordervanguard
 Ghost | ghost
 Havoc | havoc
 Hound's Tooth | houndstooth
@@ -423,7 +430,9 @@ Millennium Falcon | millenniumfalcon
 Millennium Falcon | millenniumfalcon-swx57
 Mist Hunter | misthunter
 Moldy Crow | moldycrow
+Os-1 Arsenal Loadout | os1arsenalloadout
 Outrider | outrider
+Phantom II | phantomii
 Phantom | phantom
 Pivot Wing | pivotwing
 Punishing One | punishingone
@@ -446,6 +455,7 @@ Tantive IV | tantiveiv
 Vaksai | vaksai
 Vector | vector
 Virago | virago
+XG-1 Assault Configuration | xg1assaultconfiguration
 
 ## Torpedo Upgrades
 
@@ -483,6 +493,7 @@ Scum | scum
 
 Name | Canonical
 -----|----------
+Alpha-class Star Wing | alphaclassstarwing
 Firespray-31 | firespray31
 Gozanti-class Cruiser | gozanticlasscruiser
 Lambda-Class Shuttle | lambdaclassshuttle
@@ -496,11 +507,21 @@ TIE Fighter | tiefighter
 TIE Interceptor | tieinterceptor
 TIE Phantom | tiephantom
 TIE Punisher | tiepunisher
+TIE Silencer | tiesilencer
 TIE Striker | tiestriker
 TIE/fo Fighter | tiefofighter
 TIE/sf Fighter | tiesffighter
 Upsilon-class Shuttle | upsilonclassshuttle
 VT-49 Decimator | vt49decimator
+
+## Imperial Alpha-class Star Wing Pilots
+
+Name | Canonical
+-----|----------
+Lieutenant Karsabi | lieutenantkarsabi
+Major Vynder | majorvynder
+Nu Squadron Pilot | nusquadronpilot
+Rho Squadron Veteran | rhosquadronveteran
 
 ## Imperial Firespray-31 Pilots
 
@@ -662,6 +683,12 @@ Name | Canonical
 Omega Specialist | omegaspecialist
 Zeta Specialist | zetaspecialist
 
+## Imperial TIE Silencer Pilots
+
+Name | Canonical
+-----|----------
+Kylo Ren | kyloren
+
 ## Imperial TIE Striker Pilots
 
 Name | Canonical
@@ -700,12 +727,14 @@ ARC-170 | arc170
 Attack Shuttle | attackshuttle
 Auzituck Gunship | auzituckgunship
 B-Wing | bwing
+B/SF-17 Bomber | bsf17bomber
 CR90 Corvette | cr90corvette
 E-Wing | ewing
 GR-75 Medium Transport | gr75mediumtransport
 HWK-290 | hwk290
 K-Wing | kwing
 Scurrg H-6 Bomber | scurrgh6bomber
+Sheathipede-class Shuttle | sheathipedeclassshuttle
 T-70 X-Wing | t70xwing
 TIE Fighter | tiefighter
 U-Wing | uwing
@@ -753,6 +782,12 @@ Green Squadron Pilot | greensquadronpilot
 Jake Farrell | jakefarrell
 Prototype Pilot | prototypepilot
 Tycho Celchu | tychocelchu
+
+## Rebel B/SF-17 Bomber Pilots
+
+Name | Canonical
+-----|----------
+"Crimson Leader" | crimsonleader
 
 ## Rebel B-Wing Pilots
 
@@ -809,6 +844,12 @@ Warden Squadron Pilot | wardensquadronpilot
 Name | Canonical
 -----|----------
 Captain Nym | captainnym
+
+## Rebel Sheathipede-class Shuttle Pilots
+
+Name | Canonical
+-----|----------
+Fenn Rau | fennrau
 
 ## Rebel T-70 X-Wing Pilots
 
@@ -919,6 +960,7 @@ HWK-290 | hwk290
 JumpMaster 5000 | jumpmaster5000
 Kihraxz Fighter | kihraxzfighter
 Lancer-class Pursuit Craft | lancerclasspursuitcraft
+M12-L Kimogila Fighter | m12lkimogilafighter
 M3-A Interceptor | m3ainterceptor
 Protectorate Starfighter | protectoratestarfighter
 Quadjumper | quadjumper
@@ -998,6 +1040,12 @@ Asajj Ventress | asajjventress
 Ketsu Onyo | ketsuonyo
 Sabine Wren | sabinewren
 Shadowport Hunter | shadowporthunter
+
+## Scum M12-L Kimogila Fighter Pilots
+
+Name | Canonical
+-----|----------
+Torani Kulda | toranikulda
 
 ## Scum M3-A Interceptor Pilots
 
