@@ -417,6 +417,7 @@ Dutyfree | dutyfree
 Enforcer | enforcer
 First Order Vanguard | firstordervanguard
 Ghost | ghost
+Ghost | ghost-swx72
 Havoc | havoc
 Hound's Tooth | houndstooth
 IG-2000 | ig2000

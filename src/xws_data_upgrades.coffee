@@ -1,8 +1,6 @@
 # 'Adaptability (old)' already present as 'adaptability'
 # '"Heavy Scyk" Interceptor (Torpedo)' already present as 'heavyscykinterceptor'
 # '"Heavy Scyk" Interceptor (Missile)' already present as 'heavyscykinterceptor'
-# 'Ghost (Phantom II)' already present as 'ghost'
-# YASB claims 'Ghost (Phantom II)': 'ghost-swx72'; double check which is correct.
 (exports ? this).xws ?= {}
 (exports ? this).xws.upgrade_slot2key2obj_dict = \
 {
@@ -1424,6 +1422,10 @@
             "enforcer": {
                 "name": "Enforcer",
                 "points": 1
+            },
+            "ghost-swx72": {
+                "name": "Ghost",
+                "points": 0
             },
             "phantomii": {
                 "name": "Phantom II",
