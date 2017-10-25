@@ -1,6 +1,8 @@
 # 'Adaptability (old)' already present as 'adaptability'
 # '"Heavy Scyk" Interceptor (Torpedo)' already present as 'heavyscykinterceptor'
 # '"Heavy Scyk" Interceptor (Missile)' already present as 'heavyscykinterceptor'
+# 'Ghost (Phantom II)' already present as 'ghost'
+# YASB claims 'Ghost (Phantom II)': 'ghost-swx72'; double check which is correct.
 (exports ? this).xws ?= {}
 (exports ? this).xws.upgrade_slot2key2obj_dict = \
 {
@@ -304,6 +306,10 @@
             },
             "selflessness": {
                 "name": "Selflessness",
+                "points": 1
+            },
+            "saturationsalvo": {
+                "name": "Saturation Salvo",
                 "points": 1
             }
         }
@@ -728,6 +734,14 @@
             "arccaster": {
                 "name": "ARC Caster",
                 "points": 2
+            },
+            "jammingbeam": {
+                "name": "Jamming Beam",
+                "points": 1
+            },
+            "linkedbattery": {
+                "name": "Linked Battery",
+                "points": 2
             }
         }
     },
@@ -765,6 +779,10 @@
             "bombletgenerator": {
                 "name": "Bomblet Generator",
                 "points": 3
+            },
+            "ordnancesilos": {
+                "name": "Ordnance Silos",
+                "points": 2
             }
         }
     },
@@ -810,6 +828,10 @@
             "minefieldmapper": {
                 "name": "Minefield Mapper",
                 "points": 0
+            },
+            "trajectorysimulator": {
+                "name": "Trajectory Simulator",
+                "points": 1
             }
         }
     },
@@ -1394,6 +1416,26 @@
             "starvipermkii": {
                 "name": "StarViper Mk. II",
                 "points": -3
+            },
+            "xg1assaultconfiguration": {
+                "name": "XG-1 Assault Configuration",
+                "points": 1
+            },
+            "enforcer": {
+                "name": "Enforcer",
+                "points": 1
+            },
+            "phantomii": {
+                "name": "Phantom II",
+                "points": 0
+            },
+            "firstordervanguard": {
+                "name": "First Order Vanguard",
+                "points": 2
+            },
+            "os1arsenalloadout": {
+                "name": "Os-1 Arsenal Loadout",
+                "points": 2
             }
         }
     }
