@@ -28,6 +28,8 @@ for upgrade in upgrade_list
             xpac_str = '-swx22'
         else if upgrade.name == 'Millennium Falcon (TFA)'
             xpac_str = '-swx57'
+        else if upgrade.name == 'Ghost (Phantom II)'
+            xpac_str = '-swx72'
 
         orig_name = upgrade.name
         upgrade.name = upgrade.name.replace(/\ \(.*\)/, '')

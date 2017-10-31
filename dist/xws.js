@@ -2942,6 +2942,10 @@
           "name": "Enforcer",
           "points": 1
         },
+        "ghost-swx72": {
+          "name": "Ghost",
+          "points": 0
+        },
         "phantomii": {
           "name": "Phantom II",
           "points": 0
