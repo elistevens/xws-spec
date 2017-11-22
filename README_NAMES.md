@@ -63,7 +63,9 @@ Turret | turret
 
 Name | Canonical
 -----|----------
+"Chopper" | chopper
 BB-8 | bb8
+Flight-Assist Astromech | flightassistastromech
 M9-G8 | m9g8
 R2 Astromech | r2astromech
 R2-D2 | r2d2
@@ -158,6 +160,7 @@ Cassian Andor | cassianandor
 Chewbacca | chewbacca
 Cikatro Vizago | cikatrovizago
 Construction Droid | constructiondroid
+Courier Droid | courierdroid
 Darth Vader | darthvader
 Dash Rendar | dashrendar
 Dengar | dengar
@@ -190,6 +193,7 @@ Latts Razzi | lattsrazzi
 Leia Organa | leiaorgana
 Luke Skywalker | lukeskywalker
 Mara Jade | marajade
+Maul | maul
 Mercenary Copilot | mercenarycopilot
 Moff Jerjerrod | moffjerjerrod
 Navigator | navigator
@@ -281,6 +285,7 @@ Name | Canonical
 Black Market Slicer Tools | blackmarketslicertools
 Burnout SLAM | burnoutslam
 Cloaking Device | cloakingdevice
+Contraband Cybernetics | contrabandcybernetics
 Dead Man's Switch | deadmansswitch
 EMP Device | empdevice
 Feedback Array | feedbackarray
@@ -320,6 +325,7 @@ B-Wing/E2 | bwinge2
 Captured TIE | capturedtie
 Combat Retrofit | combatretrofit
 Countermeasures | countermeasures
+Deflective Plating | deflectiveplating
 Engine Upgrade | engineupgrade
 Experimental Interface | experimentalinterface
 Guidance Chips | guidancechips
@@ -387,6 +393,7 @@ Sensor Team | sensorteam
 
 Name | Canonical
 -----|----------
+Advanced Optics | advancedoptics
 Comm Relay | commrelay
 Hyperwave Comm Scanner | hyperwavecommscanner
 Pattern Analyzer | patternanalyzer
@@ -411,6 +418,7 @@ Black One | blackone
 Bright Hope | brighthope
 Broken Horn | brokenhorn
 Concord Dawn Protector | concorddawnprotector
+Crossfire Formation | crossfireformation
 Dauntless | dauntless
 Dodonna's Pride | dodonnaspride
 Dutyfree | dutyfree
@@ -788,7 +796,10 @@ Tycho Celchu | tychocelchu
 
 Name | Canonical
 -----|----------
+"Cobalt Leader" | cobaltleader
 "Crimson Leader" | crimsonleader
+"Crimson Specialist" | crimsonspecialist
+Crimson Squadron Pilot | crimsonsquadronpilot
 
 ## Rebel B-Wing Pilots
 
@@ -850,6 +861,9 @@ Captain Nym | captainnym
 
 Name | Canonical
 -----|----------
+"Zeb" Orrelios | zeborrelios
+AP-5 | ap5
+Ezra Bridger | ezrabridger
 Fenn Rau | fennrau
 
 ## Rebel T-70 X-Wing Pilots
@@ -1046,6 +1060,8 @@ Shadowport Hunter | shadowporthunter
 
 Name | Canonical
 -----|----------
+Cartel Brute | cartelbrute
+Dalan Oberos | dalanoberos
 Torani Kulda | toranikulda
 
 ## Scum M3-A Interceptor Pilots

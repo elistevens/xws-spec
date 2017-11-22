@@ -140,6 +140,14 @@
             "m9g8": {
                 "name": "M9-G8",
                 "points": 3
+            },
+            "chopper": {
+                "name": "\"Chopper\"",
+                "points": 1
+            },
+            "flightassistastromech": {
+                "name": "Flight-Assist Astromech",
+                "points": 1
             }
         }
     },
@@ -699,6 +707,14 @@
             "cadbane": {
                 "name": "Cad Bane",
                 "points": 2
+            },
+            "maul": {
+                "name": "Maul",
+                "points": 3
+            },
+            "courierdroid": {
+                "name": "Courier Droid",
+                "points": 0
             }
         }
     },
@@ -998,6 +1014,10 @@
             "iondischargers": {
                 "name": "Ion Dischargers",
                 "points": 2
+            },
+            "contrabandcybernetics": {
+                "name": "Contraband Cybernetics",
+                "points": 1
             }
         }
     },
@@ -1068,6 +1088,10 @@
             "hyperwavecommscanner": {
                 "name": "Hyperwave Comm Scanner",
                 "points": 1
+            },
+            "advancedoptics": {
+                "name": "Advanced Optics",
+                "points": 2
             }
         }
     },
@@ -1201,6 +1225,10 @@
             "pulsedrayshield": {
                 "name": "Pulsed Ray Shield",
                 "points": 2
+            },
+            "deflectiveplating": {
+                "name": "Deflective Plating",
+                "points": 1
             }
         }
     },
@@ -1437,6 +1465,10 @@
             },
             "os1arsenalloadout": {
                 "name": "Os-1 Arsenal Loadout",
+                "points": 2
+            },
+            "crossfireformation": {
+                "name": "Crossfire Formation",
                 "points": 2
             }
         }
