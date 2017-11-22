@@ -1,5 +1,6 @@
 # 'CR90 Corvette (Aft)' already present as 'cr90corvette'
 # 'Raider-class Corvette (Aft)' already present as 'raiderclasscorvette'
+# YASB claims 'Dalan Oberos (Kimogila)': 'dalanoberos-swx70'; double check which is correct.
 (exports ? this).xws ?= {}
 (exports ? this).xws.pilot_faction2ship2pilot2obj_dict = \
 {
@@ -518,6 +519,18 @@
                     "fennrau": {
                         "name": "Fenn Rau",
                         "points": 20
+                    },
+                    "zeborrelios": {
+                        "name": "\"Zeb\" Orrelios",
+                        "points": 16
+                    },
+                    "ezrabridger": {
+                        "name": "Ezra Bridger",
+                        "points": 17
+                    },
+                    "ap5": {
+                        "name": "AP-5",
+                        "points": 15
                     }
                 }
             },
@@ -526,6 +539,18 @@
                 "subfaction": "Resistance",
                 "multisection": false,
                 "pilots": {
+                    "crimsonsquadronpilot": {
+                        "name": "Crimson Squadron Pilot",
+                        "points": 25
+                    },
+                    "crimsonspecialist": {
+                        "name": "\"Crimson Specialist\"",
+                        "points": 27
+                    },
+                    "cobaltleader": {
+                        "name": "\"Cobalt Leader\"",
+                        "points": 28
+                    },
                     "crimsonleader": {
                         "name": "\"Crimson Leader\"",
                         "points": 29
@@ -1506,6 +1531,14 @@
                     "toranikulda": {
                         "name": "Torani Kulda",
                         "points": 27
+                    },
+                    "dalanoberos": {
+                        "name": "Dalan Oberos",
+                        "points": 25
+                    },
+                    "cartelbrute": {
+                        "name": "Cartel Brute",
+                        "points": 22
                     }
                 }
             }
