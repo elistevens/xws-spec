@@ -1107,6 +1107,10 @@
                 "subfaction": "First Order",
                 "multisection": false,
                 "pilots": {
+                    "testpilotblackout": {
+                        "name": "Test Pilot \"Blackout\"",
+                        "points": 31
+                    },
                     "kyloren": {
                         "name": "Kylo Ren",
                         "points": 35
@@ -1530,6 +1534,10 @@
                     "dalanoberos": {
                         "name": "Dalan Oberos",
                         "points": 25
+                    },
+                    "cartelexecutioner": {
+                        "name": "Cartel Executioner",
+                        "points": 24
                     },
                     "cartelbrute": {
                         "name": "Cartel Brute",

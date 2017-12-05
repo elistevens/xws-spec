@@ -317,6 +317,10 @@
             "saturationsalvo": {
                 "name": "Saturation Salvo",
                 "points": 1
+            },
+            "debrisgambit": {
+                "name": "Debris Gambit",
+                "points": 2
             }
         }
     },
@@ -370,6 +374,10 @@
             "harpoonmissiles": {
                 "name": "Harpoon Missiles",
                 "points": 4
+            },
+            "scramblermissiles": {
+                "name": "Scrambler Missiles",
+                "points": 2
             }
         }
     },
@@ -1055,6 +1063,10 @@
             "r4e1": {
                 "name": "R4-E1",
                 "points": 1
+            },
+            "r5tk": {
+                "name": "R5-TK",
+                "points": 0
             }
         }
     },
@@ -1092,6 +1104,10 @@
             "advancedoptics": {
                 "name": "Advanced Optics",
                 "points": 2
+            },
+            "threattracker": {
+                "name": "Threat Tracker",
+                "points": 3
             }
         }
     },

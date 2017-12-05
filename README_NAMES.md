@@ -235,6 +235,7 @@ Cool Hand | coolhand
 Crack Shot | crackshot
 Daredevil | daredevil
 Deadeye | deadeye
+Debris Gambit | debrisgambit
 Decoy | decoy
 Determination | determination
 Draw Their Fire | drawtheirfire
@@ -309,6 +310,7 @@ Harpoon Missiles | harpoonmissiles
 Homing Missiles | homingmissiles
 Ion Pulse Missiles | ionpulsemissiles
 Proton Rockets | protonrockets
+Scrambler Missiles | scramblermissiles
 Unguided Rockets | unguidedrockets
 XX-23 S-Thread Tracers | xx23sthreadtracers
 
@@ -360,6 +362,7 @@ R4 Agromech | r4agromech
 R4-B11 | r4b11
 R4-E1 | r4e1
 R5-P8 | r5p8
+R5-TK | r5tk
 Salvaged Astromech | salvagedastromech
 Unhinged Astromech | unhingedastromech
 
@@ -400,6 +403,7 @@ Pattern Analyzer | patternanalyzer
 Primed Thrusters | primedthrusters
 Sensor Cluster | sensorcluster
 Targeting Synchronizer | targetingsynchronizer
+Threat Tracker | threattracker
 Weapons Guidance | weaponsguidance
 
 ## Title Upgrades
@@ -697,6 +701,7 @@ Zeta Specialist | zetaspecialist
 Name | Canonical
 -----|----------
 Kylo Ren | kyloren
+Test Pilot "Blackout" | testpilotblackout
 
 ## Imperial TIE Striker Pilots
 
@@ -1061,6 +1066,7 @@ Shadowport Hunter | shadowporthunter
 Name | Canonical
 -----|----------
 Cartel Brute | cartelbrute
+Cartel Executioner | cartelexecutioner
 Dalan Oberos | dalanoberos
 Torani Kulda | toranikulda
 

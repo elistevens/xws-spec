@@ -1,6 +1,5 @@
 # 'CR90 Corvette (Aft)' already present as 'cr90corvette'
 # 'Raider-class Corvette (Aft)' already present as 'raiderclasscorvette'
-# YASB claims 'Dalan Oberos (Kimogila)': 'dalanoberos-swx70'; double check which is correct.
 (exports ? this).xws ?= {}
 (exports ? this).xws.pilot_faction2ship2pilot2obj_dict = \
 {
@@ -1112,6 +1111,10 @@
                 "subfaction": "First Order",
                 "multisection": false,
                 "pilots": {
+                    "testpilotblackout": {
+                        "name": "Test Pilot \"Blackout\"",
+                        "points": 31
+                    },
                     "kyloren": {
                         "name": "Kylo Ren",
                         "points": 35
@@ -1535,6 +1538,10 @@
                     "dalanoberos": {
                         "name": "Dalan Oberos",
                         "points": 25
+                    },
+                    "cartelexecutioner": {
+                        "name": "Cartel Executioner",
+                        "points": 24
                     },
                     "cartelbrute": {
                         "name": "Cartel Brute",
