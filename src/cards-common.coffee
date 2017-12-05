@@ -1071,6 +1071,13 @@ exportObj.basicCardData = ->
                 'Barrel Roll'
                 'Reload'
             ]
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0]
+                [ 3, 1, 2, 1, 3, 0]
+                [ 3, 2, 2, 2, 3, 0]
+                [ 1, 1, 2, 1, 1, 0]
+                [ 0, 0, 0, 0, 0, 3]
+            ]
         'Sheathipede-class Shuttle':
             name: 'Sheathipede-class Shuttle'
             factions: ["Rebel Alliance"]
@@ -1122,6 +1129,14 @@ exportObj.basicCardData = ->
                 'Barrel Roll'
                 'Boost'
                 'Target Lock'
+            ]
+            maneuvers: [
+                [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+                [ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0 ]
+                [ 2, 2, 2, 2, 2, 0, 0, 0, 0, 0 ]
+                [ 1, 2, 2, 2, 1, 0, 0, 0, 3, 3 ]
+                [ 0, 0, 2, 0, 0, 3, 0, 0, 0, 0 ]
+                [ 0, 0, 2, 0, 0, 0, 0, 0, 0, 0 ]
             ]
 
     # name field is for convenience only
@@ -4932,7 +4947,7 @@ exportObj.basicCardData = ->
         }
         {
             name: 'Dalan Oberos (Kimogila)'
-            canonical_name: "#{'Dalan Oberos'.canonicalize()}-swx70"
+            canonical_name: "dalanoberos"
             id: 272
             unique: true
             faction: 'Scum and Villainy'
@@ -4948,7 +4963,7 @@ exportObj.basicCardData = ->
             points: 25
         }
         {
-            name: 'Cartel E???'
+            name: 'Cartel Executioner'
             id: 273
             faction: 'Scum and Villainy'
             ship: 'M12-L Kimogila Fighter'
@@ -4960,7 +4975,7 @@ exportObj.basicCardData = ->
                 'Salvaged Astromech'
                 'Illicit'
             ]
-            points: 100
+            points: 24
         }
         {
             name: 'Cartel Brute'
@@ -5118,17 +5133,18 @@ exportObj.basicCardData = ->
             points: 100
         }
         {
-            name: 'Test Pilo???'
+            name: 'Test Pilot "Blackout"'
             id: 285
             faction: 'First Order'
             unique: true
             ship: 'TIE Silencer'
-            skill: 6
+            skill: 7
             slots: [
+                'Elite'
                 'System'
                 'Tech'
             ]
-            points: 100
+            points: 31
         }
         {
             name: 'Kylo Ren (TIE Silencer)'
@@ -7090,6 +7106,37 @@ exportObj.basicCardData = ->
             id: 254
             slot: 'Tech'
             points: 2
+        }
+        {
+            name: 'Scrambler Missiles'
+            id: 255
+            slot: 'Missile'
+            points: 2
+            attack: 3
+            range: '2-3'
+        }
+        {
+            name: 'R5-TK'
+            id: 256
+            unique: true
+            slot: 'Salvaged Astromech'
+            points: 0
+        }
+        {
+            name: 'Threat Tracker'
+            id: 257
+            slot: 'Tech'
+            points: 3
+            restriction_func: (ship) ->
+                not ((ship.data.large ? false) or (ship.data.huge ? false))
+        }
+        {
+            name: 'Debris Gambit'
+            id: 258
+            slot: 'Elite'
+            points: 2
+            restriction_func: (ship) ->
+                not ((ship.data.large ? false) or (ship.data.huge ? false))
         }
     ]
 
