@@ -700,7 +700,9 @@ Zeta Specialist | zetaspecialist
 
 Name | Canonical
 -----|----------
+First Order Test Pilot | firstordertestpilot
 Kylo Ren | kyloren
+Sienar-Jaemus Analyst | sienarjaemusanalyst
 Test Pilot "Blackout" | testpilotblackout
 
 ## Imperial TIE Striker Pilots
