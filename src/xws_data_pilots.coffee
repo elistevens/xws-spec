@@ -1111,6 +1111,14 @@
                 "subfaction": "First Order",
                 "multisection": false,
                 "pilots": {
+                    "sienarjaemusanalyst": {
+                        "name": "Sienar-Jaemus Analyst",
+                        "points": 26
+                    },
+                    "firstordertestpilot": {
+                        "name": "First Order Test Pilot",
+                        "points": 29
+                    },
                     "testpilotblackout": {
                         "name": "Test Pilot \"Blackout\"",
                         "points": 31
