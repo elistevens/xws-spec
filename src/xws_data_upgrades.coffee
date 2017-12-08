@@ -1,6 +1,7 @@
-# 'Adaptability (old)' already present as 'adaptability'
-# '"Heavy Scyk" Interceptor (Torpedo)' already present as 'heavyscykinterceptor'
-# '"Heavy Scyk" Interceptor (Missile)' already present as 'heavyscykinterceptor'
+# ept 'Adaptability (old)' already present as ept 'adaptability'
+# YASB claims '"Chopper" (Astromech)': 'chopper'; double check which is correct.
+# title '"Heavy Scyk" Interceptor (Torpedo)' already present as title 'heavyscykinterceptor'
+# title '"Heavy Scyk" Interceptor (Missile)' already present as title 'heavyscykinterceptor'
 (exports ? this).xws ?= {}
 (exports ? this).xws.upgrade_slot2key2obj_dict = \
 {
@@ -141,7 +142,7 @@
                 "name": "M9-G8",
                 "points": 3
             },
-            "chopper": {
+            "chopper-swx72": {
                 "name": "\"Chopper\"",
                 "points": 1
             },

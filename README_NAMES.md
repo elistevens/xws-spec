@@ -63,7 +63,7 @@ Turret | turret
 
 Name | Canonical
 -----|----------
-"Chopper" | chopper
+"Chopper" | chopper-swx72
 BB-8 | bb8
 Flight-Assist Astromech | flightassistastromech
 M9-G8 | m9g8
