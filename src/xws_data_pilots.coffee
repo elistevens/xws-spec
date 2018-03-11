@@ -50,6 +50,10 @@
                     "tarnmison": {
                         "name": "Tarn Mison",
                         "points": 23
+                    },
+                    "kullbeesperado": {
+                        "name": "Kullbee Sperado",
+                        "points": 26
                     }
                 }
             },
@@ -1126,6 +1130,17 @@
                     "kyloren": {
                         "name": "Kylo Ren",
                         "points": 35
+                    }
+                }
+            },
+            "tiereaper": {
+                "name": "TIE Reaper",
+                "subfaction": "Galactic Empire",
+                "multisection": false,
+                "pilots": {
+                    "majorvermeil": {
+                        "name": "Major Vermeil",
+                        "points": 26
                     }
                 }
             }

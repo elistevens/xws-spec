@@ -163,7 +163,9 @@ Construction Droid | constructiondroid
 Courier Droid | courierdroid
 Darth Vader | darthvader
 Dash Rendar | dashrendar
+Death Troopers | deathtroopers
 Dengar | dengar
+Director Krennic | directorkrennic
 Emperor Palpatine | emperorpalpatine
 Ezra Bridger | ezrabridger
 Finn | finn
@@ -208,6 +210,7 @@ Recon Specialist | reconspecialist
 Rey | rey
 Sabine Wren | sabinewren
 Saboteur | saboteur
+Saw Gerrera | sawgerrera
 Shield Technician | shieldtechnician
 Systems Officer | systemsofficer
 Tactician | tactician
@@ -380,6 +383,7 @@ Fire-Control System | firecontrolsystem
 Minefield Mapper | minefieldmapper
 Reinforced Deflectors | reinforceddeflectors
 Sensor Jammer | sensorjammer
+Targeting Scrambler | targetingscrambler
 Trajectory Simulator | trajectorysimulator
 
 ## Team Upgrades
@@ -520,6 +524,7 @@ TIE Fighter | tiefighter
 TIE Interceptor | tieinterceptor
 TIE Phantom | tiephantom
 TIE Punisher | tiepunisher
+TIE Reaper | tiereaper
 TIE Silencer | tiesilencer
 TIE Striker | tiestriker
 TIE/fo Fighter | tiefofighter
@@ -686,6 +691,12 @@ Name | Canonical
 "Redline" | redline
 Black Eight Squadron Pilot | blackeightsqpilot
 Cutlass Squadron Pilot | cutlasssquadronpilot
+
+## Imperial TIE Reaper Pilots
+
+Name | Canonical
+-----|----------
+Major Vermeil | majorvermeil
 
 ## Imperial TIE/sf Fighter Pilots
 
@@ -923,6 +934,7 @@ Name | Canonical
 Biggs Darklighter | biggsdarklighter
 Garven Dreis | garvendreis
 Jek Porkins | jekporkins
+Kullbee Sperado | kullbeesperado
 Luke Skywalker | lukeskywalker
 Red Squadron Pilot | redsquadronpilot
 Rookie Pilot | rookiepilot
