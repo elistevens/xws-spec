@@ -718,6 +718,18 @@
             "courierdroid": {
                 "name": "Courier Droid",
                 "points": 0
+            },
+            "deathtroopers": {
+                "name": "Death Troopers",
+                "points": 2
+            },
+            "sawgerrera": {
+                "name": "Saw Gerrera",
+                "points": 1
+            },
+            "directorkrennic": {
+                "name": "Director Krennic",
+                "points": 5
             }
         }
     },
@@ -849,6 +861,10 @@
             "trajectorysimulator": {
                 "name": "Trajectory Simulator",
                 "points": 1
+            },
+            "targetingscrambler": {
+                "name": "Targeting Scrambler",
+                "points": 0
             }
         }
     },

@@ -1,5 +1,4 @@
 # ept 'Adaptability (old)' already present as ept 'adaptability'
-# YASB claims '"Chopper" (Astromech)': 'chopper'; double check which is correct.
 # title '"Heavy Scyk" Interceptor (Torpedo)' already present as title 'heavyscykinterceptor'
 # title '"Heavy Scyk" Interceptor (Missile)' already present as title 'heavyscykinterceptor'
 (exports ? this).xws ?= {}
@@ -724,6 +723,18 @@
             "courierdroid": {
                 "name": "Courier Droid",
                 "points": 0
+            },
+            "deathtroopers": {
+                "name": "Death Troopers",
+                "points": 2
+            },
+            "sawgerrera": {
+                "name": "Saw Gerrera",
+                "points": 1
+            },
+            "directorkrennic": {
+                "name": "Director Krennic",
+                "points": 5
             }
         }
     },
@@ -855,6 +866,10 @@
             "trajectorysimulator": {
                 "name": "Trajectory Simulator",
                 "points": 1
+            },
+            "targetingscrambler": {
+                "name": "Targeting Scrambler",
+                "points": 0
             }
         }
     },
