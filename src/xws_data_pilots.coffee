@@ -51,6 +51,10 @@
                         "name": "Tarn Mison",
                         "points": 23
                     },
+                    "leevantenza": {
+                        "name": "Leevan Tenza",
+                        "points": 25
+                    },
                     "kullbeesperado": {
                         "name": "Kullbee Sperado",
                         "points": 26
@@ -477,6 +481,14 @@
                     "bluesquadronpathfinder": {
                         "name": "Blue Squadron Pathfinder",
                         "points": 23
+                    },
+                    "sawgerrera": {
+                        "name": "Saw Gerrera",
+                        "points": 26
+                    },
+                    "benthictwotubes": {
+                        "name": "Benthic Two-Tubes",
+                        "points": 24
                     }
                 }
             },
@@ -1141,6 +1153,18 @@
                     "majorvermeil": {
                         "name": "Major Vermeil",
                         "points": 26
+                    },
+                    "captainferoph": {
+                        "name": "Captain Feroph",
+                        "points": 24
+                    },
+                    "vizier": {
+                        "name": "\"Vizier\"",
+                        "points": 23
+                    },
+                    "scarifbasepilot": {
+                        "name": "Scarif Base Pilot",
+                        "points": 22
                     }
                 }
             }

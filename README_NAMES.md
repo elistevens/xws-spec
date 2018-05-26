@@ -179,6 +179,7 @@ Han Solo | hansolo
 Hera Syndulla | herasyndulla
 Hotshot Co-pilot | hotshotcopilot
 IG-88D | ig88d
+ISB Slicer | isbslicer
 Inspiring Recruit | inspiringrecruit
 Intelligence Agent | intelligenceagent
 Jabba the Hutt | jabbathehutt
@@ -194,6 +195,7 @@ Lando Calrissian | landocalrissian
 Latts Razzi | lattsrazzi
 Leia Organa | leiaorgana
 Luke Skywalker | lukeskywalker
+Magva Yarro | magvayarro
 Mara Jade | marajade
 Maul | maul
 Mercenary Copilot | mercenarycopilot
@@ -213,6 +215,7 @@ Saboteur | saboteur
 Saw Gerrera | sawgerrera
 Shield Technician | shieldtechnician
 Systems Officer | systemsofficer
+Tactical Officer | tacticalofficer
 Tactician | tactician
 Tail Gunner | tailgunner
 Targeting Coordinator | targetingcoordinator
@@ -345,6 +348,7 @@ Munitions Failsafe | munitionsfailsafe
 Optimized Generators | optimizedgenerators
 Ordnance Tubes | ordnancetubes
 Pulsed Ray Shield | pulsedrayshield
+Servomotor S-Foils | servomotorsfoils
 Shield Upgrade | shieldupgrade
 Smuggling Compartment | smugglingcompartment
 Spacetug Tractor Array | spacetugtractorarray
@@ -418,6 +422,7 @@ Name | Canonical
 "Light Scyk" Interceptor | lightscykinterceptor
 A-Wing Test Pilot | awingtestpilot
 Adaptive Ailerons | adaptiveailerons
+Advanced Ailerons | advancedailerons
 Alliance Overhaul | allianceoverhaul
 Andrasta | andrasta
 Assailer | assailer
@@ -485,6 +490,7 @@ Flechette Torpedoes | flechettetorpedoes
 Ion Torpedoes | iontorpedoes
 Plasma Torpedoes | plasmatorpedoes
 Proton Torpedoes | protontorpedoes
+Renegade Refit | renegaderefit
 Seismic Torpedo | seismictorpedo
 
 ## Turret Upgrades
@@ -696,7 +702,10 @@ Cutlass Squadron Pilot | cutlasssquadronpilot
 
 Name | Canonical
 -----|----------
+"Vizier" | vizier
+Captain Feroph | captainferoph
 Major Vermeil | majorvermeil
+Scarif Base Pilot | scarifbasepilot
 
 ## Imperial TIE/sf Fighter Pilots
 
@@ -912,10 +921,12 @@ Sabine Wren | sabinewren
 
 Name | Canonical
 -----|----------
+Benthic Two-Tubes | benthictwotubes
 Blue Squadron Pathfinder | bluesquadronpathfinder
 Bodhi Rook | bodhirook
 Cassian Andor | cassianandor
 Heff Tobber | hefftobber
+Saw Gerrera | sawgerrera
 
 ## Rebel VCX-100 Pilots
 
@@ -935,6 +946,7 @@ Biggs Darklighter | biggsdarklighter
 Garven Dreis | garvendreis
 Jek Porkins | jekporkins
 Kullbee Sperado | kullbeesperado
+Leevan Tenza | leevantenza
 Luke Skywalker | lukeskywalker
 Red Squadron Pilot | redsquadronpilot
 Rookie Pilot | rookiepilot
