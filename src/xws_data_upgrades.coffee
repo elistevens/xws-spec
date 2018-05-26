@@ -67,6 +67,10 @@
             "seismictorpedo": {
                 "name": "Seismic Torpedo",
                 "points": 2
+            },
+            "renegaderefit": {
+                "name": "Renegade Refit",
+                "points": -2
             }
         }
     },
@@ -735,6 +739,18 @@
             "directorkrennic": {
                 "name": "Director Krennic",
                 "points": 5
+            },
+            "magvayarro": {
+                "name": "Magva Yarro",
+                "points": 2
+            },
+            "tacticalofficer": {
+                "name": "Tactical Officer",
+                "points": 2
+            },
+            "isbslicer": {
+                "name": "ISB Slicer",
+                "points": 2
             }
         }
     },
@@ -1261,6 +1277,10 @@
             "deflectiveplating": {
                 "name": "Deflective Plating",
                 "points": 1
+            },
+            "servomotorsfoils": {
+                "name": "Servomotor S-Foils",
+                "points": 0
             }
         }
     },
@@ -1502,6 +1522,10 @@
             "crossfireformation": {
                 "name": "Crossfire Formation",
                 "points": 2
+            },
+            "advancedailerons": {
+                "name": "Advanced Ailerons",
+                "points": 0
             }
         }
     }

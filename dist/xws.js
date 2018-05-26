@@ -56,6 +56,10 @@
               "name": "Tarn Mison",
               "points": 23
             },
+            "leevantenza": {
+              "name": "Leevan Tenza",
+              "points": 25
+            },
             "kullbeesperado": {
               "name": "Kullbee Sperado",
               "points": 26
@@ -482,6 +486,14 @@
             "bluesquadronpathfinder": {
               "name": "Blue Squadron Pathfinder",
               "points": 23
+            },
+            "sawgerrera": {
+              "name": "Saw Gerrera",
+              "points": 26
+            },
+            "benthictwotubes": {
+              "name": "Benthic Two-Tubes",
+              "points": 24
             }
           }
         },
@@ -1146,6 +1158,18 @@
             "majorvermeil": {
               "name": "Major Vermeil",
               "points": 26
+            },
+            "captainferoph": {
+              "name": "Captain Feroph",
+              "points": 24
+            },
+            "vizier": {
+              "name": "\"Vizier\"",
+              "points": 23
+            },
+            "scarifbasepilot": {
+              "name": "Scarif Base Pilot",
+              "points": 22
             }
           }
         }
@@ -1649,6 +1673,10 @@
         "seismictorpedo": {
           "name": "Seismic Torpedo",
           "points": 2
+        },
+        "renegaderefit": {
+          "name": "Renegade Refit",
+          "points": -2
         }
       }
     },
@@ -2317,6 +2345,18 @@
         "directorkrennic": {
           "name": "Director Krennic",
           "points": 5
+        },
+        "magvayarro": {
+          "name": "Magva Yarro",
+          "points": 2
+        },
+        "tacticalofficer": {
+          "name": "Tactical Officer",
+          "points": 2
+        },
+        "isbslicer": {
+          "name": "ISB Slicer",
+          "points": 2
         }
       }
     },
@@ -2843,6 +2883,10 @@
         "deflectiveplating": {
           "name": "Deflective Plating",
           "points": 1
+        },
+        "servomotorsfoils": {
+          "name": "Servomotor S-Foils",
+          "points": 0
         }
       }
     },
@@ -3084,6 +3128,10 @@
         "crossfireformation": {
           "name": "Crossfire Formation",
           "points": 2
+        },
+        "advancedailerons": {
+          "name": "Advanced Ailerons",
+          "points": 0
         }
       }
     }
