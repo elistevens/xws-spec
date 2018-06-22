@@ -344,6 +344,7 @@ Ion Projector | ionprojector
 Lightweight Frame | lightweightframe
 Long-Range Scanners | longrangescanners
 Maneuvering Fins | maneuveringfins
+Multi-spectral Camouflage | multispectralcamouflage
 Munitions Failsafe | munitionsfailsafe
 Optimized Generators | optimizedgenerators
 Ordnance Tubes | ordnancetubes
@@ -388,6 +389,7 @@ Minefield Mapper | minefieldmapper
 Reinforced Deflectors | reinforceddeflectors
 Sensor Jammer | sensorjammer
 Targeting Scrambler | targetingscrambler
+Thrust Corrector | thrustcorrector
 Trajectory Simulator | trajectorysimulator
 
 ## Team Upgrades
@@ -926,6 +928,8 @@ Blue Squadron Pathfinder | bluesquadronpathfinder
 Bodhi Rook | bodhirook
 Cassian Andor | cassianandor
 Heff Tobber | hefftobber
+Magva Yarro | magvayarro
+Partisan Renegade | partisanrenegade
 Saw Gerrera | sawgerrera
 
 ## Rebel VCX-100 Pilots
@@ -943,6 +947,8 @@ Name | Canonical
 -----|----------
 "Hobbie" Klivian | hobbieklivian
 Biggs Darklighter | biggsdarklighter
+Cavern Angels Zealot | cavernangelszealot
+Edrio Two-Tubes | edriotwotubes
 Garven Dreis | garvendreis
 Jek Porkins | jekporkins
 Kullbee Sperado | kullbeesperado
