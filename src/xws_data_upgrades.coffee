@@ -886,6 +886,10 @@
             "targetingscrambler": {
                 "name": "Targeting Scrambler",
                 "points": 0
+            },
+            "thrustcorrector": {
+                "name": "Thrust Corrector",
+                "points": 1
             }
         }
     },
@@ -1281,6 +1285,10 @@
             "servomotorsfoils": {
                 "name": "Servomotor S-Foils",
                 "points": 0
+            },
+            "multispectralcamouflage": {
+                "name": "Multi-spectral Camouflage",
+                "points": 1
             }
         }
     },

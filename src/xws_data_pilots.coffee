@@ -51,6 +51,10 @@
                         "name": "Tarn Mison",
                         "points": 23
                     },
+                    "edriotwotubes": {
+                        "name": "Edrio Two-Tubes",
+                        "points": 24
+                    },
                     "leevantenza": {
                         "name": "Leevan Tenza",
                         "points": 25
@@ -58,6 +62,10 @@
                     "kullbeesperado": {
                         "name": "Kullbee Sperado",
                         "points": 26
+                    },
+                    "cavernangelszealot": {
+                        "name": "Cavern Angels Zealot",
+                        "points": 22
                     }
                 }
             },
@@ -486,9 +494,17 @@
                         "name": "Saw Gerrera",
                         "points": 26
                     },
+                    "magvayarro": {
+                        "name": "Magva Yarro",
+                        "points": 25
+                    },
                     "benthictwotubes": {
                         "name": "Benthic Two-Tubes",
                         "points": 24
+                    },
+                    "partisanrenegade": {
+                        "name": "Partisan Renegade",
+                        "points": 22
                     }
                 }
             },
