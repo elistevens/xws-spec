@@ -32,7 +32,7 @@ about the appropriate nature of a list for any given purpose.
 ### Squadron Attributes
 Requirement | Key | Type | Notes
 ---|---|---|---
-Mandatory | faction | String | Canonicalized faction name. Possible values: `rebelalliance`, `galacticempire`, `scumandvillainy`, `firstorder`, `resistance`, `cis`, `galacticrepublic`.
+Mandatory | faction | String | Canonicalized faction name; see below. 
 Mandatory | pilots | Array | List of one or more pilots; see below.
  | | |
 Optional | name | String | Human-readable squadron name.
@@ -45,6 +45,7 @@ Ignored | vendor | Dictionary | An object used to store vendor-specific data; se
 In situations where the type of data being imported is not known, a squadron
 data structure can be identified by the mandatory `faction` and `pilots` keys.
 
+Possible values for the faction key include: `rebelalliance`, `galacticempire`, `scumandvillainy`, `firstorder`, `resistance`.
 
 ## Pilot Data Format
 Each entry in the `squadron.pilots` list represents a separate pilot card in the
@@ -157,7 +158,7 @@ MAY fail when imported into other applications.
 
 
 ### Checking should also be implemented by the app importing a squadron
-Imporint applications should ensure that:
+Importing applications should ensure that:
 * Point totals are correct, or failing that, the `points` key is dropped/ignored
 * There are no illegal upgrades
 * Factions are not mixed
