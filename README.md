@@ -1,4 +1,4 @@
-# X-Wing Squadron Specification version 1.0.0
+# X-Wing Squadron Specification version 2.0.0
 
 This specification facilitates the export and subsequent import of squadrons for
 FFG's X-Wing Miniatures game from one compliant application to another.
@@ -6,32 +6,9 @@ FFG's X-Wing Miniatures game from one compliant application to another.
 ## Goals
 * Allow users to easily move a squadron from one squadron building app to another
 * Allow users to share a squadron without dictating how it should be viewed
-* Backup multiple squadrons without being tied to a specific app to restore them
+* Back up squadrons without being tied to a specific app to restore them
 * Be future-proof
 * Be human-readable
-* Be human-writeable (with just a text editor)
-
-
-## Multiple Squadron Data Format (X-Wing Squadron Container Format or .XWC)
-A container can be represented as a stand-alone JSON file encoded in UTF-8 with
-either an .xwc or a .json extension. MIME types of application/json or
-text/plain SHOULD be accepted by API endpoints.
-
-Using this format, multiple squadrons can be stored together, as an array
-wrapped in a dictionary with a single mandatory key.
-
-This can represent such things as the entirety of a player's squadrons saved in
-a squad builder application, the set of lists used by a player during an
-escalation league, the top 8 tables from a tournament, etc.
-
-Requirement | Key | Type | Notes
----|---|---|---
-Mandatory | container | Array | List of squadron objects; see below.
- | | |
-Ignored | vendor | Dictionary | An object used to store vendor-specific data; see above.
-
-In situations where the type of data being imported is not known, a container
-data structure can be identified by the mandatory `container` key.
 
 
 ## Single Squadron Data Format (X-Wing Squadron Format or .XWS)
@@ -55,15 +32,14 @@ about the appropriate nature of a list for any given purpose.
 ### Squadron Attributes
 Requirement | Key | Type | Notes
 ---|---|---|---
-Mandatory | faction | String | Canonicalized faction name. Possible values: "rebel", "imperial", "scum".
+Mandatory | faction | String | Canonicalized faction name. Possible values: `rebelalliance`, `galacticempire`, `scumandvillainy`, `firstorder`, `resistance`, `cis`, `galacticrepublic`.
 Mandatory | pilots | Array | List of one or more pilots; see below.
  | | |
 Optional | name | String | Human-readable squadron name.
 Optional | description | String | Text description or notes for the squadron.
 Optional | obstacles | Array | Array of three Strings, each being an identifier for the obstacle chosen for tournament use.
-Optional | damagedeck | String | Canonical name of the package of the damage deck chosen for tournament use (one of `core` or `core2`).
+Optional | points | Integer | Total point cost of the squadron. SHOULD be ignored by importing applications unless the XWS source is trusted.
  | | |
-Ignored | points | Integer | Total point cost of the squadron. MUST be ignored by importing applications; for human readability only.
 Ignored | vendor | Dictionary | An object used to store vendor-specific data; see above.
 
 In situations where the type of data being imported is not known, a squadron
@@ -80,57 +56,12 @@ A squadron MUST have at least one pilot entry.
 ### Pilot Attributes
 Requirement | Key | Type | Notes
 ---|---|---|---
-Mandatory | name | String | Canonicalized pilot name.
-Mandatory | ship | String | Canonicalized ship name.
+Mandatory | id | String | Canonicalized pilot identifier (replaces `name` and `ship` from 1e).
  | | |
 Optional | upgrades | Dictionary | Equipped upgrade cards for this pilot; see below.
-Optional | multisection_id | Integer | Indicates membership in a multi-section huge ship; see below.
+Optional | points | Integer | Total point cost of the pilot plus upgrades. SHOULD be ignored by importing applications unless the XWS source is trusted.
  | | |
-Ignored | points | Integer | Total point cost of the pilot plus upgrades. MUST be ignored by importing applications; for human readability only.
 Ignored | vendor | Dictionary | An object used to store vendor-specific data; see above.
-
-
-### Multi-Section Huge Ships
-This spec represents huge ships with multiple pilot cards as multiple entries in
-the squad.pilots array. This most closely matches the pilot cards present in the
-squadron, even though there is some friction translating that into ships on the
-table.
-
-Each pilot card for a multi-section huge ship SHOULD be contiguous in the
-squadron.pilots array. Relative ordering of the sections SHOULD NOT be
-considered by the importing implementation.
-
-Each multi-section huge ship MUST be assigned a zero-indexed identification
-number, and that number must be present in the squadron.pilots entry for that
-ship. This allows lists with multiple multi-section huge ships to disambiguate
-which section belongs with which other sections.
-
-Note that current tournament rules do not allow for more than one multi-section
-huge ship per list (due to the CR90 Corvette costing 3 epic points, and no
-format granting more than 5 epic points per list).
-
-```json
-[
-    {
-        ...
-    },
-    {
-        "name": "cr90corvettefore",
-        "ship": "cr90corvette",
-        "multisection_id": 0,
-        "upgrades": {...}
-    },
-    {
-        "name": "cr90corvetteaft",
-        "ship": "cr90corvette",
-        "multisection_id": 0,
-        "upgrades": {...}
-    },
-    {
-        ...
-    }
-]
-```
 
 
 ## Upgrades Data Format
@@ -140,95 +71,43 @@ canonicalized name of an upgrade card for the appropriate slot type.
 
 ```json
 {
-    "name": "...",
-    "ship": "...",
+    "id": "...",
     "upgrades": {
-        "amd": ["r2d2"],
-        "mod": ["hullupgrade"]
+        "astromech": ["r2d2"],
+        "modification": ["hullupgrade"]
     }
 }
 ```
 
+A list of all valid upgrade type keys can be found at 
+[https://github.com/guidokessels/xwing-data2/tree/master/data/upgrades](xwing-data2 upgrades).
+
 
 ## Canonical Unique IDs
-As new ships, pilots, upgrades and other cards are added, it would be best if
+As new pilots and upgrades are added, it would be best if
 their IDs could be generated without further discussion between developers. The
 best solution is to canonicalize the card names, taking into account some cards
-share the same name (eg. Chewbacca as pilot and as crew, R2-D2 as astromech and
+share the same name (eg. Han Solo as several different pilots, R2-D2 as astromech and
 as crew, etc.)
 
 
 ### Canonicalization Rules
-1. Take the English-language name as printed on the card
-2. Check for special case exceptions to these rules (see below)
-3. Lowercase the name
-4. Convert non-ASCII characters to closest ASCII equivalent (to remove umlauts, etc.)
-5. Remove non-alphanumeric characters
-6. Check for collisions, add expansion suffix if needed
+1. Take the English-language name exactly as printed on the card
+2. Lowercase the name
+3. Convert non-ASCII characters to closest ASCII equivalent (to remove umlauts, etc.)
+4. Remove non-alphanumeric characters
+5. Check for collisions, reference [https://github.com/guidokessels/xwing-data2](xwing-data2) if any exist
 
-#### Canonicalization and Special Cases
-A small number of names are abbreviated during canonicalization to reduce data
-length. Those special cases can be found at the top of the README_NAMES.md file.
-
-[http://github.com/elistevens/xws-spec/blob/master/README_NAMES.md](./README_NAMES.md)
-
-Implementation authors should not rely on the rest of the canonicalization
-listing to be updated promptly upon the release of new content. It is intended
-to be a useful check of an implementation's canonicalization routines, not an
-authoritative source for what content is legal.
-
-This information is also provided as part of the `xws-spec` bower package. See
-the `window.xws.pilot_faction2ship2pilot2obj_dict` and
-`window.xws.upgrade_slot2key2obj_dict` variables.
 
 #### Canonicalization and Name Collisions
-To determine collision for upgrades, simply see if there are two cards that have the
-same canonicalized name.
+To determine collisions, simply see if there are two cards of the same type (upgrade or pilot) that have the
+same canonicalized name. Pilots and upgrades cannot collide with each other.
 
-To determine collision for pilots, see if there are pilots that for the combination
-of (faction, ship, pilot name) have the same canonicalized names. Note that this doesn't use
-subfaction, since right now we only specify faction at the list level, not the pilot
-level (since you can mix subfactions in a single list).
+When there is a collision, then the canonicalized name is determined by the card's entry in 
+[https://github.com/guidokessels/xwing-data2](xwing-data2).
 
-Pilots and upgrades cannot collide with each other.
-
-When there is a collision, then the canonicalized name becomes:
-
-    ${name}-${expansion product code}${a, b, c, etc. if needed}
-    milleniumfalcon-swx57 (HotR Title)
-    poedameron-swx57 (PS9)
-
-AS of HotR, the only pilots who need suffixes are Poe, Han and Chewie.
-
-R2-D2 deserves special note, since it's an upgrade card with the same name in two
-different slots. Those still collide, and since the droid was released first, the
-canonicalization is:
-
-    r2d2 (Astromech Droid)
-    r2d2-swx22 (Crew)
-
-This is a retroactive change from earlier versions of the spec (prior to 0.3.0), which
-had both versions of R2-D2 canonicalize to ``"r2d2"`. Implementation authors are encouraged
-to automatically correct the older `"crew": ["r2d2"]` data to the new canonicalization.
-
-Note also that all pilot versions of Sabine Wren released as of HotR do not require suffixes,
-since they are all piloting unique ship names (and the crew, obviously, doesn't conflict
-with those either).
-
-If two pilots have the same name in the same pack and are flying the same ship, then we
-tack on ``"a"`, `,`"b"` etc. with the ordering determined first by increasing point cost, second
-by alphabetical card text if the point costs and ships are the same.
-
-    anakin-swx999a (Speeder Bike Pilot - Light Side (please no))
-    anakin-swx999b (Speeder Bike Pilot - Dark Side (no, just no))
-
-When a card appears in multiple expansion packs, we use the lowest numbered expansion,
-unless FFG releases packs so far out of order that we've already picked a canonicalization
-for a card before a lower swxNN shows up (seems pretty unlikely, but if it happens then
-the change will not be made retroactively).
 
 ## Obstacles
-
 Obstacle canonicalization is:
 
     ${set containing the obstacle}${astreiod or debris}${number}
@@ -277,9 +156,9 @@ not known. Their export would be valid if re-imported into the original app but
 MAY fail when imported into other applications.
 
 
-### Checking should also be implemented by the app importing a squadron,
-including ensuring that:
-* Point totals are correct
+### Checking should also be implemented by the app importing a squadron
+Imporint applications should ensure that:
+* Point totals are correct, or failing that, the `points` key is dropped/ignored
 * There are no illegal upgrades
 * Factions are not mixed
 
@@ -317,13 +196,20 @@ unrecognized vendor properties before exporting again. This is to prevent
 obsolete data being exported. It is acceptable to entirely remove all other
 implementations' vendor keys to accomplish this.
 
+### Official FFG builder data
 
-# Sample XWS Data Structure
-This sample shows a build with lots of upgrades, some added dynamically by other
-upgrades (A-Wing Test Pilot). It includes all required and optional data as well
-as vendor data at both top level and squadron level.
+The `"ffg"` vendor is a special case. Applications SHOULD NOT remove the `"ffg"` vendor 
+key on import, since that key will tie the list back to the official builder.
 
-[http://github.com/elistevens/xws-spec/blob/master/sample.json](./sample.json)
+```json
+{
+    "vendor": {
+        "ffg": {
+            "builder_url": "http://..."
+        }
+    }
+}
+```
 
 
 # Validation
@@ -347,9 +233,7 @@ http://elistevens.github.io/xws-spec/
 This spec SHALL have a version number.
 
 Future versions of this specification will increment the version number
-according to http://semver.org/ . Due to this spec being tied to validation
-functions, this specification will get a patch-level revision when new content
-is available.
+according to http://semver.org/ .
 
 The version number SHOULD NOT be used to reject squadrons on import. An
 exporting implementation might support content through wave 6 but a given
@@ -357,14 +241,8 @@ squadron could be valid for wave 4. An importing application that has content
 through wave 5 should not reject the squadron based on the spec version
 indicated in the export JSON.
 
-The version number SHALL be incremented when FFG releases errata that changes
-the point cost of any pilots or cards.
 
-Updating the version should include change the number in the README.md,
-src/xws_validate.coffee, bower.json, and package.json files.
-
-
-# QR Code Support (Experimental)
+# QR Code Support (Experimental, Deprecated from 1e)
 Implementations are encouraged to provide QR codes containing single-squadron
 XWS JSON when it makes sense to do so, and similarly to provide QR code scanning
 when appropriate.
@@ -411,7 +289,7 @@ A listing of known applications and developer resources that might be of use whe
     X-Wing Squad Helper for Twitch and YouTube Streamers.
 
 ## Resources for developers
-- https://github.com/guidokessels/xwing-data. 
+- https://github.com/guidokessels/xwing-data2 . 
     An easy-to-use collection of data and images from X-Wing: The Miniatures Game by Fantasy Flight Games. 
     It has every card in the game, and each pilot and upgrade has the XWS id so you should be able to follow the XWS spec.
 - https://github.com/voidstate/xwing-card-images 
