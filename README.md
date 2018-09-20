@@ -99,6 +99,15 @@ as crew, etc.)
 4. Remove non-alphanumeric characters
 5. Check for collisions, reference [https://github.com/guidokessels/xwing-data2](xwing-data2) if any exist
 
+Generally, collisions will be resolved by adding suffixes to the card ID to make it no longer conflict.
+Those suffixes are determined by card type as follows:
+
+Pilots: pilotname-shipname-factionname-productsku-number
+Upgrades: upgradename-slotname-productsku-number
+Conditions: conditionname-productsku-number
+
+Suffixes are generally added left-to-right, and include only the minimal set needed for uniqueness.
+All collision resolutions should be verified against [https://github.com/guidokessels/xwing-data2](xwing-data2).
 
 #### Canonicalization and Name Collisions
 To determine collisions, simply see if there are two cards of the same type (upgrade or pilot) that have the
