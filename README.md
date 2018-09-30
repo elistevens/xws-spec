@@ -223,21 +223,9 @@ key on import, since that key will tie the list back to the official builder.
 
 
 # Validation
-Implementations MAY use the following JSON schema to validate XWS data.
+An online validation tool can be found at:
 
-[http://github.com/elistevens/xws-spec/blob/master/schema.json](./schema.json)
-
-More on JSON schemas can be fond at:
-
-- http://json-schema.org
-- https://github.com/geraintluff/tv4
-
-Additionally, the `xws-spec` bower package has custom validation functions that
-can be used to validate single-squadron lists. An online validator can be found
-at:
-
-http://elistevens.github.io/xws-spec/
-
+http://xhud.sirjorj.com/xwing.cgi/validator2
 
 # Versioning
 This spec SHALL have a version number.
