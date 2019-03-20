@@ -126,7 +126,10 @@ Obstacle outlines are roughly ordered from smallest to largest in the order they
 listed on the official tournament sheet, but since that's somewhat
 subjective, the exact numbering of each obstacle should be considered arbitrary.
 
-![Please consult the following image.](xws-obstacles-core2.png)
+![Please consult the following images.](xws-obstacles-core2.png)
+![Gas Cloud 1 (`gascloud1`)](Gascloud_1.png)
+![Gas Cloud 2 (`gascloud2`)](Gascloud_2.png)
+![Gas Cloud 3 (`gascloud3`)](Gascloud_3.png)
 
 
 # Requirements for Application Developers
