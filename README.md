@@ -140,6 +140,18 @@ Gas Cloud 3 (`gascloud3`)
 
 ![Gas Cloud 3 (`gascloud3`)](Gascloud_3.png)
 
+Gas Cloud 4 (`gascloud4`)
+
+![Gas Cloud 4 (`gascloud4`)](Gascloud_4.png)
+
+Gas Cloud 5 (`gascloud5`)
+
+![Gas Cloud 5 (`gascloud5`)](Gascloud_5.png)
+
+Gas Cloud 6 (`gascloud6`)
+
+![Gas Cloud 6 (`gascloud6`)](Gascloud_6.png)
+
 
 # Requirements for Application Developers
 
