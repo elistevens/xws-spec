@@ -1,9 +1,10 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "X-Wing Squadron Format Schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://github.com/elistevens/xws-spec/blob/master/schema.json",
+    "title": "X-Wing Squadron Format Schema Version 2.0.0",
     "description": "A squadron for the X-Wing Miniatures Game in app-independent format for sharing, saving and moving between apps.",
     "type": "object",
-    "required": ["version","faction","pilots"],
+    "required": ["faction","pilots", "version"],
     "additionalProperties" : false,
     "properties": {
         "version": {
@@ -21,7 +22,14 @@
         },
         "faction": {
             "type": "string",
-            "enum": [ "rebel", "imperial", "scum" ],
+            "enum": [ "rebelalliance",
+                "galacticempire",
+                "scumandvillainy",
+                "resistance",
+                "firstorder",
+                "galacticrepublic",
+                "separatistalliance"
+            ],
             "description": "The faction this squadron belongs to."
         },
         "description": {
@@ -43,24 +51,19 @@
             "items": {
                 "type": "object",
                 "minItems": 1,
-                "required": ["name","ship"],
+                "required": ["id"],
                 "additionalProperties" : false,
                 "properties": {
-                    "multisection_id": {
-                        "type": "integer"
-                    },
-                    "name": {
+                    "id": {
                         "type": "string",
-                        "pattern" : "^[0-9a-z]+$"
+                        "pattern" : "^[0-9a-z-]+[^-]$"
                     },
-                    "ship": {
-                        "type": "string",
-                        "pattern" : "^[0-9a-z]+$"
+                    "points": {
+                        "type": "integer",
+                        "descrpition": "Total point cost of the pilot plus upgrades. SHOULD be ignored by importing applications unless the XWS source is trusted."
                     },
                     "upgrades": {
                         "type": "object",
-                        "additionalProperties": false,
-                        "minProperties": 1,
                         "patternProperties": {
                             "^[0-9a-z]+$": {
                                 "type": "array",
@@ -71,13 +74,30 @@
                                 }
                             }
                         }
-                     },
-                     "vendor": {
+                    },
+                    "vendor": {
                         "type": "object",
-                         "minProperties": 1,
-                         "maxProperties": 1,
-                         "description": "An extensible object containing app-specific data. Developers should put extra data here under their own namespace."
-                     }
+                        "minProperties": 1,
+                        "maxProperties": 1,
+                        "description": "An extensible object containing app-specific data. Developers should put extra data here under their own namespace.",
+                        "patternProperties": {
+                            "^.*$": {
+                                "type": "object",
+                                "properties": {
+                                    "url": {
+                                        "type": "string"
+                                    },
+                                    "builder_url": {
+                                        "type": "string"
+                                    },
+                                    "builder": {
+                                        "type": "string"
+                                    },
+                                    "additionalProperties": true
+                                }
+                            }
+                        }
+                    }
                 }
             }
         },
@@ -85,7 +105,24 @@
             "type": "object",
             "minProperties": 1,
             "maxProperties": 1,
-            "description": "An extensible object containing app-specific data. Developers should put extra data here under their own namespace."
+            "description": "An extensible object containing app-specific data. Developers should put extra data here under their own namespace.",
+            "patternProperties": {
+                "^.*$": {
+                    "type": "object",
+                    "properties": {
+                        "url": {
+                            "type": "string"
+                        },
+                        "builder_url": {
+                            "type": "string"
+                        },
+                        "builder": {
+                            "type": "string"
+                        },
+                        "additionalProperties": true
+                    }
+                }
+            }
         }
     }
 }
