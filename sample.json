@@ -1,94 +1,38 @@
 {
-    "name": "2 A-Wings, 2 X-Wings",
-    "faction": "rebel",
-    "points": 100,
-    "version": "0.3.0",
-    "description": "Tycho leads a flight",
-    "obstacles": ["core-asteroid-5", "vt49decimator-debris-2", "yt2400-debris-0"],
+    "name": "X-Squad",
+    "faction": "separatistalliance",
+	"description": "Test xws 2.0.0 data",
+	"points": 76,
+	"version": "2.0.0",
     "pilots": [
         {
-            "name": "tychocelchu",
-            "ship": "awing",
+            "id": "bombardmentdrone",
+			"points": 44,
             "upgrades": {
-                "title": [
-                    "awingtestpilot"
-                ],
-                "missile": [
-                    "chardaanrefit"
-                ],
-                "ept": [
-                    "pushthelimit",
-                    "experthandling"
-                ],
-                "mod": [
-                    "experimentalinterface"
-                ]
-            },
-            "vendor": {
-                "voidstate": {
-                    "pilot_id": 30
-                }
+				"modification": ["angleddeflectors"],
+                "configuration": ["landingstruts"],
+                "device": ["drk1probedroids"],
+                "sensor": ["trajectorysimulator"]
             }
         },
         {
-            "name": "rookiepilot",
-            "ship": "xwing",
+            "id": "dfs311-vultureclassdroidfighter",
+			"points": 32,
             "upgrades": {
-                "amd": [
-                    "r2astromech"
-                ]
+                "missile": ["clustermissiles"],
+                "modification": ["angleddeflectors"],
+                "configuration": ["grapplingstruts"]
             },
-            "vendor": {
-                "voidstate": {
-                    "pilot_id": 14
-                }
-            }
-        },
-        {
-            "name": "rookiepilot",
-            "ship": "xwing",
-            "upgrades": {
-                "amd": [
-                    "r2astromech"
-                ]
-            },
-            "vendor": {
-                "voidstate": {
-                    "pilot_id": 14
-                }
-            }
-        },
-        {
-            "name": "greensquadronpilot",
-            "ship": "awing",
-            "upgrades": {
-                "title": [
-                    "awingtestpilot"
-                ],
-                "missile": [
-                    "chardaanrefit"
-                ],
-                "ept": [
-                    "elusiveness",
-                    "experthandling"
-                ],
-                "mod": [
-                    "stealthdevice"
-                ]
-            },
-            "vendor": {
-                "voidstate": {
-                    "pilot_id": 33
-                }
-            }
+			"vendor": {
+				"pyxwb2": {
+					"url": "https://github.com/minsis/pyxwb2"
+				}
+			}
         }
     ],
-    "vendor": {
-        "voidstate": {
-            "squadron_id": 2498,
-            "link": "http://xwing-builder.co.uk/view/2498/2-a-wings-2-x-wings",
-            "builder": "Voidstate's Unofficial X-Wing Squadron Builder",
-            "builder_link": "http://xwing-builder.co.uk/build"
-        }
-    }
+	"vendor": {
+		"pyxwb2": {
+			"url": "https://github.com/minsis/pyxwb2"
+		}
+	}
 }
