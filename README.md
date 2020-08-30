@@ -319,4 +319,7 @@ A listing of known applications and developer resources that might be of use whe
     Initially forked from guidokessels/xwing-data
 - https://github.com/geordanr/xwing-miniatures-font
     X-Wing Miniatures Font. Vector font by Hinny and armoredgear7.
+    
+## Libraries for developers
+- https://github.com/minsis/pyxwb2. A python library for importing and building squads. Also includes an API for interfacing with xwing-data2 resource.
 
